@@ -1,3 +1,320 @@
-.logo {
-    height: 120px;
+:root {
+  --blue: #2aa4f4;
+  --orange: #ff7a18;
+  --ink: #1f2937;
+  --bg: #ff7a18;
+  --card: #ffffff;
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0; 
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem;
+  color: var(--ink); 
+  background: var(--orange);
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: Garamond, 'Times New Roman', serif;
+}
+
+h2 {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive, sans-serif;
+}
+
+p {
+  font-family: Perpetua, Georgia, serif;
+  font-size: 1.2rem;
+}
+
+/* FIXED HEADER LAYOUT - Using Flexbox for proper vertical centering */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background: var(--card);
+  border-bottom: 2px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.site-header p {
+  margin: 0;
+  color: #495869;
+  font-weight: 500;
+  max-width: 600px;
+}
+
+.logo { 
+  height: 80px; 
+  width: auto; 
+}
+
+.call-btn {
+  background: var(--blue); 
+  color: #fff; 
+  padding: 12px 20px; 
+  border-radius: 999px;
+  text-decoration: none; 
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.call-btn:hover {
+  background: var(--orange);
+  transform: scale(1.05);
+}
+
+.section {
+  max-width: 900px; 
+  margin: 28px auto; 
+  padding: 20px; 
+  background: var(--card);
+  border-radius: 16px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.section h2 { 
+  margin-top: 0; 
+  color: var(--blue); 
+  font-size: 2rem; 
+  font-weight: 600; 
+}
+
+.services { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
+  text-align: center;
+}
+
+.services li {
+  padding: 15px 20px; 
+  margin: 10px 0;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  background: var(--card);
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.services li:hover {
+  border-width: 4px;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(42, 164, 244, 0.2);
+  background: #f8fafc;
+}
+
+/* Modal Popup Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--card);
+  margin: 10% auto;
+  padding: 30px;
+  border: 3px solid var(--blue);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  animation: slideIn 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.close {
+  color: var(--ink);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  margin: -10px -10px 10px 10px;
+}
+
+.close:hover {
+  color: var(--orange);
+}
+
+.modal h3 {
+  color: var(--blue);
+  margin-top: 0;
+  font-size: 1.8rem;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive, sans-serif;
+}
+
+.modal p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.slider { 
+  position: relative; 
+  min-height: 70px;
+  text-align: center;
+}
+
+.slide { 
+  display: none; 
+  font-size: 1.1rem; 
+}
+
+.slide.active { 
+  display: block; 
+}
+
+.slider-controls { 
+  margin-top: 10px; 
+  display: flex; 
+  gap: 10px;
+  justify-content: center;
+}
+
+button { 
+  cursor: pointer; 
+  font-size: 1rem; 
+  padding: 8px 12px;
+  border: 2px solid var(--blue);
+  background: var(--card);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--blue);
+  color: white;
+}
+
+form {
+  text-align: center;
+  border: 2px solid var(--blue);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 500px;
+  background: var(--card);
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+form input, form textarea {
+  display: block;
+  margin: 5px auto 15px;
+  padding: 12px;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  background: var(--card);
+  transition: border-color 0.2s ease;
+  font-size: 1rem;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(42, 164, 244, 0.1);
+}
+
+form button {
+  padding: 12px 24px;
+  background: var(--blue);
+  color: white;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.1rem;
+}
+
+form button:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  transform: scale(1.02);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-header h1 {
+    font-size: 2rem;
+  }
+  
+  .site-header p {
+    font-size: 1rem;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+  
+  .section {
+    margin: 15px;
+    padding: 15px;
+  }
+  
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+    padding: 20px;
+  }
 }

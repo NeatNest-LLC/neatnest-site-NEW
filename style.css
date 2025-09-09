@@ -10,10 +10,24 @@
 
 body {
   margin: 0; 
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem; /* Larger base font size for all non-heading elements */
   color: var(--ink); 
   background: var(--orange); /* Orange background */
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: Garamond, 'Times New Roman', serif;
+}
+
+h2 {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive, sans-serif;
+}
+
+p {
+  font-family: Perpetua, Georgia, serif;
+  font-size: 1.2rem; /* Larger paragraphs */
 }
 
 .site-header {
@@ -32,8 +46,8 @@ body {
 
 .logo { height: 56px; width: auto; }
 
-.title h1 { margin: 0; font-size: 1.5rem; }
-.title p { margin: 2px 0 0; color: #495869; font-weight: 500; }
+title h1 { margin: 0; font-size: 2.5rem; font-weight: 700; }
+title p { margin: 2px 0 0; color: #495869; font-weight: 500; }
 
 .call-btn {
   background: var(--blue); 
@@ -42,6 +56,7 @@ body {
   border-radius: 999px;
   text-decoration: none; 
   font-weight: 700;
+  font-size: 1.1rem; /* Larger button text */
 }
 
 .section {
@@ -54,7 +69,7 @@ body {
   text-align: center;
 }
 
-.section h2 { margin-top: 0; color: var(--blue); }
+.section h2 { margin-top: 0; color: var(--blue); font-size: 2rem; font-weight: 600; }
 
 .services { 
   list-style: none; 
@@ -70,6 +85,7 @@ body {
   border-radius: 8px;
   background: var(--card);
   font-weight: 500;
+  font-size: 1.1rem; /* Larger service text */
 }
 
 .services li:last-child { border: 2px solid var(--blue); }
@@ -80,7 +96,7 @@ body {
   text-align: center;
 }
 
-.slide { display: none; }
+.slide { display: none; font-size: 1.1rem; } /* Larger testimonial text */
 .slide.active { display: block; }
 
 .slider-controls { 
@@ -90,7 +106,7 @@ body {
   justify-content: center;
 }
 
-button { cursor: pointer; }
+button { cursor: pointer; font-size: 1rem; }
 
 form {
   text-align: center;
@@ -107,6 +123,7 @@ form label {
   margin: 15px 0 5px;
   text-align: center;
   font-weight: 500;
+  font-size: 1.1rem; /* Larger form labels */
 }
 
 form input, form textarea {
@@ -120,6 +137,7 @@ form input, form textarea {
   text-align: center;
   background: var(--card);
   transition: border-color 0.2s ease;
+  font-size: 1rem; /* Larger input text */
 }
 
 form input:focus, form textarea:focus {
@@ -138,6 +156,7 @@ form button {
   margin-top: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-size: 1.1rem; /* Larger button text */
 }
 
 form button:hover {
@@ -150,4 +169,5 @@ form button:hover {
   padding: 20px;
   background: var(--card);
   color: var(--ink);
+  font-size: 1rem; /* Larger footer text */
 }

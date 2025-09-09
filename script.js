@@ -1,51 +1,30 @@
-// year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
+// Existing testimonial slider code...
 
-// testimonial slider with auto-rotation
-const slides = Array.from(document.querySelectorAll('.slide'));
-let idx = 0;
-let autoRotateTimer;
+// Service item click handlers to open modals
+const serviceItems = document.querySelectorAll('.service-item');
+serviceItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const modalId = item.getAttribute('data-modal-id');
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'block';
+    });
+});
 
-function show(i) { 
-  slides.forEach((s,n) => s.classList.toggle('active', n===i)); 
-}
+// Close button handlers to close modals
+const closeButtons = document.querySelectorAll('.modal-close');
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        modal.style.display = 'none';
+    });
+});
 
-function nextSlide() {
-  idx = (idx + 1) % slides.length; 
-  show(idx);
-}
-
-function prevSlide() {
-  idx = (idx - 1 + slides.length) % slides.length; 
-  show(idx);
-}
-
-function startAutoRotate() {
-  autoRotateTimer = setInterval(nextSlide, 4000); // 4 seconds
-}
-
-function stopAutoRotate() {
-  clearInterval(autoRotateTimer);
-}
-
-// Manual navigation
-document.getElementById('next').onclick = () => { 
-  stopAutoRotate();
-  nextSlide();
-  startAutoRotate(); // restart timer after manual interaction
-};
-
-document.getElementById('prev').onclick = () => { 
-  stopAutoRotate();
-  prevSlide(); 
-  startAutoRotate(); // restart timer after manual interaction
-};
-
-// Pause on hover for better UX
-const slider = document.querySelector('.slider');
-slider.addEventListener('mouseenter', stopAutoRotate);
-slider.addEventListener('mouseleave', startAutoRotate);
-
-// Initialize
-show(idx);
-startAutoRotate();
+// Click outside modal to close functionality
+const modals = document.querySelectorAll('.modal');
+modals.forEach(modal => {
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});

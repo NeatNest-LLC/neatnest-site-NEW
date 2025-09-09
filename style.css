@@ -1,106 +1,51 @@
-:root {
-  --blue: #2aa4f4;
-  --orange: #ff7a18;
-  --ink: #1f2937;
-  --bg: #f5f7fb;
-  --card: #ffffff;
+// year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// testimonial slider with auto-rotation
+const slides = Array.from(document.querySelectorAll('.slide'));
+let idx = 0;
+let autoRotateTimer;
+
+function show(i) { 
+  slides.forEach((s,n) => s.classList.toggle('active', n===i)); 
 }
 
-* { box-sizing: border-box; }
-
-body {
-  margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--ink); background: var(--bg); line-height: 1.5;
+function nextSlide() {
+  idx = (idx + 1) % slides.length; 
+  show(idx);
 }
 
-.site-header {
-  display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center;
-  padding: 16px 20px; background: var(--card); border-bottom: 2px solid #e5e7eb;
-  position: sticky; top: 0; z-index: 10;
-  text-align: center; /* Added: Center header content */
+function prevSlide() {
+  idx = (idx - 1 + slides.length) % slides.length; 
+  show(idx);
 }
 
-.logo { height: 56px; width: auto; }
-
-.title h1 { margin: 0; font-size: 1.5rem; }
-.title p { margin: 2px 0 0; color: #495869; font-weight: 500; }
-
-.call-btn {
-  background: var(--orange); color: #fff; padding: 10px 14px; border-radius: 999px;
-  text-decoration: none; font-weight: 700;
+function startAutoRotate() {
+  autoRotateTimer = setInterval(nextSlide, 4000); // 4 seconds
 }
 
-.section {
-  max-width: 900px; margin: 28px auto; padding: 20px; background: var(--card);
-  border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  text-align: center; /* Added: Center all section content */
+function stopAutoRotate() {
+  clearInterval(autoRotateTimer);
 }
 
-.section h2 { margin-top: 0; color: var(--blue); }
+// Manual navigation
+document.getElementById('next').onclick = () => { 
+  stopAutoRotate();
+  nextSlide();
+  startAutoRotate(); // restart timer after manual interaction
+};
 
-.services { 
-  list-style: none; padding: 0; margin: 0;
-  text-align: center; /* Added: Center service list */
-}
+document.getElementById('prev').onclick = () => { 
+  stopAutoRotate();
+  prevSlide(); 
+  startAutoRotate(); // restart timer after manual interaction
+};
 
-.services li {
-  padding: 10px 0; border-bottom: 1px solid #eef2f7;
-}
+// Pause on hover for better UX
+const slider = document.querySelector('.slider');
+slider.addEventListener('mouseenter', stopAutoRotate);
+slider.addEventListener('mouseleave', startAutoRotate);
 
-.services li:last-child { border-bottom: 0; }
-
-.slider { 
-  position: relative; min-height: 70px;
-  text-align: center; /* Added: Center testimonials */
-}
-
-.slide { display: none; }
-.slide.active { display: block; }
-
-.slider-controls { 
-  margin-top: 10px; display: flex; gap: 10px;
-  justify-content: center; /* Added: Center slider buttons */
-}
-
-button { cursor: pointer; }
-
-/* Added: Center form elements */
-form {
-  text-align: center;
-}
-
-form label {
-  display: block;
-  margin: 15px 0 5px;
-  text-align: center;
-}
-
-form input, form textarea {
-  display: block;
-  margin: 5px auto 15px;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-form button {
-  padding: 10px 20px;
-  background: var(--blue);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.site-footer {
-  text-align: center; padding: 30px 10px; color: #6b7280; background: transparent;
-}
-
-@media (max-width: 720px) {
-  .site-header { grid-template-columns: auto 1fr; }
-  .call-btn { grid-column: 1 / -1; justify-self: center; } /* Updated: Center on mobile */
-}
+// Initialize
+show(idx);
+startAutoRotate();

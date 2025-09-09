@@ -1,8 +1,109 @@
-<header style="text-align: center;">
-    <div>
-        <img src="path-to-logo" alt="Logo" />
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NeatNest LLC — We keep the neatest nests!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <img src="images/logo.jpg" alt="NeatNest LLC logo" class="logo" />
+    <h1>NeatNest LLC</h1>
+    <p>Family-owned and operated cleaning company in Wallingford, CT — providing reliable cleaning services for homes and businesses across the community.</p>
+    <a class="call-btn" href="tel:+12035550123">Call Now</a>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h2>A little bit about us…</h2>
+      <p>We are a small, family-owned house cleaning company dedicated to providing reliable, affordable, and detail-oriented cleaning services. Our team specializes in routine housekeeping, deep cleaning, and move-in/move-out services. Whether you need weekly maintenance or a one-time deep clean, we work around your schedule to keep your space spotless.</p>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <ul class="services">
+        <li data-service="routine">Routine Housekeeping</li>
+        <li data-service="deep">Top-to-Bottom Deep Clean</li>
+        <li data-service="move">Move-In / Move-Out Clean</li>
+        <li data-service="office">Office & Commercial Cleaning</li>
+        <li data-service="carpet">Carpet & Upholstery Cleaning</li>
+      </ul>
+    </section>
+
+    <section id="testimonials" class="section">
+      <h2>What people say</h2>
+      <div class="slider">
+        <div class="slide active">"Showed up on time and did an amazing job." — J.S.</div>
+        <div class="slide">"My house hasn't looked this good in years." — M.R.</div>
+        <div class="slide">"Professional, fast, and friendly." — K.K.</div>
+      </div>
+      <div class="slider-controls">
+        <button id="prev">◀</button>
+        <button id="next">▶</button>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Request a Free In-Home Consultation</h2>
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <label>Your Name <input name="name" required /></label>
+        <label>Phone <input name="phone" required /></label>
+        <label>Email <input name="email" type="email" required /></label>
+        <label>Tell us what you need
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> NeatNest LLC • Wallingford, CT
+  </footer>
+
+  <!-- Service Popup Modals -->
+  <div id="routine-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Routine Housekeeping</h3>
+      <p>Our regular housekeeping service includes weekly or bi-weekly cleaning of all main living areas. We'll dust surfaces, vacuum carpets and rugs, mop floors, clean bathrooms thoroughly, sanitize kitchen areas, and tidy up common spaces. Perfect for maintaining a consistently clean home without the hassle.</p>
     </div>
-    <h1>Your Heading</h1>
-    <p>Your description goes here.</p>
-    <button>Call to Action</button>
-</header>
+  </div>
+
+  <div id="deep-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Top-to-Bottom Deep Clean</h3>
+      <p>Our comprehensive deep cleaning service goes beyond regular housekeeping. We clean baseboards, window sills, light fixtures, ceiling fans, inside appliances (oven, refrigerator, microwave), cabinet fronts, and all hard-to-reach areas. Ideal for spring cleaning, special occasions, or preparing your home for guests.</p>
+    </div>
+  </div>
+
+  <div id="move-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Move-In / Move-Out Clean</h3>
+      <p>Perfect for moving transitions, this service ensures your new home is spotless before you move in, or your old home is pristine for the next occupants. Includes deep cleaning of all rooms, inside cabinets and drawers, appliance cleaning, and thorough sanitization throughout the entire property.</p>
+    </div>
+  </div>
+
+  <div id="office-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Office & Commercial Cleaning</h3>
+      <p>Professional cleaning services for offices, retail spaces, and commercial buildings. We offer flexible scheduling including after-hours cleaning, desk and workspace sanitization, restroom maintenance, lobby and common area cleaning, and trash removal. Customizable packages to fit your business needs.</p>
+    </div>
+  </div>
+
+  <div id="carpet-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Carpet & Upholstery Cleaning</h3>
+      <p>Professional steam cleaning for carpets, rugs, and upholstered furniture. Our service includes stain removal, odor treatment, fabric protection application, and deep extraction cleaning that removes embedded dirt and allergens. We use eco-friendly solutions safe for pets and children.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

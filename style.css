@@ -10,10 +10,10 @@
 
 body {
   margin: 0; 
-  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--ink); 
   background: var(--orange); /* Orange background */
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .site-header {
@@ -32,7 +32,7 @@ body {
 
 .logo { height: 56px; width: auto; }
 
-.title h1 { margin: 0; font-size: 2.5rem; font-weight: 700; }
+.title h1 { margin: 0; font-size: 1.5rem; }
 .title p { margin: 2px 0 0; color: #495869; font-weight: 500; }
 
 .call-btn {
@@ -54,7 +54,7 @@ body {
   text-align: center;
 }
 
-.section h2 { margin-top: 0; color: var(--blue); font-size: 2rem; font-weight: 600; }
+.section h2 { margin-top: 0; color: var(--blue); }
 
 .services { 
   list-style: none; 

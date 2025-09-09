@@ -2,7 +2,7 @@
   --blue: #2aa4f4;
   --orange: #ff7a18;
   --ink: #1f2937;
-  --bg: #ff7a18; /* Changed to orange */
+  --bg: #ff7a18;
   --card: #ffffff;
 }
 
@@ -12,7 +12,7 @@ body {
   margin: 0; 
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--ink); 
-  background: var(--orange); /* Orange background */
+  background: var(--orange);
   line-height: 1.5;
 }
 
@@ -64,11 +64,15 @@ body {
 }
 
 .services li {
-  padding: 10px 0; 
-  border-bottom: 1px solid #eef2f7;
+  padding: 15px 20px; 
+  margin: 10px 0;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  background: var(--card);
+  font-weight: 500;
 }
 
-.services li:last-child { border-bottom: 0; }
+.services li:last-child { border-bottom: 2px solid var(--blue); }
 
 .slider { 
   position: relative; 

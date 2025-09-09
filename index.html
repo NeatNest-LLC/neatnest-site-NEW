@@ -19,26 +19,26 @@
   <main>
     <section id="about" class="section">
       <h2>A little bit about us…</h2>
-      <p>We are a small, family-owned house cleaning company dedicated to providing reliable, affordable, and detail-oriented cleaning services. Our team specializes in routine housekeeping, deep cleaning, move-in/move-out cleaning, and carpet care for homes and apartments. With a focus on trust, quality, and customer satisfaction, we make it easy to enjoy a cleaner, healthier home. Serving local families and businesses, we take pride in treating every home like our own.</p>
+      <p>We are a small, family-owned house cleaning company dedicated to providing reliable, affordable, and detail-oriented cleaning services. Our team specializes in routine housekeeping, deep cleaning, and move-in/move-out services. We take pride in our work and treat every home as if it were our own, ensuring that you can relax in a spotless, comfortable environment.</p>
     </section>
 
     <section id="services" class="section">
       <h2>Services</h2>
       <ul class="services">
-        <li>Routine Housekeeping</li>
-        <li>Top-to-Bottom Deep Clean</li>
-        <li>Move-In / Move-Out Clean</li>
-        <li>Office & Commercial Cleaning</li>
-        <li>Carpet & Upholstery Cleaning</li>
+        <li data-service="routine">Routine Housekeeping</li>
+        <li data-service="deep">Top-to-Bottom Deep Clean</li>
+        <li data-service="move">Move-In / Move-Out Clean</li>
+        <li data-service="office">Office & Commercial Cleaning</li>
+        <li data-service="carpet">Carpet & Upholstery Cleaning</li>
       </ul>
     </section>
 
     <section id="testimonials" class="section">
       <h2>What people say</h2>
       <div class="slider">
-        <div class="slide active">“Showed up on time and did an amazing job.” — J.S.</div>
-        <div class="slide">“My house hasn’t looked this good in years.” — M.R.</div>
-        <div class="slide">“Professional, fast, and friendly.” — K.K.</div>
+        <div class="slide active">"Showed up on time and did an amazing job." — J.S.</div>
+        <div class="slide">"My house hasn't looked this good in years." — M.R.</div>
+        <div class="slide">"Professional, fast, and friendly." — K.K.</div>
       </div>
       <div class="slider-controls">
         <button id="prev">◀</button>
@@ -64,6 +64,47 @@
   <footer class="site-footer">
     © <span id="year"></span> NeatNest LLC • Wallingford, CT
   </footer>
+
+  <!-- Service Popup Modals -->
+  <div id="routine-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Routine Housekeeping</h3>
+      <p>Our regular housekeeping service includes weekly or bi-weekly cleaning of all main living areas. We'll dust surfaces, vacuum carpets and rugs, mop floors, clean bathrooms thoroughly, sanitize kitchen counters and appliances, and make beds. This service is perfect for maintaining a consistently clean and comfortable home environment.</p>
+    </div>
+  </div>
+
+  <div id="deep-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Top-to-Bottom Deep Clean</h3>
+      <p>Our comprehensive deep cleaning service goes beyond regular housekeeping. We clean baseboards, window sills, light fixtures, ceiling fans, inside appliances (oven, refrigerator, microwave), detailed bathroom cleaning including grout, thorough kitchen deep clean, and all areas that are often overlooked in routine cleaning.</p>
+    </div>
+  </div>
+
+  <div id="move-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Move-In / Move-Out Clean</h3>
+      <p>Perfect for moving transitions, this service ensures your new home is spotless before you move in, or your old home is pristine for the next occupants. Includes deep cleaning of all rooms, inside cabinets and drawers, appliance cleaning, detailed bathroom sanitization, and thorough kitchen deep clean.</p>
+    </div>
+  </div>
+
+  <div id="office-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Office & Commercial Cleaning</h3>
+      <p>Professional cleaning services for offices, retail spaces, and commercial buildings. We offer flexible scheduling including after-hours cleaning, desk and workspace sanitization, restroom maintenance, floor care, trash removal, and common area cleaning. Custom cleaning plans available to meet your business needs.</p>
+    </div>
+  </div>
+
+  <div id="carpet-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Carpet & Upholstery Cleaning</h3>
+      <p>Professional steam cleaning for carpets, rugs, and upholstered furniture. Our service includes stain removal, odor treatment, fabric protection application, and deep extraction cleaning that removes embedded dirt and allergens. We use eco-friendly cleaning solutions that are safe for pets and children.</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

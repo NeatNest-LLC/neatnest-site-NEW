@@ -1,10 +1,51 @@
 // year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// simple testimonial slider
+// testimonial slider with auto-rotation
 const slides = Array.from(document.querySelectorAll('.slide'));
 let idx = 0;
-function show(i){ slides.forEach((s,n)=>s.classList.toggle('active', n===i)); }
-document.getElementById('next').onclick = ()=>{ idx=(idx+1)%slides.length; show(idx); };
-document.getElementById('prev').onclick = ()=>{ idx=(idx-1+slides.length)%slides.length; show(idx); };
+let autoRotateTimer;
+
+function show(i) { 
+  slides.forEach((s,n) => s.classList.toggle('active', n===i)); 
+}
+
+function nextSlide() {
+  idx = (idx + 1) % slides.length; 
+  show(idx);
+}
+
+function prevSlide() {
+  idx = (idx - 1 + slides.length) % slides.length; 
+  show(idx);
+}
+
+function startAutoRotate() {
+  autoRotateTimer = setInterval(nextSlide, 4000); // 4 seconds
+}
+
+function stopAutoRotate() {
+  clearInterval(autoRotateTimer);
+}
+
+// Manual navigation
+document.getElementById('next').onclick = () => { 
+  stopAutoRotate();
+  nextSlide();
+  startAutoRotate(); // restart timer after manual interaction
+};
+
+document.getElementById('prev').onclick = () => { 
+  stopAutoRotate();
+  prevSlide(); 
+  startAutoRotate(); // restart timer after manual interaction
+};
+
+// Pause on hover for better UX
+const slider = document.querySelector('.slider');
+slider.addEventListener('mouseenter', stopAutoRotate);
+slider.addEventListener('mouseleave', startAutoRotate);
+
+// Initialize
 show(idx);
+startAutoRotate();

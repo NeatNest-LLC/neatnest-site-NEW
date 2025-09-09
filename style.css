@@ -63,18 +63,18 @@ p {
 }
 
 .logo { 
-  height: 80px; 
+  height: 120px;   /* increased from 80px */
   width: auto; 
 }
 
 .call-btn {
   background: var(--blue); 
   color: #fff; 
-  padding: 12px 20px; 
+  padding: 18px 32px;   /* increased from 12px 20px */
   border-radius: 999px;
   text-decoration: none; 
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.4rem;    /* increased from 1.1rem */
   transition: all 0.3s ease;
 }
 
@@ -304,7 +304,7 @@ form button:hover {
   }
   
   .logo {
-    height: 60px;
+    height: 60px;  /* smaller for mobile */
   }
   
   .section {

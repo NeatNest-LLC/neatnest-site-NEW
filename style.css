@@ -1,9 +1,17 @@
+/* Friendly, modern fonts for NeatNest LLC */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;600;700&family=Quicksand:wght@500;700&display=swap');
+
 :root {
   --blue: #2aa4f4;
   --orange: #ff7a18;
   --ink: #1f2937;
   --bg: #ff7a18;
   --card: #ffffff;
+
+  /* Font variables */
+  --font-display: "Fredoka", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-accent: "Quicksand", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 * { 
@@ -12,7 +20,7 @@
 
 body {
   margin: 0; 
-  font-family: Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.1rem;
   color: var(--ink); 
   background: var(--orange);
@@ -20,20 +28,22 @@ body {
 }
 
 h1 {
-  font-family: Garamond, 'Times New Roman', serif;
+  font-family: var(--font-display);
 }
 
 h2 {
-  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive, sans-serif;
+  font-family: var(--font-accent);
 }
 
 p {
-  font-family: Perpetua, Georgia, serif;
+  font-family: var(--font-body);
   font-size: 1.2rem;
 }
 
 /* FIXED HEADER LAYOUT - Using Flexbox for proper vertical centering */
 .site-header {
+    position: static;
+    /* Other styles */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,8 +68,10 @@ p {
 .site-header p {
   margin: 0;
   color: #495869;
-  font-weight: 500;
+  font-weight: 600;
   max-width: 600px;
+  font-family: var(--font-accent);
+  letter-spacing: 0.2px;
 }
 
 .logo { 
@@ -76,6 +88,8 @@ p {
   font-weight: 700;
   font-size: 1.4rem;    /* increased from 1.1rem */
   transition: all 0.3s ease;
+  font-family: var(--font-accent);
+  letter-spacing: 0.3px;
 }
 
 .call-btn:hover {
@@ -97,7 +111,8 @@ p {
   margin-top: 0; 
   color: var(--blue); 
   font-size: 2rem; 
-  font-weight: 600; 
+  font-weight: 700; 
+  font-family: var(--font-display);
 }
 
 .services { 
@@ -113,11 +128,12 @@ p {
   border: 2px solid var(--blue);
   border-radius: 8px;
   background: var(--card);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   transform: scale(1);
+  font-family: var(--font-body);
 }
 
 .services li:hover {
@@ -171,13 +187,14 @@ p {
   color: var(--blue);
   margin-top: 0;
   font-size: 1.8rem;
-  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive, sans-serif;
+  font-family: var(--font-accent);
 }
 
 .modal p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--ink);
+  font-family: var(--font-body);
 }
 
 @keyframes fadeIn {
@@ -199,6 +216,7 @@ p {
 .slide { 
   display: none; 
   font-size: 1.1rem; 
+  font-family: var(--font-body);
 }
 
 .slide.active { 
@@ -220,6 +238,8 @@ button {
   background: var(--card);
   border-radius: 4px;
   transition: all 0.2s ease;
+  font-family: var(--font-accent);
+  font-weight: 700;
 }
 
 button:hover {
@@ -235,14 +255,16 @@ form {
   margin: 15px auto;
   max-width: 500px;
   background: var(--card);
+  font-family: var(--font-body);
 }
 
 form label {
   display: block;
   margin: 15px 0 5px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.1rem;
+  font-family: var(--font-accent);
 }
 
 form input, form textarea {
@@ -257,6 +279,7 @@ form input, form textarea {
   background: var(--card);
   transition: border-color 0.2s ease;
   font-size: 1rem;
+  font-family: var(--font-body);
 }
 
 form input:focus, form textarea:focus {
@@ -271,11 +294,12 @@ form button {
   color: white;
   border: 2px solid var(--blue);
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 1.1rem;
+  font-family: var(--font-accent);
 }
 
 form button:hover {
@@ -291,6 +315,7 @@ form button:hover {
   color: var(--ink);
   font-size: 1rem;
   margin-top: 20px;
+  font-family: var(--font-body);
 }
 
 /* Responsive Design */

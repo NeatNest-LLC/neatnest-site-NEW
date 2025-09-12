@@ -42,20 +42,38 @@ p {
 
 /* FIXED HEADER LAYOUT - Using Flexbox for proper vertical centering */
 .site-header {
-    position: static;
+    position: relative;
     /* Other styles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background: var(--card);
+    border-bottom: 2px solid #e5e7eb;
+    position: static;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+}
+
+.social-links {
+  position: absolute;
+  top: 15px;   /* space from top */
+  left: 20px;  /* space from left */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
-  background: var(--card);
-  border-bottom: 2px solid #e5e7eb;
-  position: static;
-  top: 0;
-  z-index: 10;
-  text-align: center;
+  gap: 12px;   /* spacing between icons */
+}
+
+.social-links a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+}
+
+.social-links a img:hover {
+  transform: scale(1.2);
 }
 
 .site-header h1 {

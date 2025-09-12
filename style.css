@@ -133,7 +133,7 @@ p {
   cursor: pointer;
   transition: all 0.3s ease;
   transform: scale(1);
-  font-family: var(--font-body);
+  font-family: var(--font-display); /* updated to match header phrase */
 }
 
 .services li:hover {

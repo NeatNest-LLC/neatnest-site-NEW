@@ -143,6 +143,13 @@ p {
   background: #f8fafc;
 }
 
+/* Service icon above text */
+.service-logo {
+  width: 60px;
+  display: block;
+  margin: 0 auto 10px; /* centers icon above the text */
+}
+
 /* Modal Popup Styles */
 .modal {
   display: none;

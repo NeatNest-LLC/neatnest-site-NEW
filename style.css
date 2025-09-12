@@ -174,11 +174,12 @@ p {
   position: relative;
   animation: slideIn 0.3s ease;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+  text-align: center; /* NEW: centers all child elements */
 }
 
 .close {
   color: var(--ink);
-  float: right;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;

@@ -1,23 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="google-site-verification" content="mnmC5PS4lYmcLw-1vwb80J6D3rb3r5V0vBiByU0r0yc" />
   <meta name="description" content="Family-owned cleaning company in Wallingford, CT. Deep cleans, routine housekeeping, move-in/move-out, office cleaning, and carpet & upholstery." />
- 
   <meta property="og:title" content="NeatNest LLC — We keep the neatest nests!" />
   <meta property="og:description" content="Family-owned cleaning company in Wallingford, CT. Deep cleans, routine housekeeping, move-in/move-out, office cleaning, and carpet & upholstery." />
   <meta property="og:image" content="https://neatnestllc.com/images/logo.jpg" />
   <meta property="og:url" content="https://neatnestllc.com/" />
   <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://neatnestllc.com/" />
   <title>NeatNest LLC — We keep the neatest nests!</title>
   <link rel="stylesheet" href="style.css" />
-
-    <link rel="canonical" href="https://neatnestllc.com/" />
 </head>
 <body>
   <header class="site-header">
-    <img src="images/logo.jpg" alt="NeatNest LLC logo" class="logo" />
+    <img src="images/logo.jpg" alt="NeatNest LLC logo" class="logo" width="240" height="120" />
     <h1>NeatNest LLC</h1>
     <p>Family-owned and operated cleaning company in Wallingford, CT — providing reliable cleaning services for homes and businesses across the community.</p>
     <a class="call-btn" href="tel:+12035550123">Call Now</a>
@@ -40,6 +39,37 @@
       </ul>
     </section>
 
+    <!-- NEW: Logos row (add your images to /images/logos/ with these names or change the src) -->
+    <section id="badges" class="section" aria-label="Proudly Local & Family-Friendly">
+      <h2>Proudly Local & Family-Friendly</h2>
+      <div class="logos">
+        <figure>
+          <img src="images/logos/neatnest-badge-family.svg"
+               alt="Family-owned & operated badge in blue and orange"
+               loading="lazy" decoding="async" width="300" height="100" />
+          <figcaption>Family-Owned & Operated</figcaption>
+        </figure>
+        <figure>
+          <img src="images/logos/neatnest-badge-trust.svg"
+               alt="Trusted, background-checked team badge"
+               loading="lazy" decoding="async" width="300" height="100" />
+          <figcaption>Trusted, Background-Checked</figcaption>
+        </figure>
+        <figure>
+          <img src="images/logos/neatnest-badge-eco.svg"
+               alt="Eco-friendly supplies badge"
+               loading="lazy" decoding="async" width="300" height="100" />
+          <figcaption>Eco-Friendly Options</figcaption>
+        </figure>
+        <figure>
+          <img src="images/logos/neatnest-badge-local.svg"
+               alt="Proudly serving Wallingford and nearby towns badge"
+               loading="lazy" decoding="async" width="300" height="100" />
+          <figcaption>Local to Wallingford</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section id="testimonials" class="section">
       <h2>What people say</h2>
       <div class="slider">
@@ -48,8 +78,8 @@
         <div class="slide">"Top notch attention to detail. I've tried numerous other cleaning services and no one even comes close!" — Nicki B.</div>
       </div>
       <div class="slider-controls">
-        <button id="prev">◀</button>
-        <button id="next">▶</button>
+        <button id="prev" type="button" aria-label="Previous testimonial">◀</button>
+        <button id="next" type="button" aria-label="Next testimonial">▶</button>
       </div>
     </section>
 
@@ -72,47 +102,10 @@
     © <span id="year"></span> NeatNest LLC • Wallingford, CT
   </footer>
 
-  <!-- Service Popup Modals -->
-  <div id="routine-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Routine Housekeeping</h3>
-      <p>Our regular housekeeping service includes weekly or bi-weekly cleaning of all main living areas. We'll dust surfaces, vacuum carpets and rugs, mop floors, clean bathrooms thoroughly, sanitize kitchen surfaces, and take out trash. Perfect for maintaining a clean and healthy home environment.</p>
-    </div>
-  </div>
-
-  <div id="deep-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Top-to-Bottom Deep Clean</h3>
-      <p>Our comprehensive deep cleaning service goes beyond regular housekeeping. We clean baseboards, window sills, light fixtures, ceiling fans, inside appliances (oven, refrigerator, microwave), scrub tile grout, wash walls, and clean inside cabinets and drawers. Ideal for seasonal cleaning or preparing for special events.</p>
-    </div>
-  </div>
-
-  <div id="move-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Move-In / Move-Out Clean</h3>
-      <p>Perfect for moving transitions, this service ensures your new home is spotless before you move in, or your old home is pristine for the next occupants. Includes deep cleaning of all rooms, inside and outside of all appliances, cabinets, closets, and thorough sanitization.</p>
-    </div>
-  </div>
-
-  <div id="office-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Office & Commercial Cleaning</h3>
-      <p>Professional cleaning services for offices, retail spaces, and commercial buildings. We offer flexible scheduling including after-hours cleaning, desk and workspace sanitization, restroom maintenance, floor care, and common area cleaning to keep your business environment clean and professional.</p>
-    </div>
-  </div>
-
-  <div id="carpet-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Carpet & Upholstery Cleaning</h3>
-      <p>Professional steam cleaning for carpets, rugs, and upholstered furniture. Our service includes stain removal, odor treatment, fabric protection application, and deep extraction cleaning that removes dirt, allergens, and bacteria from deep within fibers.</p>
-    </div>
-  </div>
-
   <script src="script.js"></script>
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

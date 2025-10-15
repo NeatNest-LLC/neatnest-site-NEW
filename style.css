@@ -386,3 +386,19 @@ form button:hover {
     padding: 20px;
   }
 }
+/* Book Now button styles */
+.book-btn {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.book-btn:hover {
+  background: var(--orange);
+}

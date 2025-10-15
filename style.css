@@ -205,6 +205,17 @@ p {
   margin: -10px -10px 10px 10px;
 }
 
+/* Force X below Book Now */
+.modal-content .close {
+  display: block;
+  margin: 15px auto 0;
+  color: var(--ink);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
 .close:hover {
   color: var(--orange);
 }

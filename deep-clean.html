@@ -197,6 +197,206 @@
 
   </main>
 
+  <!-- Enhanced Footer with NAP (Name, Address, Phone) and Town Links -->
+  <footer class="site-footer" style="background: var(--card); color: var(--ink); padding: 30px 20px; text-align: center; border-top: 3px solid var(--blue);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <!-- Business NAP Information -->
+      <div style="margin-bottom: 20px;">
+        <p style="margin: 5px 0; font-weight: 700; font-size: 1.2rem; font-family: var(--font-display);">NeatNest LLC</p>
+        <p style="margin: 5px 0;">274 Woodhouse Ave, Wallingford, CT 06492</p>
+        <p style="margin: 5px 0;">
+          <a href="tel:+12035007034" style="color: var(--blue); text-decoration: none; font-weight: 600;">(203) 500-7034</a>
+        </p>
+      </div>
+
+      <!-- Town Links (Hub & Spoke) -->
+      <div style="margin: 20px 0; padding: 15px 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
+        <p style="margin: 0 0 10px 0; font-weight: 600;">Proudly Serving:</p>
+        <p style="margin: 0;">
+          <a href="wallingford-cleaning.html" style="color: var(--blue); text-decoration: none; font-weight: 600; margin: 0 10px;">Wallingford</a> •
+          <a href="north-haven-cleaning.html" style="color: var(--blue); text-decoration: none; font-weight: 600; margin: 0 10px;">North Haven</a> •
+          <a href="cheshire-cleaning.html" style="color: var(--blue); text-decoration: none; font-weight: 600; margin: 0 10px;">Cheshire</a>
+        </p>
+      </div>
+
+      <!-- Copyright and Home Link -->
+      <div style="margin-top: 20px; font-size: 0.95rem;">
+        <p style="margin: 5px 0;">
+          © <span id="year"></span> NeatNest LLC • Fully Insured & Bonded • 
+          <a href="index.html" style="color: var(--blue); text-decoration: none;">Home</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Auto-update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>      </a>
+      <a href="https://maps.app.goo.gl/YP8Fn2mmzQTBQ2F69" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile">
+        <img src="images/google.svg" alt="Google logo" />
+      </a>
+    </div>
+    
+    <img src="images/logo.jpg" alt="NeatNest LLC logo" class="logo" />
+    <h1>[SERVICE NAME] | NeatNest LLC</h1>
+    <p>Professional [SERVICE NAME] in Wallingford, CT & surrounding areas</p>
+    <a class="call-btn" href="tel:+12035007034">CALL NOW</a>
+  </header>
+
+  <main>
+    <!-- Hero Section with Service Image -->
+    <section class="section">
+      <img src="images/service-hero-placeholder.jpg" alt="[SERVICE NAME]" style="width: 100%; max-width: 800px; border-radius: 12px; margin-bottom: 20px;">
+      
+      <h2>[SERVICE NAME]</h2>
+      <p><strong>Brief service tagline or key benefit goes here.</strong></p>
+      <p>This is where you describe the service in 2-3 sentences. Explain what makes this service valuable and who it's perfect for. Keep it simple and benefit-focused.</p>
+    </section>
+
+    <!-- What's Included Section - TWO COLUMNS -->
+    <section class="section">
+      <h2>What's Included</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px 40px; max-width: 800px; margin: 20px auto; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+          <li>Service feature or task #1</li>
+          <li>Service feature or task #2</li>
+          <li>Service feature or task #3</li>
+          <li>Service feature or task #4</li>
+          <li>Service feature or task #5</li>
+          <li>Service feature or task #6</li>
+          <li>Service feature or task #7</li>
+          <li>Service feature or task #8</li>
+        </ul>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+          <li>Service feature or task #9</li>
+          <li>Service feature or task #10</li>
+          <li>Service feature or task #11</li>
+          <li>Service feature or task #12</li>
+          <li>Service feature or task #13</li>
+          <li>Service feature or task #14</li>
+          <li>Service feature or task #15</li>
+          <li>Service feature or task #16</li>
+        </ul>
+      </div>
+      
+      <!-- Mobile Responsive: Stack to Single Column on Small Screens -->
+      <style>
+        @media (max-width: 768px) {
+          .section div[style*="grid-template-columns: 1fr 1fr"] {
+            grid-template-columns: 1fr !important;
+            gap: 10px !important;
+          }
+        }
+      </style>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section">
+      <h2>Why Choose NeatNest LLC?</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+        <div>
+          <img src="images/icon-placeholder-1.png" alt="Icon" style="width: 60px; margin-bottom: 10px;">
+          <h3 style="font-size: 1.3rem; margin: 10px 0;">Benefit #1</h3>
+          <p>Short description of this benefit.</p>
+        </div>
+        <div>
+          <img src="images/icon-placeholder-2.png" alt="Icon" style="width: 60px; margin-bottom: 10px;">
+          <h3 style="font-size: 1.3rem; margin: 10px 0;">Benefit #2</h3>
+          <p>Short description of this benefit.</p>
+        </div>
+        <div>
+          <img src="images/icon-placeholder-3.png" alt="Icon" style="width: 60px; margin-bottom: 10px;">
+          <h3 style="font-size: 1.3rem; margin: 10px 0;">Benefit #3</h3>
+          <p>Short description of this benefit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before/After Images (Optional) -->
+    <section class="section">
+      <h2>See The Difference</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+        <div>
+          <img src="images/before-placeholder.jpg" alt="Before cleaning" style="width: 100%; border-radius: 8px;">
+          <p style="margin-top: 8px; font-weight: 600;">Before</p>
+        </div>
+        <div>
+          <img src="images/after-placeholder.jpg" alt="After cleaning" style="width: 100%; border-radius: 8px;">
+          <p style="margin-top: 8px; font-weight: 600;">After</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <h2>What Our Customers Say</h2>
+      <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--blue);">
+        <p style="font-style: italic; margin-bottom: 10px;">"Quote from a happy customer about this specific service. Make it relevant and authentic."</p>
+        <p style="font-weight: 600; margin: 0;">— Customer Name, Town</p>
+      </div>
+      <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--blue);">
+        <p style="font-style: italic; margin-bottom: 10px;">"Another testimonial highlighting a different aspect of the service or your company."</p>
+        <p style="font-weight: 600; margin: 0;">— Customer Name, Town</p>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="section">
+      <h2>Serving Your Community</h2>
+      <p>NeatNest LLC proudly provides [SERVICE NAME] throughout:</p>
+      <p style="font-weight: 600; color: var(--blue);">
+        Wallingford • Cheshire • Branford • Guilford • East Haven<br>
+        Durham • Madison • Middlefield • North Branford • North Haven
+      </p>
+    </section>
+
+    <!-- Quote Form -->
+    <section id="contact" class="section">
+      <h2>Get Your Free Quote</h2>
+      <p>Ready to experience the NeatNest difference? Contact us today!</p>
+      
+      <form name="contact" method="POST" netlify>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="service" value="[SERVICE NAME]" />
+        
+        <label>Your Name <input name="name" required /></label>
+        <label>Phone <input name="phone" required /></label>
+        <label>Email <input name="email" type="email" required /></label>
+        <label>Tell us about your cleaning needs
+          <textarea name="message" rows="4" placeholder="Square footage, specific concerns, preferred date, etc."></textarea>
+        </label>
+        <button type="submit">Get My Free Quote</button>
+      </form>
+      
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <strong>NeatNest LLC</strong><br>
+        274 Woodhouse Ave, Wallingford, CT 06492<br>
+        Phone: <a href="tel:+12035007034">(203) 500-7034</a><br>
+        Email: <a href="mailto:info@neatnestllc.com">info@neatnestllc.com</a><br>
+        <strong>Hours:</strong> Mon–Sun: 7 AM–8 PM
+      </div>
+    </section>
+
+    <!-- Other Services Link -->
+    <section class="section" style="background: #f8fafc;">
+      <h2>Explore Our Other Services</h2>
+      <p>NeatNest LLC offers a full range of professional cleaning services:</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 15px;">
+        <a href="routine-housekeeping.html" style="padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Routine Housekeeping</a>
+        <a href="deep-clean-service.html" style="padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Deep Clean</a>
+        <a href="move-in-out.html" style="padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Move In/Out</a>
+        <a href="office-cleaning.html" style="padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Office Cleaning</a>
+        <a href="carpet-upholstery.html" style="padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Carpet & Upholstery</a>
+      </div>
+      <p style="margin-top: 20px;"><a href="index.html" style="color: var(--blue); font-weight: 600;">← Back to Home</a></p>
+    </section>
+
+  </main>
+
   <!-- Footer -->
   <footer class="site-footer">
     © <span id="year"></span> NeatNest LLC • Wallingford, CT • Fully Insured & Bonded

@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="google-site-verification" content="mnmC5PS4lYmcLw-1vwb80J6D3rb3r5V0vBiByU0r0yc" />
-  <meta name="description" content="Top-to-Bottom Deep Clean service by NeatNest LLC in Wallingford, CT. Professional deep cleaning for every room, inside appliances, grout, baseboards & more." />
+  <meta name="description" content="Professional Deep Cleaning Services in Wallingford, CT. Top-to-bottom deep clean by NeatNest LLC - fully insured & bonded. Serving Wallingford, Cheshire & Branford." />
  
-  <meta property="og:title" content="Top-to-Bottom Deep Clean | NeatNest LLC" />
-  <meta property="og:description" content="Experience the ultimate clean with our comprehensive deep cleaning service. We tackle every corner, surface, and space to leave your home sparkling." />
+  <meta property="og:title" content="Professional Deep Cleaning Services in Wallingford, CT | NeatNest LLC" />
+  <meta property="og:description" content="Top-to-bottom deep cleaning by NeatNest LLC. Fully insured & bonded family-owned company serving Wallingford, Cheshire & Branford, CT." />
   <meta property="og:image" content="https://neatnestllc.com/images/OG_logo.png" />
   <meta property="og:url" content="https://neatnestllc.com/deep-clean-service.html" />
   <meta property="og:type" content="website" />
-  <title>Top-to-Bottom Deep Clean Service | NeatNest LLC</title>
+  <title>Professional Deep Cleaning Services in Wallingford, CT | NeatNest LLC</title>
   <link rel="icon" href="images/favicon32.png" type="image/png">
   
   <!-- Google Fonts performance optimization -->
@@ -28,7 +28,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Top-to-Bottom Deep Clean",
+  "serviceType": "Professional Deep Cleaning",
   "provider": {
     "@type": "LocalBusiness",
     "name": "NeatNest LLC",
@@ -44,156 +44,409 @@
     }
   },
   "areaServed": [
-    "Branford, CT",
-    "Cheshire, CT",
-    "Guilford, CT",
-    "East Haven, CT",
-    "Middlefield, CT",
-    "Durham, CT",
-    "Madison, CT",
-    "North Haven, CT",
     "Wallingford, CT",
-    "North Branford, CT"
+    "Cheshire, CT",
+    "Branford, CT"
   ],
-  "description": "Comprehensive deep cleaning service that covers every room from top to bottom, including inside appliances, grout scrubbing, baseboard cleaning, and detailed sanitization."
+  "description": "Professional top-to-bottom deep cleaning service covering every room, inside appliances, grout scrubbing, baseboard cleaning, and detailed sanitization."
 }
 </script>
 
+<style>
+  /* Additional styles specific to landing page */
+  .landing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .landing-header .logo {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .header-phone {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  .cta-button {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Fredoka', sans-serif;
+    transition: transform 0.2s;
+    display: inline-block;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+  }
+  
+  .hero-landing {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/team-cleaning.jpg') center/cover;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 60px 20px;
+  }
+  
+  .hero-landing h1 {
+    font-size: 2.8rem;
+    font-family: 'Fredoka', sans-serif;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .hero-landing p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+  }
+  
+  .trust-bar {
+    background: #f8f9fa;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 3px solid #4a90e2;
+  }
+  
+  .trust-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .trust-item img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .service-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .service-table th {
+    background: #4a90e2;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  .service-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .service-table tr:hover {
+    background: #f8f9fa;
+  }
+  
+  .checkmark {
+    color: #4a90e2;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .local-proof {
+    background: #fff;
+    padding: 40px 20px;
+  }
+  
+  .landmarks {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 25px 0;
+  }
+  
+  .landmarks h3 {
+    color: #4a90e2;
+    margin-bottom: 15px;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  .landmarks ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .landmarks li::before {
+    content: "📍 ";
+    margin-right: 5px;
+  }
+  
+  .town-hub {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .town-hub h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  .town-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .town-link {
+    background: white;
+    color: #2c3e50;
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  .town-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .landing-header {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    
+    .header-right {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .hero-landing h1 {
+      font-size: 2rem;
+    }
+    
+    .trust-items {
+      gap: 20px;
+    }
+  }
+</style>
+
 </head>
 <body>
-  <header class="site-header">
-    <div class="social-links">
-      <a href="https://www.facebook.com/neatnestct" target="_blank" aria-label="Facebook">
-        <img src="images/facebook.svg" alt="Facebook logo" />
-      </a>
-      <a href="https://www.instagram.com/neatnestct" target="_blank" aria-label="Instagram">
-        <img src="images/Instagram.svg" alt="Instagram logo" />
-      </a>
-      <a href="https://maps.app.goo.gl/YP8Fn2mmzQTBQ2F69"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Google Business Profile">
-        <img src="images/google.svg" alt="Google logo" />
-      </a>
-    </div>
-
+  <!-- Landing Page Header -->
+  <header class="landing-header">
     <img src="images/logo.jpg" alt="NeatNest LLC logo" class="logo" />
-    <h1>Top-to-Bottom Deep Clean | NeatNest LLC</h1>
-    <p>Experience the ultimate clean with our <strong>comprehensive deep cleaning service</strong>. We tackle every corner, surface, and space to leave your home sparkling from top to bottom.</p>
-    <a class="call-btn" href="tel:+12035007034">CALL NOW</a>
+    <div class="header-right">
+      <a href="tel:+12035007034" class="header-phone">📞 (203) 500-7034</a>
+      <a href="#contact" class="cta-button">Get a Free Quote</a>
+    </div>
   </header>
+
+  <!-- Hero Section -->
+  <section class="hero-landing">
+    <div>
+      <h1>Professional Deep Cleaning Services in Wallingford, CT</h1>
+      <p>Top-to-bottom deep cleaning that leaves your home sparkling. Fully insured, bonded, and trusted by families across Wallingford, Cheshire, and Branford.</p>
+      <a href="#contact" class="cta-button" style="font-size: 1.2rem; padding: 15px 35px;">Schedule Your Deep Clean Today</a>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="trust-items">
+      <div class="trust-item">
+        <span style="font-size: 2rem;">🛡️</span>
+        <span>Fully Insured & Bonded</span>
+      </div>
+      <div class="trust-item">
+        <span style="font-size: 2rem;">👨‍👩‍👧‍👦</span>
+        <span>Family-Owned & Operated</span>
+      </div>
+      <div class="trust-item">
+        <span style="font-size: 2rem;">⭐⭐⭐⭐⭐</span>
+        <span>5-Star Rated</span>
+      </div>
+      <div class="trust-item">
+        <span style="font-size: 2rem;">📍</span>
+        <span>Based in Wallingford, CT</span>
+      </div>
+    </div>
+  </section>
 
   <main>
     
-    <section id="overview" class="section">
-      <h2>What's Included in Our Deep Clean</h2>
-      <p><strong>Our Top-to-Bottom Deep Clean goes beyond regular cleaning.</strong> We focus on areas that are often overlooked and provide a thorough, detailed cleaning that refreshes your entire home. Perfect for seasonal cleaning, preparing for guests, or when your home needs extra attention.</p>
-      <p>This service typically takes 4-8 hours depending on your home's size and condition. Our experienced team uses professional-grade products and equipment to deliver exceptional results every time.</p>
-    </section>
-
-    <section id="why-deep-clean" class="section">
-      <h2>Why Choose Deep Cleaning?</h2>
-      <ul class="services">
-        <li>
-          <img class="service-logo" src="images/service-logo-bottle.png" alt="Cartoon spray bottle" width="60" height="60">
-          <strong>Health Benefits:</strong> Eliminate allergens, dust mites, and bacteria that accumulate over time
-        </li>
-        <li>
-          <img class="service-logo" src="images/service-logo-mop.png" alt="Cartoon broom" width="60" height="60">
-          <strong>Fresh Start:</strong> Ideal for seasonal changes or preparing for special occasions
-        </li>
-        <li>
-          <img class="service-logo" src="images/service-logo-movein.png" alt="Cartoon home" width="60" height="60">
-          <strong>Detailed Attention:</strong> We clean areas that regular cleaning might miss
-        </li>
-        <li>
-          <img class="service-logo" src="images/service-logo-office.png" alt="Cartoon office building" width="60" height="60">
-          <strong>Professional Results:</strong> Our trained team delivers spotless results you can trust
-        </li>
-      </ul>
-    </section>
-
-    <section id="checklist" class="section">
-      <h2>Complete Deep Cleaning Checklist</h2>
-      <p>Here's everything we cover in our Top-to-Bottom Deep Clean service:</p>
+    <!-- Service Breakdown -->
+    <section id="service-breakdown" class="section">
+      <h2>What's Included in Your Deep Clean</h2>
+      <p><strong>Our Top-to-Bottom Deep Clean leaves no surface untouched.</strong> We go beyond regular cleaning to tackle the areas that need extra attention. Here's exactly what you get:</p>
       
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 25px;">
-        
-        <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #4a90e2;">
-          <h3 style="color: #4a90e2; margin-bottom: 15px;">🍳 Kitchen</h3>
-          <ul style="list-style: none; padding: 0; line-height: 1.8;">
-            <li>✓ Clean inside oven</li>
-            <li>✓ Clean inside refrigerator</li>
-            <li>✓ Clean inside microwave</li>
-            <li>✓ Wipe cabinet fronts & inside</li>
-            <li>✓ Scrub backsplash</li>
-            <li>✓ Clean under sink</li>
-            <li>✓ Degrease stovetop</li>
-            <li>✓ Polish fixtures</li>
-            <li>✓ Clean dishwasher exterior</li>
-          </ul>
-        </div>
+      <table class="service-table">
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>What We Clean</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>🍳 Kitchen</strong></td>
+            <td>
+              <span class="checkmark">✓</span> Inside oven deep clean<br>
+              <span class="checkmark">✓</span> Inside refrigerator<br>
+              <span class="checkmark">✓</span> Inside microwave<br>
+              <span class="checkmark">✓</span> Cabinet fronts & inside<br>
+              <span class="checkmark">✓</span> Backsplash scrubbing<br>
+              <span class="checkmark">✓</span> Stovetop degreasing<br>
+              <span class="checkmark">✓</span> Under sink cleaning<br>
+              <span class="checkmark">✓</span> Baseboards & fixtures
+            </td>
+          </tr>
+          <tr>
+            <td><strong>🚿 Bathrooms</strong></td>
+            <td>
+              <span class="checkmark">✓</span> Tile & grout scrubbing<br>
+              <span class="checkmark">✓</span> Shower/tub deep clean<br>
+              <span class="checkmark">✓</span> Toilet sanitization (inside & out)<br>
+              <span class="checkmark">✓</span> Mirror & fixture polishing<br>
+              <span class="checkmark">✓</span> Cabinet cleaning<br>
+              <span class="checkmark">✓</span> Soap scum removal<br>
+              <span class="checkmark">✓</span> Exhaust fan cleaning<br>
+              <span class="checkmark">✓</span> Baseboard wiping
+            </td>
+          </tr>
+          <tr>
+            <td><strong>🛋️ Living Areas</strong></td>
+            <td>
+              <span class="checkmark">✓</span> Ceiling fan dusting<br>
+              <span class="checkmark">✓</span> Light fixture cleaning<br>
+              <span class="checkmark">✓</span> Window sills & frames<br>
+              <span class="checkmark">✓</span> Baseboard cleaning<br>
+              <span class="checkmark">✓</span> All surface dusting<br>
+              <span class="checkmark">✓</span> Vacuum under furniture<br>
+              <span class="checkmark">✓</span> Vent & register cleaning<br>
+              <span class="checkmark">✓</span> Door & frame wiping
+            </td>
+          </tr>
+          <tr>
+            <td><strong>🛏️ Bedrooms</strong></td>
+            <td>
+              <span class="checkmark">✓</span> Complete surface dusting<br>
+              <span class="checkmark">✓</span> Under bed cleaning<br>
+              <span class="checkmark">✓</span> Baseboard wiping<br>
+              <span class="checkmark">✓</span> Closet floor cleaning<br>
+              <span class="checkmark">✓</span> Ceiling fan dusting<br>
+              <span class="checkmark">✓</span> Vacuum/mop all floors<br>
+              <span class="checkmark">✓</span> Mirror cleaning<br>
+              <span class="checkmark">✓</span> Window blind dusting
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-        <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #50c878;">
-          <h3 style="color: #50c878; margin-bottom: 15px;">🚿 Bathrooms</h3>
-          <ul style="list-style: none; padding: 0; line-height: 1.8;">
-            <li>✓ Scrub tile & grout</li>
-            <li>✓ Clean shower/tub thoroughly</li>
-            <li>✓ Sanitize toilet inside & out</li>
-            <li>✓ Polish mirrors & fixtures</li>
-            <li>✓ Clean cabinet fronts & inside</li>
-            <li>✓ Wipe baseboards</li>
-            <li>�� Remove soap scum buildup</li>
-            <li>✓ Clean exhaust fan</li>
-          </ul>
-        </div>
-
-        <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #ffa500;">
-          <h3 style="color: #ffa500; margin-bottom: 15px;">🛋️ Living Areas</h3>
-          <ul style="list-style: none; padding: 0; line-height: 1.8;">
-            <li>✓ Dust ceiling fans</li>
-            <li>✓ Clean light fixtures</li>
-            <li>✓ Wipe window sills & frames</li>
-            <li>✓ Clean baseboards</li>
-            <li>✓ Dust all surfaces</li>
-            <li>✓ Vacuum under furniture</li>
-            <li>✓ Clean vents & registers</li>
-            <li>✓ Wipe doors & frames</li>
-          </ul>
-        </div>
-
-        <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #9370db;">
-          <h3 style="color: #9370db; margin-bottom: 15px;">🛏️ Bedrooms</h3>
-          <ul style="list-style: none; padding: 0; line-height: 1.8;">
-            <li>✓ Dust all surfaces</li>
-            <li>✓ Clean under beds</li>
-            <li>✓ Wipe baseboards</li>
-            <li>✓ Clean closet floors</li>
-            <li>✓ Dust ceiling fans</li>
-            <li>✓ Vacuum/mop floors</li>
-            <li>✓ Clean mirrors</li>
-            <li>✓ Dust window blinds</li>
-          </ul>
-        </div>
-
+      <div style="background: #fff3cd; padding: 20px; border-left: 4px solid #ffc107; border-radius: 4px; margin: 25px 0;">
+        <strong>⏱️ Service Time:</strong> 4-8 hours depending on home size and condition<br>
+        <strong>💰 Starting Price:</strong> $299 (price varies based on home size)<br>
+        <strong>🧴 Products:</strong> Professional-grade, eco-friendly cleaning solutions
       </div>
     </section>
 
-    <section id="pricing" class="section">
-      <h2>Pricing & Booking</h2>
-      <p><strong>Starting at $299</strong> — Price varies based on home size and condition.</p>
-      <p>Average completion time: 4-8 hours</p>
-      <p>Ready to experience a spotless home? Contact us today for a free, no-obligation quote. We serve Wallingford, Branford, Cheshire, Guilford, East Haven, Middlefield, Durham, Madison, North Haven, and North Branford, CT.</p>
-      <a class="call-btn" href="#contact" style="display: inline-block; margin-top: 15px;">Get a Free Quote</a>
+    <!-- Hyper-Local Proof -->
+    <section class="local-proof">
+      <div class="section">
+        <h2>Proudly Serving Your Neighborhood</h2>
+        
+        <div class="landmarks">
+          <h3>We Clean Homes Throughout Wallingford, Cheshire & Branford</h3>
+          <ul>
+            <li>Near Choate Rosemary Hall in Wallingford</li>
+            <li>Around Quinnipiac River Park</li>
+            <li>East Wallingford & Yalesville areas</li>
+            <li>Near Cheshire Academy</li>
+            <li>Around Mixville section of Cheshire</li>
+            <li>Near Branford Hills Shopping Center</li>
+            <li>Around Branford Center & Town Green</li>
+            <li>Pine Orchard & Stony Creek neighborhoods</li>
+            <li>Near Durham Road corridor</li>
+            <li>Community Lake area</li>
+          </ul>
+        </div>
+
+        <p style="text-align: center; font-size: 1.1rem; margin: 30px 0;">
+          <strong>Based right here at 274 Woodhouse Ave, Wallingford</strong> — we're your local neighbors committed to keeping our community's homes clean and healthy.
+        </p>
+      </div>
     </section>
 
-    <section id="testimonials" class="section">
-      <h2>What Our Clients Say</h2>
+    <!-- Local Testimonials -->
+    <section id="testimonials" class="section" style="background: #f8f9fa;">
+      <h2>What Your Neighbors Are Saying</h2>
+      <p style="text-align: center; margin-bottom: 30px;"><strong>Real reviews from real neighbors in Wallingford, Cheshire & Branford</strong></p>
+      
       <div class="slider">
-        <div class="slide active">"I could not be Happier with the service from Neat Nest LLC. Had a deep cleaning done before the holidays. It was far beyond what I imagined. Rugs, stove, floors, fixtures. Everything. You won't be disappointed and won't find a more trust worthy service in your home." — David T.</div>
-        <div class="slide">"Mike and his crew are a pleasure to have in our home. The company is run in a businesslike way, with Mike being very professional. They are reliable, friendly, and trustworthy." — Jennifer L.</div>
-        <div class="slide">"Top notch attention to detail. I've tried numerous other cleaning services and no one even comes close!" — Nicki B.</div>
-        <div class="slide">"Michael and his team came to clean my condo and they did an amazing job. I walked in and could smell the cleanliness in the air. The price is very reasonable for what you get. I will definitely be using them again!" — Sarah M.</div>
+        <div class="slide active">
+          <strong>⭐⭐⭐⭐⭐</strong><br>
+          "I could not be Happier with the service from Neat Nest LLC. Had a deep cleaning done before the holidays. It was far beyond what I imagined. Rugs, stove, floors, fixtures. Everything. You won't be disappointed and won't find a more trust worthy service in your home."<br>
+          <em>— David T., Wallingford, CT</em>
+        </div>
+        <div class="slide">
+          <strong>⭐⭐⭐⭐⭐</strong><br>
+          "Mike and his crew are a pleasure to have in our home. The company is run in a businesslike way, with Mike being very professional. They are reliable, friendly, and trustworthy."<br>
+          <em>— Jennifer L., Wallingford, CT</em>
+        </div>
+        <div class="slide">
+          <strong>⭐⭐⭐⭐⭐</strong><br>
+          "Top notch attention to detail. I've tried numerous other cleaning services and no one even comes close!"<br>
+          <em>— Nicki B., Cheshire, CT</em>
+        </div>
+        <div class="slide">
+          <strong>⭐⭐⭐⭐⭐</strong><br>
+          "Michael and his team came to clean my condo and they did an amazing job. I walked in and could smell the cleanliness in the air. The price is very reasonable for what you get. I will definitely be using them again!"<br>
+          <em>— Sarah M., Branford, CT</em>
+        </div>
       </div>
 
       <div class="slider-controls">
@@ -202,34 +455,54 @@
       </div>
     </section>
 
+    <!-- Contact Form -->
     <section id="contact" class="section">
-      <h2>Request a Quote</h2>
-      <p>Serving <strong>Wallingford, CT</strong> & surrounding areas.</p>
-      <form name="contact-deep-clean" method="POST" netlify>
+      <h2>Get Your Free Quote Today</h2>
+      <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px;">
+        <strong>Ready for a spotless home?</strong> Fill out the form below or call us directly at <a href="tel:+12035007034" style="color: #4a90e2; font-weight: 700;">(203) 500-7034</a>
+      </p>
+      
+      <form name="contact-deep-clean" method="POST" netlify style="max-width: 600px; margin: 0 auto;">
         <input type="hidden" name="form-name" value="contact-deep-clean" />
         <input type="hidden" name="service" value="Top-to-Bottom Deep Clean" />
         <label>Your Name <input name="name" required /></label>
         <label>Phone <input name="phone" required /></label>
         <label>Email <input name="email" type="email" required /></label>
-        <label>Tell us about your home and cleaning needs
-          <textarea name="message" rows="4" required></textarea>
+        <label>Home Address (City/Town)
+          <input name="location" placeholder="e.g., Wallingford, CT" required />
         </label>
-        <button type="submit">Send</button>
+        <label>Tell us about your home and cleaning needs
+          <textarea name="message" rows="4" placeholder="Home size, number of rooms, any special requests..." required></textarea>
+        </label>
+        <button type="submit" style="width: 100%; font-size: 1.2rem; padding: 15px;">Get My Free Quote</button>
       </form>
       
       <!-- Contact info block -->
-      <div class="contact-info">
+      <div class="contact-info" style="margin-top: 40px;">
         <strong>NeatNest LLC</strong><br>
         274 Woodhouse Ave, Wallingford, CT 06492<br>
         Phone: <a href="tel:+12035007034">(203) 500-7034</a><br>
         Email: <a href="mailto:info@neatnestllc.com">info@neatnestllc.com</a><br>
         <strong>Hours:</strong> Mon–Sun: 7 AM–8 PM
       </div>
-
-      <p style="margin-top: 25px;"><a href="index.html" style="color: #4a90e2; text-decoration: none;">← Back to Home</a></p>
     </section>
-  
+
   </main>
+
+  <!-- Town Hub Footer -->
+  <section class="town-hub">
+    <h3>Proudly Serving Our Neighbors In:</h3>
+    <div class="town-links">
+      <a href="wallingford-cleaning.html" class="town-link">Wallingford, CT</a>
+      <a href="cheshire-cleaning.html" class="town-link">Cheshire, CT</a>
+      <a href="branford-cleaning.html" class="town-link">Branford, CT</a>
+    </div>
+    <p style="margin-top: 30px; font-size: 0.9rem;">Also serving: Durham, East Haven, Guilford, Madison, Middlefield, North Branford & North Haven</p>
+  </section>
+
+  <footer style="background: #1a252f; color: #ccc; text-align: center; padding: 20px;">
+    <p>&copy; 2026 NeatNest LLC. All rights reserved. | <a href="index.html" style="color: #4a90e2;">Home</a> | Fully Insured & Bonded</p>
+  </footer>
 
   <script>
     // Testimonial slider functionality
@@ -247,8 +520,8 @@
     prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
     nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
 
-    // Auto-advance every 5 seconds
-    setInterval(() => showSlide(currentSlide + 1), 5000);
+    // Auto-advance every 6 seconds
+    setInterval(() => showSlide(currentSlide + 1), 6000);
   </script>
 
 </body>

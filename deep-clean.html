@@ -23,6 +23,65 @@
   
   <link rel="stylesheet" href="style.css" />
   <link rel="canonical" href="https://neatnestllc.com/deep-clean-service.html" />
+  
+  <style>
+    /* FAQ Accordion Styles */
+    .faq-item {
+      border: 2px solid var(--blue);
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      background: white;
+    }
+    
+    .faq-question {
+      background: var(--blue);
+      color: white;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s ease;
+      font-family: var(--font-accent);
+    }
+    
+    .faq-question:hover {
+      background: #2394d9;
+    }
+    
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-question.active::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0 20px;
+      background: #f8fafc;
+    }
+    
+    .faq-answer.active {
+      max-height: 500px;
+      padding: 15px 20px;
+    }
+    
+    .faq-answer p {
+      margin: 0;
+      line-height: 1.7;
+    }
+  </style>
 </head>
 
 <body>
@@ -213,28 +272,72 @@
       </div>
     </section>
 
-    <!-- 9) FAQ (yes—include it) -->
+    <!-- 9) FAQ with Accordion (first one expanded) -->
     <section class="section" style="background: #f8fafc;">
       <h2>Deep Cleaning FAQs</h2>
       
-      <div style="text-align: left; max-width: 800px; margin: 20px auto;">
-        <h3 style="color: var(--blue); font-size: 1.2rem; margin-top: 20px;">How much does a deep cleaning cost in Wallingford CT?</h3>
-        <p>Deep cleaning pricing varies based on home size, condition, and specific needs. Most homes in Wallingford, North Haven, and Cheshire range from $250–$600. We offer free, no-obligation quotes so you know exactly what to expect before we start.</p>
+      <div style="max-width: 800px; margin: 20px auto;">
+        
+        <!-- FAQ 1 - EXPANDED by default -->
+        <div class="faq-item">
+          <div class="faq-question active" onclick="toggleFAQ(this)">
+            How much does a deep cleaning cost in Wallingford CT?
+          </div>
+          <div class="faq-answer active">
+            <p>Deep cleaning pricing varies based on home size, condition, and specific needs. Most homes in Wallingford, North Haven, and Cheshire range from $250–$600. We offer free, no-obligation quotes so you know exactly what to expect before we start.</p>
+          </div>
+        </div>
 
-        <h3 style="color: var(--blue); font-size: 1.2rem; margin-top: 20px;">How long does a deep clean take?</h3>
-        <p>A typical deep clean takes 4–8 hours depending on the size of your home and the level of buildup. Larger homes or homes that haven't been professionally cleaned in a while may take longer. Our team works efficiently without cutting corners.</p>
+        <!-- FAQ 2 - Collapsed -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            How long does a deep clean take?
+          </div>
+          <div class="faq-answer">
+            <p>A typical deep clean takes 4–8 hours depending on the size of your home and the level of buildup. Larger homes or homes that haven't been professionally cleaned in a while may take longer. Our team works efficiently without cutting corners.</p>
+          </div>
+        </div>
 
-        <h3 style="color: var(--blue); font-size: 1.2rem; margin-top: 20px;">Do you bring supplies and equipment?</h3>
-        <p>Yes! We bring all cleaning supplies, tools, and equipment needed for the job. We use professional-grade, eco-friendly products that are safe for your family and pets. If you have specific product preferences, just let us know.</p>
+        <!-- FAQ 3 - Collapsed -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Do you bring supplies and equipment?
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We bring all cleaning supplies, tools, and equipment needed for the job. We use professional-grade, eco-friendly products that are safe for your family and pets. If you have specific product preferences, just let us know.</p>
+          </div>
+        </div>
 
-        <h3 style="color: var(--blue); font-size: 1.2rem; margin-top: 20px;">What's the difference between deep cleaning and standard cleaning?</h3>
-        <p>Standard cleaning focuses on maintenance—dusting, vacuuming, wiping surfaces, and keeping things tidy. Deep cleaning goes further: scrubbing grout, degreasing buildup, cleaning baseboards, dusting ceiling fans, and tackling neglected areas. It's a comprehensive reset for your home.</p>
+        <!-- FAQ 4 - Collapsed -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            What's the difference between deep cleaning and standard cleaning?
+          </div>
+          <div class="faq-answer">
+            <p>Standard cleaning focuses on maintenance—dusting, vacuuming, wiping surfaces, and keeping things tidy. Deep cleaning goes further: scrubbing grout, degreasing buildup, cleaning baseboards, dusting ceiling fans, and tackling neglected areas. It's a comprehensive reset for your home.</p>
+          </div>
+        </div>
 
-        <h3 style="color: var(--blue); font-size: 1.2rem; margin-top: 20px;">How often should I schedule deep cleaning?</h3>
-        <p>Most homeowners schedule a deep clean 2–4 times per year, often with the change of seasons or before major holidays. If you also have regular maintenance cleaning, annual or semi-annual deep cleans are typically enough to keep your home in excellent condition.</p>
+        <!-- FAQ 5 - Collapsed -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            How often should I schedule deep cleaning?
+          </div>
+          <div class="faq-answer">
+            <p>Most homeowners schedule a deep clean 2–4 times per year, often with the change of seasons or before major holidays. If you also have regular maintenance cleaning, annual or semi-annual deep cleans are typically enough to keep your home in excellent condition.</p>
+          </div>
+        </div>
 
-        <h3 style="color: var(--blue); font-size: 1.2rem; margin-top: 20px;">Do you offer deep cleaning in North Haven and Cheshire?</h3>
-        <p>Absolutely! We proudly serve Wallingford, North Haven, and Cheshire CT with the same high-quality deep cleaning service. Our team is familiar with homes throughout the area and provides consistent, reliable service across all three towns.</p>
+        <!-- FAQ 6 - Collapsed -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Do you offer deep cleaning in North Haven and Cheshire?
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! We proudly serve Wallingford, North Haven, and Cheshire CT with the same high-quality deep cleaning service. Our team is familiar with homes throughout the area and provides consistent, reliable service across all three towns.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -323,6 +426,16 @@
   <script>
     // Auto-update year
     document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // FAQ Accordion Toggle Function
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      const isActive = element.classList.contains('active');
+      
+      // Toggle the clicked FAQ
+      element.classList.toggle('active');
+      answer.classList.toggle('active');
+    }
   </script>
 </body>
 </html>

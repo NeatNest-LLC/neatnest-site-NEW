@@ -150,19 +150,19 @@
       
       <!-- Badge 1: Family-Owned -->
       <div style="display: flex; align-items: center; gap: 8px;">
-        <img src="images/icon-family.png" alt="Family owned icon" style="width: 32px; height: 32px;">
+        <img src="images/badge-family.png" alt="Family owned icon" style="width: 32px; height: 32px;">
         <span style="font-weight: 600; color: var(--blue); font-size: 1rem;">Family-Owned</span>
       </div>
 
       <!-- Badge 2: Fully Insured & Bonded -->
       <div style="display: flex; align-items: center; gap: 8px;">
-        <img src="images/icon-insured.png" alt="Insured and bonded icon" style="width: 32px; height: 32px;">
+        <img src="images/badge-insured.png" alt="Insured and bonded icon" style="width: 32px; height: 32px;">
         <span style="font-weight: 600; color: var(--blue); font-size: 1rem;">Fully Insured & Bonded</span>
       </div>
 
       <!-- Badge 3: 5-Star Rated -->
       <div style="display: flex; align-items: center; gap: 8px;">
-        <img src="https://www.gstatic.com/images/icons/material/system/2x/star_rate_googblue_36dp.png" alt="5-star rating icon" style="width: 32px; height: 32px;">
+        <img src="images/badge-star.png" alt="5-star rating icon" style="width: 32px; height: 32px;">
         <span style="font-weight: 600; color: var(--blue); font-size: 1rem;">5-Star Rated</span>
       </div>
 
@@ -471,7 +471,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     
     // FAQ Accordion Toggle Function
-    function toggleFAQ(element) {
+    function toggleFAQ(this) {
       const answer = element.nextElementSibling;
       const isActive = element.classList.contains('active');
       

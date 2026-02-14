@@ -128,7 +128,7 @@
       color: var(--blue);
     }
 
-    /* Dropdown styling - ENHANCED */
+    /* Dropdown styling - SIMPLE VERSION */
     .nav-dropdown {
       position: relative;
     }
@@ -137,27 +137,24 @@
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 8px;
-      background: var(--blue);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 700;
+      gap: 5px;
+      color: var(--ink);
+      font-weight: 600;
       font-size: 1rem;
       font-family: var(--font-accent);
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 6px rgba(42, 169, 224, 0.2);
+      padding: 10px 15px;
+      transition: color 0.3s ease;
     }
 
     .nav-dropdown-toggle:hover {
-      background: #2394d9;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(42, 169, 224, 0.3);
+      color: var(--blue);
     }
 
     .nav-dropdown-toggle::after {
       content: '▾';
       font-size: 0.9rem;
+      color: var(--blue);
+      font-weight: bold;
       transition: transform 0.3s ease;
     }
 
@@ -260,7 +257,7 @@
       }
 
       .nav-dropdown-toggle {
-        padding: 8px 16px;
+        padding: 8px 12px;
         font-size: 0.9rem;
       }
     }
@@ -301,7 +298,7 @@
       .nav-dropdown-toggle {
         width: 100%;
         justify-content: space-between;
-        margin: 10px 0;
+        padding: 15px 10px;
       }
 
       .nav-dropdown-menu {
@@ -345,7 +342,7 @@
     <ul class="nav-menu" id="navMenu">
       <li><a href="index.html">Home</a></li>
       
-      <!-- Services Dropdown - ENHANCED -->
+      <!-- Services Dropdown - CLEAN & SIMPLE -->
       <li class="nav-dropdown">
         <span class="nav-dropdown-toggle">Services</span>
         <ul class="nav-dropdown-menu">

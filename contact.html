@@ -13,15 +13,16 @@
   
   <title>Contact NeatNest LLC | House Cleaning in Wallingford, North Haven & Cheshire CT</title>
   <link rel="icon" href="images/favicon32.png" type="image/png">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="canonical" href="https://neatnestllc.com/contact.html" />
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&family=Nunito:wght@400;600;700&family=Quicksand:wght@500;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&family=Nunito:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" media="print" onload="this.media='all'">
-
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="canonical" href="https://neatnestllc.com/contact.html" />
+  
   <!-- LocalBusiness Schema for Contact Page -->
   <script type="application/ld+json">
   {
@@ -41,15 +42,15 @@
     "areaServed": [
       {
         "@type": "City",
-        "name": "Wallingford"
+        "name": "Wallingford, CT"
       },
       {
         "@type": "City",
-        "name": "North Haven"
+        "name": "North Haven, CT"
       },
       {
         "@type": "City",
-        "name": "Cheshire"
+        "name": "Cheshire, CT"
       }
     ],
     "openingHours": "Mo-Su 07:00-20:00"
@@ -57,6 +58,244 @@
   </script>
 
   <style>
+    /* Navigation Bar Styles - SAME AS INDEX */
+    .main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+      height: 70px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .main-nav.hidden {
+      transform: translateY(-100%);
+    }
+
+    .nav-logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li {
+      position: relative;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      font-family: var(--font-accent);
+      padding: 10px 15px;
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--blue);
+    }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-toggle {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      font-family: var(--font-accent);
+      padding: 10px 15px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-dropdown-toggle:hover {
+      color: var(--blue);
+    }
+
+    .nav-dropdown-toggle::after {
+      content: '▾';
+      font-size: 0.9rem;
+      color: var(--blue);
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-toggle::after {
+      transform: rotate(180deg);
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      padding: 10px 0;
+      margin-top: 5px;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-dropdown-menu li {
+      list-style: none;
+    }
+
+    .nav-dropdown-menu a {
+      padding: 12px 20px;
+      display: block;
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: #f8fafc;
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      background: var(--orange);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      font-family: var(--font-accent);
+      min-width: 48px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-cta:hover {
+      background: #e66a15;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 122, 24, 0.3);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--blue);
+      padding: 10px;
+    }
+
+    body {
+      padding-top: 70px;
+    }
+
+    /* Footer Styles - SAME AS INDEX */
+    .site-footer {
+      background: var(--card);
+      color: var(--ink);
+      padding: 30px 20px 15px;
+      border-top: 3px solid var(--blue);
+    }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 20px;
+    }
+
+    .footer-col h3 {
+      color: var(--blue);
+      font-family: var(--font-accent);
+      font-size: 1.1rem;
+      margin: 0 0 10px 0;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 6px;
+    }
+
+    .footer-col ul li a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--blue);
+    }
+
+    .footer-contact {
+      margin-top: 15px;
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+
+    .footer-contact a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
     /* Contact Page Specific Styles */
     .contact-hero {
       text-align: center;
@@ -175,7 +414,92 @@
       border: 0;
     }
 
+    /* Mobile Responsive */
+    @media (max-width: 1024px) {
+      .main-nav {
+        padding: 0 20px;
+      }
+
+      .nav-menu {
+        gap: 20px;
+      }
+
+      .nav-menu a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+
+      .nav-dropdown-toggle {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+    }
+
     @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .nav-menu.active {
+        max-height: 600px;
+      }
+
+      .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+      }
+
+      .nav-menu a {
+        padding: 15px 10px;
+      }
+
+      .nav-dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+        padding: 15px 10px;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: #f8fafc;
+        margin-left: 20px;
+        display: none;
+      }
+
+      .nav-dropdown.active .nav-dropdown-menu {
+        display: block;
+      }
+
+      .nav-cta {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
       .contact-hero h1 {
         font-size: 2rem;
       }
@@ -207,6 +531,40 @@
 </head>
 
 <body>
+  <!-- Global Sticky Navigation Bar -->
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html" class="nav-logo-link" aria-label="NeatNest LLC - Return to homepage">
+      <img src="images/logo.jpg" alt="NeatNest LLC Professional House Cleaning Services Logo" class="nav-logo" />
+    </a>
+
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+      ☰
+    </button>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      
+      <li class="nav-dropdown">
+        <span class="nav-dropdown-toggle">Services</span>
+        <ul class="nav-dropdown-menu">
+          <li><a href="deep-house-cleaning.html">Deep Cleaning</a></li>
+          <li><a href="recurring-cleaning.html">Recurring Cleaning</a></li>
+          <li><a href="routine-housekeeping.html">Standard Cleaning</a></li>
+          <li><a href="move-in-out.html">Move-In/Move-Out</a></li>
+          <li><a href="office-cleaning.html">Office Cleaning</a></li>
+          <li><a href="carpet-upholstery.html">Carpet & Upholstery</a></li>
+        </ul>
+      </li>
+
+      <li><a href="wallingford-ct-house-cleaning.html">Wallingford</a></li>
+      <li><a href="north-haven-ct-house-cleaning.html">North Haven</a></li>
+      <li><a href="cheshire-ct-house-cleaning.html">Cheshire</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a href="tel:+12035007034" class="nav-cta">📞 CALL NOW</a>
+  </nav>
+
   <!-- Hero Section -->
   <header class="contact-hero">
     <h1>Contact NeatNest LLC</h1>
@@ -234,7 +592,7 @@
       <h2>Request a Free Quote</h2>
       <p style="max-width: 600px; margin: 0 auto 25px; text-align: center;">Fill out the form below and we'll get back to you with a personalized quote for your cleaning needs.</p>
       
-      <form name="contact-quote" method="POST" netlify>
+      <form name="contact-quote" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact-quote" />
         
         <label>Full Name <input name="name" required /></label>
@@ -247,7 +605,6 @@
             <option value="Wallingford">Wallingford</option>
             <option value="North Haven">North Haven</option>
             <option value="Cheshire">Cheshire</option>
-            <option value="Other">Other</option>
           </select>
         </label>
 
@@ -304,21 +661,88 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer" style="background: var(--card); color: var(--ink); padding: 30px 20px 15px; text-align: center; border-top: 3px solid var(--blue);">
-    <p style="margin: 0 0 10px 0;">
-      <strong>NeatNest LLC</strong> • Wallingford, CT • 
-      <a href="tel:+12035007034" style="color: var(--blue); text-decoration: none; font-weight: 600;">(203) 500-7034</a> • 
-      <a href="mailto:info@neatnestllc.com" style="color: var(--blue); text-decoration: none;">info@neatnestllc.com</a>
-    </p>
-    <p style="margin: 0; font-size: 0.9rem; color: #666;">
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h3>Cleaning Services</h3>
+        <ul>
+          <li><a href="deep-house-cleaning.html">Deep House Cleaning</a></li>
+          <li><a href="recurring-cleaning.html">Recurring House Cleaning</a></li>
+          <li><a href="move-in-out.html">Move-In / Move-Out Cleaning</a></li>
+          <li><a href="office-cleaning.html">Office Cleaning</a></li>
+          <li><a href="carpet-upholstery.html">Carpet & Upholstery Cleaning</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Service Areas</h3>
+        <ul>
+          <li><a href="wallingford-ct-house-cleaning.html">Wallingford, CT</a></li>
+          <li><a href="north-haven-ct-house-cleaning.html">North Haven, CT</a></li>
+          <li><a href="cheshire-ct-house-cleaning.html">Cheshire, CT</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p class="footer-contact">
+          <strong>NeatNest LLC</strong><br>
+          Wallingford, CT<br>
+          <a href="tel:+12035007034">(203) 500-7034</a><br>
+          <a href="mailto:info@neatnestllc.com">info@neatnestllc.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
       © <span id="year"></span> NeatNest LLC • Serving Wallingford, North Haven & Cheshire, CT
-    </p>
+    </div>
   </footer>
 
   <script>
     // Auto-update year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+
+    mobileMenuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+    });
+
+    navDropdowns.forEach(dropdown => {
+      dropdown.querySelector('.nav-dropdown-toggle').addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          dropdown.classList.toggle('active');
+        }
+      });
+    });
+
+    // Sticky nav show/hide on scroll
+    let lastScrollTop = 0;
+    const mainNav = document.getElementById('mainNav');
+    const scrollThreshold = 200;
+
+    window.addEventListener('scroll', function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > scrollThreshold) {
+        if (scrollTop > lastScrollTop) {
+          mainNav.classList.add('hidden');
+        } else {
+          mainNav.classList.remove('hidden');
+        }
+      }
+      
+      lastScrollTop = scrollTop;
+    });
   </script>
 </body>
 </html>

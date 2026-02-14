@@ -25,44 +25,41 @@
   <link rel="canonical" href="https://neatnestllc.com/" />
   
   <!-- Updated Schema - 3 Towns Only -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "CleaningService"],
-    "name": "NeatNest LLC",
-    "image": "https://neatnestllc.com/images/logo.jpg",
-    "telephone": "+1-203-500-7034",
-    "email": "info@neatnestllc.com",
-    "url": "https://neatnestllc.com/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "274 Woodhouse Ave",
-      "addressLocality": "Wallingford",
-      "addressRegion": "CT",
-      "postalCode": "06492",
-      "addressCountry": "US"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Wallingford",
-        "addressRegion": "CT"
-      },
-      {
-        "@type": "City",
-        "name": "North Haven",
-        "addressRegion": "CT"
-      },
-      {
-        "@type": "City",
-        "name": "Cheshire",
-        "addressRegion": "CT"
-      }
-    ],
-    "openingHours": "Mo-Su 07:00-20:00",
-    "priceRange": "$$"
-  }
-  </script>
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CleaningService"],
+  "@id": "https://neatnestllc.com/#localbusiness",
+  "name": "NeatNest LLC",
+  "image": "https://neatnestllc.com/images/logo.jpg",
+  "telephone": "+1-203-500-7034",
+  "email": "info@neatnestllc.com",
+  "url": "https://neatnestllc.com/",
+
+  "sameAs": [
+    "https://www.facebook.com/neatnestct",
+    "https://www.instagram.com/neatnestct",
+    "https://maps.app.goo.gl/YP8Fn2mmzQTBQ2F69"
+  ],
+
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Wallingford",
+    "addressRegion": "CT",
+    "addressCountry": "US"
+  },
+
+  "areaServed": [
+    "Wallingford, CT",
+    "North Haven, CT",
+    "Cheshire, CT"
+  ],
+
+  "openingHours": "Mo-Su 07:00-20:00",
+  "priceRange": "$$"
+}
+</script>
+
 
   <style>
     /* Navigation Bar Styles */
@@ -595,7 +592,7 @@
 
     <div class="nav-cta-group">
       <a href="tel:+12035007034" class="nav-cta nav-call">📞 CALL</a>
-      <a href="sms:+12035007034?&body=Hi!%20I'd%20like%20a%20cleaning%20quote." class="nav-cta nav-text">💬 TEXT</a>
+      <a href="sms:+12035007034?body=Hi%21%20I%27d%20like%20a%20cleaning%20quote." class="nav-cta nav-text">💬 TEXT</a>
     </div>
   </nav>
 
@@ -763,12 +760,13 @@
           <select name="service" required style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
             <option value="">Select a service</option>
             <option value="Deep Cleaning">Deep Cleaning</option>
-            <option value="Recurring Cleaning">Recurring Cleaning</option>
-            <option value="Move-In/Move-Out">Move-In/Move-Out</option>
+            <option value="Recurring House Cleaning">Recurring House Cleaning</option>
+            <option value="Move-In / Move-Out Cleaning">Move-In / Move-Out Cleaning</option>
             <option value="Office Cleaning">Office Cleaning</option>
-            <option value="Carpet & Upholstery">Carpet & Upholstery</option>
+            <option value="Carpet & Upholstery Cleaning">Carpet & Upholstery Cleaning</option>
           </select>
         </label>
+
 
         <label>Home Size (optional)
           <input name="homesize" placeholder="e.g., 2,000 sq ft or 3 bedroom" />
@@ -786,7 +784,7 @@
       <!-- Contact Info -->
       <div class="contact-info" style="margin-top: 25px;">
         <strong>NeatNest LLC</strong><br>
-        274 Woodhouse Ave, Wallingford, CT 06492<br>
+        Wallingford, CT<br>
         Phone: <a href="tel:+12035007034">(203) 500-7034</a><br>
         Email: <a href="mailto:info@neatnestllc.com">info@neatnestllc.com</a><br>
         <strong>Hours:</strong> Mon–Sun: 7 AM–8 PM
@@ -800,7 +798,7 @@
       
       <div class="secondary-services">
         <a href="office-cleaning.html">Office & Commercial Cleaning</a>
-        <a href="carpet-upholstery.html">Carpet & Upholstery Cleaning</a>
+        <a href="carpet-and-upholstery-cleaning.html">Carpet & Upholstery Cleaning</a>
       </div>
     </section>
 
@@ -841,8 +839,7 @@
         </ul>
         <p class="footer-contact">
           <strong>NeatNest LLC</strong><br>
-          274 Woodhouse Ave<br>
-          Wallingford, CT 06492<br>
+          Wallingford, CT<br>
           <a href="tel:+12035007034">(203) 500-7034</a><br>
           <a href="mailto:info@neatnestllc.com">info@neatnestllc.com</a>
         </p>

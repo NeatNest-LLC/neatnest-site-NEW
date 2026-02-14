@@ -65,8 +65,8 @@
   </script>
 
   <style>
-    /* Sticky Header Styles - OPTIMIZED FOR CORE WEB VITALS */
-    .sticky-header {
+    /* Navigation Bar Styles - OPTIMIZED FOR CORE WEB VITALS */
+    .main-nav {
       position: fixed;
       top: 0;
       left: 0;
@@ -74,226 +74,265 @@
       background: white;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       z-index: 1000;
-      padding: 12px 20px;
+      height: 70px;
+      box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 0 40px;
       transition: transform 0.3s ease;
-      height: 74px; /* FIXED HEIGHT to prevent CLS (Cumulative Layout Shift) */
-      box-sizing: border-box;
     }
 
-    .sticky-header.hidden {
+    .main-nav.hidden {
       transform: translateY(-100%);
     }
 
-    .sticky-header-left {
+    /* Logo (left) */
+    .nav-logo-link {
       display: flex;
       align-items: center;
-      gap: 20px;
-      height: 100%;
-    }
-
-    /* Logo link wrapper */
-    .sticky-logo-link {
-      display: flex;
-      align-items: center;
-      height: 100%;
       text-decoration: none;
     }
 
-    .sticky-logo {
+    .nav-logo {
       height: 50px;
       width: auto;
     }
 
-    .sticky-social {
+    /* Menu (center) */
+    .nav-menu {
       display: flex;
-      gap: 12px;
+      gap: 30px;
       align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    .sticky-social a {
+    .nav-menu li {
+      position: relative;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      font-family: var(--font-accent);
+      padding: 10px 15px;
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--blue);
+    }
+
+    /* Dropdown styling */
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-toggle {
+      cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
-      min-width: 48px; /* Google tap target minimum */
-      min-height: 48px; /* Google tap target minimum */
+      gap: 5px;
     }
 
-    .sticky-social a img {
-      width: 28px;
-      height: 28px;
-      transition: transform 0.2s ease;
+    .nav-dropdown-toggle::after {
+      content: '▾';
+      font-size: 0.8rem;
     }
 
-    .sticky-social a:hover img {
-      transform: scale(1.1);
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      padding: 10px 0;
+      margin-top: 5px;
     }
 
-    /* Side-by-Side CTA Buttons - MEETS GOOGLE TAP TARGET REQUIREMENTS */
-    .sticky-cta-group {
-      display: flex;
-      gap: 10px;
-      align-items: center;
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
 
-    .sticky-cta {
-      padding: 10px 20px;
+    .nav-dropdown-menu li {
+      list-style: none;
+    }
+
+    .nav-dropdown-menu a {
+      padding: 12px 20px;
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: #f8fafc;
+      color: var(--blue);
+    }
+
+    /* Call Now Button (right) */
+    .nav-cta {
+      background: var(--orange);
+      color: white;
+      padding: 12px 24px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       transition: all 0.3s ease;
       white-space: nowrap;
       font-family: var(--font-accent);
-      min-width: 48px; /* Google tap target minimum */
-      min-height: 48px; /* Google tap target minimum */
+      min-width: 48px;
+      min-height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      box-sizing: border-box;
     }
 
-    .sticky-call {
-      background: var(--blue);
-      color: white;
-    }
-
-    .sticky-call:hover {
-      background: #2394d9;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(42, 169, 224, 0.3);
-    }
-
-    .sticky-text {
-      background: var(--orange);
-      color: white;
-    }
-
-    .sticky-text:hover {
+    .nav-cta:hover {
       background: #e66a15;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(255, 122, 24, 0.3);
     }
 
-    /* Add padding to body to prevent content jump - PREVENTS CLS */
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--blue);
+      padding: 10px;
+    }
+
+    /* Add padding to body */
     body {
-      padding-top: 0;
+      padding-top: 70px;
     }
 
-    body.sticky-active {
-      padding-top: 74px; /* Matches sticky header height */
+    /* Mobile Responsive */
+    @media (max-width: 1024px) {
+      .main-nav {
+        padding: 0 20px;
+      }
+
+      .nav-menu {
+        gap: 20px;
+      }
+
+      .nav-menu a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
     }
 
-    /* Mobile responsive - MAINTAINS 48x48px TAP TARGETS */
     @media (max-width: 768px) {
-      .sticky-header {
-        padding: 10px 15px;
-        height: 68px; /* Slightly smaller on tablet */
+      .mobile-menu-toggle {
+        display: block;
       }
 
-      body.sticky-active {
-        padding-top: 68px;
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
       }
 
-      .sticky-logo {
-        height: 40px;
+      .nav-menu.active {
+        max-height: 500px;
       }
 
-      .sticky-social {
-        gap: 8px;
+      .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
       }
 
-      .sticky-social a {
-        min-width: 48px;
-        min-height: 48px;
+      .nav-menu a {
+        padding: 15px 10px;
       }
 
-      .sticky-social a img {
-        width: 24px;
-        height: 24px;
+      .nav-dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: #f8fafc;
+        margin-left: 20px;
+        display: none;
       }
 
-      .sticky-cta {
-        padding: 8px 14px;
-        font-size: 0.85rem;
-        min-width: 48px;
-        min-height: 48px;
+      .nav-dropdown.active .nav-dropdown-menu {
+        display: block;
       }
 
-      .sticky-cta-group {
-        gap: 8px;
-      }
-
-      .sticky-header-left {
-        gap: 12px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .sticky-header {
-        height: 64px; /* Smaller on mobile */
-      }
-
-      body.sticky-active {
-        padding-top: 64px;
-      }
-
-      .sticky-logo {
-        height: 36px;
-      }
-
-      .sticky-social {
-        display: none; /* Hide social icons on very small screens to save space */
-      }
-
-      .sticky-cta {
-        padding: 10px 14px;
-        font-size: 0.8rem;
-        min-width: 48px; /* Still maintains Google's minimum */
-        min-height: 48px; /* Still maintains Google's minimum */
-      }
-
-      .sticky-cta-group {
-        gap: 6px;
-      }
-
-      .sticky-header-left {
-        gap: 10px;
+      .nav-cta {
+        margin-left: 0;
+        margin-top: 10px;
       }
     }
   </style>
 
 </head>
 <body>
-  <!-- Sticky Header - SEO OPTIMIZED -->
-  <nav class="sticky-header" id="stickyHeader">
-    <div class="sticky-header-left">
-      <!-- Logo link to homepage with proper alt text for SEO -->
-      <a href="index.html" class="sticky-logo-link" aria-label="NeatNest LLC - Return to homepage">
-        <img src="images/logo.jpg" alt="NeatNest LLC Professional House Cleaning Services Logo" class="sticky-logo" />
-      </a>
-      
-      <div class="sticky-social">
-        <a href="https://www.facebook.com/neatnestct" target="_blank" rel="noopener noreferrer" aria-label="Visit NeatNest LLC on Facebook">
-          <img src="images/facebook.svg" alt="Facebook" />
-        </a>
-        <a href="https://www.instagram.com/neatnestct" target="_blank" rel="noopener noreferrer" aria-label="Visit NeatNest LLC on Instagram">
-          <img src="images/Instagram.svg" alt="Instagram" />
-        </a>
-        <a href="https://maps.app.goo.gl/YP8Fn2mmzQTBQ2F69" target="_blank" rel="noopener noreferrer" aria-label="Find NeatNest LLC on Google Maps">
-          <img src="images/google.svg" alt="Google Maps" />
-        </a>
-      </div>
-    </div>
+  <!-- Main Navigation Bar -->
+  <nav class="main-nav" id="mainNav">
+    <!-- Logo (left) -->
+    <a href="index.html" class="nav-logo-link" aria-label="NeatNest LLC - Return to homepage">
+      <img src="images/logo.jpg" alt="NeatNest LLC Professional House Cleaning Services Logo" class="nav-logo" />
+    </a>
 
-    <!-- Side-by-Side Call/Text Buttons - MEETS GOOGLE TAP TARGET STANDARDS -->
-    <div class="sticky-cta-group">
-      <a href="tel:+12035007034" class="sticky-cta sticky-call" aria-label="Call NeatNest LLC at 203-500-7034">📞 CALL</a>
-      <a href="sms:+12035007034?&body=Hi!%20I'd%20like%20a%20cleaning%20quote%20for%20my%20home." class="sticky-cta sticky-text" aria-label="Text NeatNest LLC for a quote">💬 TEXT</a>
-    </div>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+      ☰
+    </button>
+
+    <!-- Menu (center) -->
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      
+      <!-- Services Dropdown -->
+      <li class="nav-dropdown">
+        <span class="nav-dropdown-toggle">Services</span>
+        <ul class="nav-dropdown-menu">
+          <li><a href="deep-house-cleaning.html">Deep Cleaning</a></li>
+          <li><a href="recurring-cleaning.html">Recurring Cleaning</a></li>
+          <li><a href="routine-housekeeping.html">Standard Cleaning</a></li>
+          <li><a href="move-in-out.html">Move-In/Move-Out</a></li>
+          <li><a href="office-cleaning.html">Office Cleaning</a></li>
+          <li><a href="carpet-upholstery.html">Carpet & Upholstery</a></li>
+        </ul>
+      </li>
+
+      <li><a href="wallingford-ct-house-cleaning.html">Wallingford</a></li>
+      <li><a href="north-haven-ct-house-cleaning.html">North Haven</a></li>
+      <li><a href="cheshire-ct-house-cleaning.html">Cheshire</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Call Now Button (right) -->
+    <a href="tel:+12035007034" class="nav-cta">📞 CALL NOW</a>
   </nav>
 
   <header class="site-header">
@@ -460,29 +499,45 @@
 
   <script src="script.js"></script>
   
-  <!-- Sticky Header Script -->
+  <!-- Navigation Script -->
   <script>
-    // Sticky header show/hide on scroll
+    // Auto-update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+
+    mobileMenuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+    });
+
+    // Mobile dropdown toggle
+    navDropdowns.forEach(dropdown => {
+      dropdown.querySelector('.nav-dropdown-toggle').addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          dropdown.classList.toggle('active');
+        }
+      });
+    });
+
+    // Sticky nav show/hide on scroll
     let lastScrollTop = 0;
-    const stickyHeader = document.getElementById('stickyHeader');
-    const scrollThreshold = 200; // Show sticky header after scrolling 200px
+    const mainNav = document.getElementById('mainNav');
+    const scrollThreshold = 200;
 
     window.addEventListener('scroll', function() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       
       if (scrollTop > scrollThreshold) {
-        document.body.classList.add('sticky-active');
-        
         if (scrollTop > lastScrollTop) {
-          // Scrolling down - hide header
-          stickyHeader.classList.add('hidden');
+          // Scrolling down - hide nav
+          mainNav.classList.add('hidden');
         } else {
-          // Scrolling up - show header
-          stickyHeader.classList.remove('hidden');
+          // Scrolling up - show nav
+          mainNav.classList.remove('hidden');
         }
-      } else {
-        document.body.classList.remove('sticky-active');
-        stickyHeader.classList.add('hidden');
       }
       
       lastScrollTop = scrollTop;

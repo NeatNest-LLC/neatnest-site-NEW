@@ -25,41 +25,47 @@
   <link rel="canonical" href="https://neatnestllc.com/" />
   
   <!-- Updated Schema - 3 Towns Only -->
- <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CleaningService"],
-  "@id": "https://neatnestllc.com/#localbusiness",
-  "name": "NeatNest LLC",
-  "image": "https://neatnestllc.com/images/logo.jpg",
-  "telephone": "+1-203-500-7034",
-  "email": "info@neatnestllc.com",
-  "url": "https://neatnestllc.com/",
 
-  "sameAs": [
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CleaningService",
+  "@id":"https://neatnestllc.com/#cleaningservice",
+  "name":"NeatNest LLC",
+  "url":"https://neatnestllc.com/",
+  "image":"https://neatnestllc.com/images/logo.jpg",
+  "telephone":"+1-203-500-7034",
+  "email":"info@neatnestllc.com",
+  "priceRange":"$$",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"", 
+    "addressLocality":"Wallingford",
+    "addressRegion":"CT",
+    "postalCode":"",
+    "addressCountry":"US"
+  },
+  "geo":{
+    "@type":"GeoCoordinates",
+    "latitude": 41.45,
+    "longitude": -72.82
+  },
+  "hasMap":"https://maps.app.goo.gl/YP8Fn2mmzQTBQ2F69",
+  "areaServed":[
+    { "@type":"City", "name":"Wallingford, CT" },
+    { "@type":"City", "name":"North Haven, CT" },
+    { "@type":"City", "name":"Cheshire, CT" }
+  ],
+  "openingHoursSpecification":[
+    { "@type":"OpeningHoursSpecification", "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens":"07:00", "closes":"20:00" }
+  ],
+  "sameAs":[
     "https://www.facebook.com/neatnestct",
     "https://www.instagram.com/neatnestct",
     "https://maps.app.goo.gl/YP8Fn2mmzQTBQ2F69"
-  ],
-
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Wallingford",
-    "addressRegion": "CT",
-    "addressCountry": "US"
-  },
-
-  "areaServed": [
-    "Wallingford, CT",
-    "North Haven, CT",
-    "Cheshire, CT"
-  ],
-
-  "openingHours": "Mo-Su 07:00-20:00",
-  "priceRange": "$$"
+  ]
 }
 </script>
-
 
   <style>
     /* Navigation Bar Styles */
@@ -562,7 +568,7 @@
 <body>
   <!-- Sticky Navigation Bar -->
   <nav class="main-nav" id="mainNav">
-    <a href="index.html" class="nav-logo-link" aria-label="NeatNest LLC - Return to homepage">
+    <a href="/" class="nav-logo-link" aria-label="NeatNest LLC - Return to homepage">
       <img src="images/logo.jpg" alt="NeatNest LLC Professional House Cleaning Services Logo" class="nav-logo" />
     </a>
 
@@ -571,7 +577,7 @@
     </button>
 
     <ul class="nav-menu" id="navMenu">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       
       <li class="nav-dropdown">
         <span class="nav-dropdown-toggle">Services</span>
@@ -834,7 +840,7 @@
       <div class="footer-col">
         <h3>Company</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <p class="footer-contact">

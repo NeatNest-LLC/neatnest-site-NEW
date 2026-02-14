@@ -112,20 +112,47 @@
       transform: scale(1.1);
     }
 
+    /* Side-by-Side CTA Buttons */
+    .sticky-cta-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
     .sticky-cta {
-      background: var(--orange);
-      color: white;
-      padding: 10px 24px;
+      padding: 10px 20px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: all 0.3s ease;
       white-space: nowrap;
       font-family: var(--font-accent);
+      min-width: 48px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
-    .sticky-cta:hover {
+    .sticky-call {
+      background: var(--blue);
+      color: white;
+    }
+
+    .sticky-call:hover {
+      background: #2394d9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(42, 169, 224, 0.3);
+    }
+
+    .sticky-text {
+      background: var(--orange);
+      color: white;
+    }
+
+    .sticky-text:hover {
       background: #e66a15;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(255, 122, 24, 0.3);
@@ -160,8 +187,12 @@
       }
 
       .sticky-cta {
-        padding: 8px 16px;
+        padding: 8px 14px;
         font-size: 0.85rem;
+      }
+
+      .sticky-cta-group {
+        gap: 8px;
       }
 
       .sticky-header-left {
@@ -175,17 +206,21 @@
       }
 
       .sticky-social {
-        gap: 6px;
-      }
-
-      .sticky-social a img {
-        width: 22px;
-        height: 22px;
+        display: none; /* Hide social icons on very small screens to save space */
       }
 
       .sticky-cta {
-        padding: 7px 12px;
+        padding: 9px 12px;
         font-size: 0.8rem;
+        min-width: 48px;
+      }
+
+      .sticky-cta-group {
+        gap: 6px;
+      }
+
+      .sticky-header-left {
+        gap: 10px;
       }
     }
   </style>
@@ -210,7 +245,10 @@
       </div>
     </div>
 
-    <a href="#contact" class="sticky-cta">GET FREE QUOTE</a>
+    <div class="sticky-cta-group">
+      <a href="tel:+12035007034" class="sticky-cta sticky-call">📞 CALL</a>
+      <a href="sms:+12035007034?&body=Hi!%20I'd%20like%20a%20cleaning%20quote%20for%20my%20home." class="sticky-cta sticky-text">💬 TEXT</a>
+    </div>
   </nav>
 
   <header class="site-header">

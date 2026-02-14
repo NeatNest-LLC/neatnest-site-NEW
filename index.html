@@ -65,7 +65,7 @@
   </script>
 
   <style>
-    /* Sticky Header Styles */
+    /* Sticky Header Styles - OPTIMIZED FOR CORE WEB VITALS */
     .sticky-header {
       position: fixed;
       top: 0;
@@ -79,6 +79,8 @@
       align-items: center;
       justify-content: space-between;
       transition: transform 0.3s ease;
+      height: 74px; /* FIXED HEIGHT to prevent CLS (Cumulative Layout Shift) */
+      box-sizing: border-box;
     }
 
     .sticky-header.hidden {
@@ -89,6 +91,15 @@
       display: flex;
       align-items: center;
       gap: 20px;
+      height: 100%;
+    }
+
+    /* Logo link wrapper */
+    .sticky-logo-link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      text-decoration: none;
     }
 
     .sticky-logo {
@@ -102,6 +113,14 @@
       align-items: center;
     }
 
+    .sticky-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px; /* Google tap target minimum */
+      min-height: 48px; /* Google tap target minimum */
+    }
+
     .sticky-social a img {
       width: 28px;
       height: 28px;
@@ -112,7 +131,7 @@
       transform: scale(1.1);
     }
 
-    /* Side-by-Side CTA Buttons */
+    /* Side-by-Side CTA Buttons - MEETS GOOGLE TAP TARGET REQUIREMENTS */
     .sticky-cta-group {
       display: flex;
       gap: 10px;
@@ -128,12 +147,13 @@
       transition: all 0.3s ease;
       white-space: nowrap;
       font-family: var(--font-accent);
-      min-width: 48px;
-      min-height: 48px;
+      min-width: 48px; /* Google tap target minimum */
+      min-height: 48px; /* Google tap target minimum */
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      box-sizing: border-box;
     }
 
     .sticky-call {
@@ -158,19 +178,24 @@
       box-shadow: 0 4px 12px rgba(255, 122, 24, 0.3);
     }
 
-    /* Add padding to body to prevent content jump */
+    /* Add padding to body to prevent content jump - PREVENTS CLS */
     body {
       padding-top: 0;
     }
 
     body.sticky-active {
-      padding-top: 74px;
+      padding-top: 74px; /* Matches sticky header height */
     }
 
-    /* Mobile responsive */
+    /* Mobile responsive - MAINTAINS 48x48px TAP TARGETS */
     @media (max-width: 768px) {
       .sticky-header {
         padding: 10px 15px;
+        height: 68px; /* Slightly smaller on tablet */
+      }
+
+      body.sticky-active {
+        padding-top: 68px;
       }
 
       .sticky-logo {
@@ -181,6 +206,11 @@
         gap: 8px;
       }
 
+      .sticky-social a {
+        min-width: 48px;
+        min-height: 48px;
+      }
+
       .sticky-social a img {
         width: 24px;
         height: 24px;
@@ -189,6 +219,8 @@
       .sticky-cta {
         padding: 8px 14px;
         font-size: 0.85rem;
+        min-width: 48px;
+        min-height: 48px;
       }
 
       .sticky-cta-group {
@@ -201,8 +233,16 @@
     }
 
     @media (max-width: 480px) {
+      .sticky-header {
+        height: 64px; /* Smaller on mobile */
+      }
+
+      body.sticky-active {
+        padding-top: 64px;
+      }
+
       .sticky-logo {
-        height: 35px;
+        height: 36px;
       }
 
       .sticky-social {
@@ -210,9 +250,10 @@
       }
 
       .sticky-cta {
-        padding: 9px 12px;
+        padding: 10px 14px;
         font-size: 0.8rem;
-        min-width: 48px;
+        min-width: 48px; /* Still maintains Google's minimum */
+        min-height: 48px; /* Still maintains Google's minimum */
       }
 
       .sticky-cta-group {
@@ -227,27 +268,31 @@
 
 </head>
 <body>
-  <!-- Sticky Header (NEW) -->
+  <!-- Sticky Header - SEO OPTIMIZED -->
   <nav class="sticky-header" id="stickyHeader">
     <div class="sticky-header-left">
-      <img src="images/logo.jpg" alt="NeatNest LLC" class="sticky-logo" />
+      <!-- Logo link to homepage with proper alt text for SEO -->
+      <a href="index.html" class="sticky-logo-link" aria-label="NeatNest LLC - Return to homepage">
+        <img src="images/logo.jpg" alt="NeatNest LLC Professional House Cleaning Services Logo" class="sticky-logo" />
+      </a>
       
       <div class="sticky-social">
-        <a href="https://www.facebook.com/neatnestct" target="_blank" aria-label="Facebook">
+        <a href="https://www.facebook.com/neatnestct" target="_blank" rel="noopener noreferrer" aria-label="Visit NeatNest LLC on Facebook">
           <img src="images/facebook.svg" alt="Facebook" />
         </a>
-        <a href="https://www.instagram.com/neatnestct" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/neatnestct" target="_blank" rel="noopener noreferrer" aria-label="Visit NeatNest LLC on Instagram">
           <img src="images/Instagram.svg" alt="Instagram" />
         </a>
-        <a href="https://maps.app.goo.gl/YP8Fn2mmzQTBQ2F69" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile">
-          <img src="images/google.svg" alt="Google" />
+        <a href="https://maps.app.goo.gl/YP8Fn2mmzQTBQ2F69" target="_blank" rel="noopener noreferrer" aria-label="Find NeatNest LLC on Google Maps">
+          <img src="images/google.svg" alt="Google Maps" />
         </a>
       </div>
     </div>
 
+    <!-- Side-by-Side Call/Text Buttons - MEETS GOOGLE TAP TARGET STANDARDS -->
     <div class="sticky-cta-group">
-      <a href="tel:+12035007034" class="sticky-cta sticky-call">📞 CALL</a>
-      <a href="sms:+12035007034?&body=Hi!%20I'd%20like%20a%20cleaning%20quote%20for%20my%20home." class="sticky-cta sticky-text">💬 TEXT</a>
+      <a href="tel:+12035007034" class="sticky-cta sticky-call" aria-label="Call NeatNest LLC at 203-500-7034">📞 CALL</a>
+      <a href="sms:+12035007034?&body=Hi!%20I'd%20like%20a%20cleaning%20quote%20for%20my%20home." class="sticky-cta sticky-text" aria-label="Text NeatNest LLC for a quote">💬 TEXT</a>
     </div>
   </nav>
 

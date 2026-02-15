@@ -789,107 +789,148 @@ form button:hover {
       color: #666;
     }
 
-    /* Mobile Responsive */
-    @media (max-width: 1024px) {
-      .main-nav {
-        padding: 0 20px;
-      }
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .main-nav {
+    padding: 0 20px;
+  }
 
-      .nav-menu {
-        gap: 20px;
-      }
+  .nav-menu {
+    gap: 20px;
+  }
 
-      .nav-menu a {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-      }
+  .nav-menu a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
 
-      .nav-dropdown-toggle {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-      }
+  .nav-dropdown-toggle {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
 
-      .nav-cta {
-        padding: 8px 14px;
-        font-size: 0.85rem;
-      }
-    }
+  .nav-cta {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
 
-    @media (max-width: 768px) {
-      .mobile-menu-toggle {
-        display: block;
-      }
+@media (max-width: 768px) {
+  /* Make hamburger bigger */
+  .mobile-menu-toggle {
+    display: block;
+    font-size: 2.2rem;
+  }
 
-      .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: white;
-        flex-direction: column;
-        gap: 0;
-        padding: 20px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-      }
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
 
-      .nav-menu.active {
-        max-height: 600px;
-      }
+  .nav-menu.active {
+    max-height: 600px;
+  }
 
-      .nav-menu li {
-        width: 100%;
-        border-bottom: 1px solid #eee;
-      }
+  .nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
 
-      .nav-menu a {
-        padding: 15px 10px;
-      }
+  .nav-menu a {
+    padding: 15px 10px;
+  }
 
-      .nav-dropdown-toggle {
-        width: 100%;
-        justify-content: space-between;
-        padding: 15px 10px;
-      }
+  .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 10px;
+  }
 
-      .nav-dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        background: #f8fafc;
-        margin-left: 20px;
-        display: none;
-      }
+  .nav-dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: #f8fafc;
+    margin-left: 20px;
+    display: none;
+  }
 
-      .nav-dropdown.active .nav-dropdown-menu {
-        display: block;
-      }
+  .nav-dropdown.active .nav-dropdown-menu {
+    display: block;
+  }
 
-      .nav-cta-group {
-        flex-direction: column;
-        width: 100%;
-        gap: 8px;
-        margin-top: 10px;
-      }
+  /* FIXED: Side-by-side buttons, not full width */
+  .nav-cta-group {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
 
-      .nav-cta {
-        width: 100%;
-      }
+  .nav-cta {
+    flex: 1;
+    max-width: 140px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
 
-      .footer-columns {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
+  /* FIXED: Add more top padding to body on mobile so socials aren't hidden */
+  body {
+    padding-top: 90px;
+  }
 
-      .trust-badges {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .trust-badges {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Contact page mobile fixes */
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-hero p {
+    font-size: 1rem;
+  }
+
+  .contact-info-box {
+    padding: 20px;
+  }
+
+  .service-area-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-area-links a {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}
 
 /* FAQ Accordion (div-based) */
 .faq-item {

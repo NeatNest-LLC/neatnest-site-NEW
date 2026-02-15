@@ -17,12 +17,13 @@
 }
 
 body {
-  margin: 0; 
+  margin: 0;
   font-family: var(--font-body);
   font-size: 1.1rem;
-  color: var(--ink); 
-  background: var(--orange);
+  color: var(--ink);
+  background: var(--bg);
   line-height: 1.6;
+  padding-top: 70px;
 }
 
 h1 {
@@ -40,21 +41,19 @@ p {
 
 /* FIXED HEADER LAYOUT - Using Flexbox for proper vertical centering */
 .site-header {
-    position: relative;
-    /* Other styles */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-    background: var(--card);
-    border-bottom: 2px solid #e5e7eb;
-    position: static;
-    top: 0;
-    z-index: 10;
-    text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background: var(--card);
+  border-bottom: 2px solid #e5e7eb;
+  z-index: 10;
+  text-align: center;
 }
+
 
 .social-links {
   position: absolute;
@@ -401,8 +400,6 @@ form button:hover {
   background: var(--orange);
 }
 
-    /* BELOW I MOVED NAV BAR CSS FROM MAIN PAGES TO HERE TO SAVE LOAD TIMES */
-
     /* Navigation Bar Styles */
     .main-nav {
       position: fixed;
@@ -587,10 +584,6 @@ form button:hover {
       cursor: pointer;
       color: var(--blue);
       padding: 10px;
-    }
-
-    body {
-      padding-top: 70px;
     }
 
     /* Big 3 Services Cards */

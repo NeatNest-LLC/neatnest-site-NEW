@@ -1124,3 +1124,38 @@ form button:hover {
     height: 300px;
   }
 }
+@media (max-width: 768px) {
+  /* Make hamburger bigger */
+  .mobile-menu-toggle {
+    display: block;
+    font-size: 2.2rem;
+  }
+ 
+  /* FIXED: Remove white block by making header background transparent on mobile */
+  .site-header {
+    padding-top: 15px;  /* Less padding since no white block */
+    padding-bottom: 20px;
+    background: transparent;  /* No white background */
+  }
+
+  /* FIXED: Move social icons down slightly */
+  .social-links {
+    top: 80px;  /* Just below nav bar */
+  }
+ 
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  /* ... rest of your mobile code stays the same ... */

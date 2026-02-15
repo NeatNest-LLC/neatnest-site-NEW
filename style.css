@@ -401,7 +401,8 @@ form button:hover {
   background: var(--orange);
 }
 
- <style>
+    /* BELOW I MOVED NAV BAR CSS FROM MAIN PAGES TO HERE TO SAVE LOAD TIMES */
+
     /* Navigation Bar Styles */
     .main-nav {
       position: fixed;

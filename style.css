@@ -890,3 +890,52 @@ form button:hover {
         gap: 15px;
       }
     }
+
+/* FAQ Accordion (div-based) */
+.faq-item {
+  border: 2px solid var(--blue);
+  border-radius: 12px;
+  background: var(--card);
+  margin: 12px 0;
+  overflow: hidden;
+  text-align: left; /* overrides .section centering */
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 16px 18px;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.faq-question.active::after {
+  content: "–";
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 18px 16px;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.faq-answer.active {
+  display: block;
+}
+
+/* Optional: make FAQ text size normal (your global p is 1.2rem) */
+.faq-answer p {
+  font-size: 1.05rem;
+  margin: 10px 0 0;
+}

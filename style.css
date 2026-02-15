@@ -614,29 +614,37 @@ form button:hover {
       padding: 10px;
     }
 
-    /* Big 3 Services Cards */
-    .big3-services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      max-width: 1000px;
-      margin: 30px auto;
-    }
+/* Big 3 Services Cards */
+.big3-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
 
-    .service-card {
-      border: 3px solid var(--blue);
-      border-radius: 12px;
-      padding: 30px 20px;
-      text-align: center;
-      background: white;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
+/* Card sizing for Big 3 */
+.big3-services .service-card {
+  flex: 1 1 280px;   /* preferred width */
+  max-width: 340px;  /* prevents stretching */
+}
+
+/* Existing service card styling */
+.service-card {
+  border: 3px solid var(--blue);
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  background: white;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
     .service-card:hover {
       transform: translateY(-5px);

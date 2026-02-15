@@ -49,6 +49,11 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Remove underline from Big 3 service cards */
+.big3-services .service-card:hover {
+  text-decoration: none;
+}
+
 /* FIXED HEADER LAYOUT - Using Flexbox for proper vertical centering */
 .site-header {
   position: relative;

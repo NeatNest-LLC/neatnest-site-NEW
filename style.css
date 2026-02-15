@@ -399,6 +399,24 @@ form button:hover {
   background: var(--orange);
 }
 
+/* Secondary CTA (Meet Our Team button) */
+.secondary-cta {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-family: var(--font-accent);
+}
+
+.secondary-cta:hover {
+  background: var(--blue);
+  color: white;
+}
+
     /* Navigation Bar Styles */
     .main-nav {
       position: fixed;

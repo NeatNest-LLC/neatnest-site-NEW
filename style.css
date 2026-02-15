@@ -821,7 +821,17 @@ form button:hover {
     display: block;
     font-size: 2.2rem;
   }
+ 
+  /* FIXED: Move social icons down on mobile so they're not clipped */
+.social-links {
+  top: 75px;  /* Push below nav bar (nav is 70px tall) */
+}
 
+.site-header {
+  padding-top: 50px;  /* Space for social icons */
+  padding-bottom: 20px;  /* Less bottom padding */
+}
+ 
   .nav-menu {
     position: fixed;
     top: 70px;

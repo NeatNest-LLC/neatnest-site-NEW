@@ -939,3 +939,9 @@ form button:hover {
   font-size: 1.05rem;
   margin: 10px 0 0;
 }
+
+/* FAQ wrapper */
+.faq-wrap {
+  max-width: 800px;
+  margin: 20px auto;
+}

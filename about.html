@@ -287,46 +287,5 @@
 
 <script src="/script.js"></script>
 
-<script>
-  
-  // Auto-update year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Mobile menu toggle
-  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-  const navMenu = document.getElementById('navMenu');
-  const navDropdowns = document.querySelectorAll('.nav-dropdown');
-
-  mobileMenuToggle.addEventListener('click', function() {
-    navMenu.classList.toggle('active');
-  });
-
-  navDropdowns.forEach(dropdown => {
-    dropdown.querySelector('.nav-dropdown-toggle').addEventListener('click', function() {
-      if (window.innerWidth <= 768) {
-        dropdown.classList.toggle('active');
-      }
-    });
-  });
-
-  let lastScrollTop = 0;
-  const mainNav = document.getElementById('mainNav');
-  const scrollThreshold = 200;
-
-  window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > scrollThreshold) {
-      if (scrollTop > lastScrollTop) {
-        mainNav.classList.add('hidden');
-      } else {
-        mainNav.classList.remove('hidden');
-      }
-    }
-    
-    lastScrollTop = scrollTop;
-  });
-</script>
-
 </body>
 </html>

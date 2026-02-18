@@ -1,54 +1,153 @@
- <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="footer-columns">
-      
-      <!-- Services Column -->
-      <div class="footer-col">
-        <h3>Cleaning Services</h3>
-        <ul>
-          <li><a href="/deep-house-cleaning">Deep House Cleaning</a></li>
-          <li><a href="/recurring-house-cleaning">Recurring House Cleaning</a></li>
-          <li><a href="/move-in-move-out-cleaning">Move-In / Move-Out Cleaning</a></li>
-          <li><a href="/office-cleaning">Office Cleaning</a></li>
-          <li><a href="/carpet-and-upholstery-cleaning">Carpet & Upholstery Cleaning</a></li>
-        </ul>
-      </div>
+document.addEventListener("DOMContentLoaded", () => {
+  // =========================
+  // 1) Footer year (all pages)
+  // =========================
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-      <!-- Service Areas Column -->
-      <div class="footer-col">
-        <h3>Service Areas</h3>
-        <ul>
-          <li><a href="/wallingford-ct-house-cleaning">Wallingford, CT</a></li>
-          <li><a href="/north-haven-ct-house-cleaning">North Haven, CT</a></li>
-          <li><a href="/cheshire-ct-house-cleaning">Cheshire, CT</a></li>
-        </ul>
-      </div>
+  // ==========================================
+  // 2) Mobile nav toggle + dropdowns (all pages)
+  // ==========================================
+  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  const navMenu = document.getElementById("navMenu");
 
-      <!-- Company Column -->
-      <div class="footer-col">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About NeatNest</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-        <p class="footer-contact">
-          <strong>NeatNest LLC</strong><br>
-          Wallingford, CT<br>
-          <a href="tel:+12035007034">(203) 500-7034</a><br>
-          <a href="mailto:info@neatnestllc.com">info@neatnestllc.com</a>
-        </p>
-      </div>
+  if (mobileMenuToggle && navMenu) {
+    mobileMenuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
 
-    </div>
+  const navDropdowns = document.querySelectorAll(".nav-dropdown");
+  if (navDropdowns.length) {
+    navDropdowns.forEach((dropdown) => {
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      if (!toggle) return;
 
-    <div class="footer-bottom">
-      © <span id="year"></span> NeatNest LLC • Serving Wallingford, North Haven & Cheshire, CT
-    </div>
-  </footer>
+      toggle.addEventListener("click", () => {
+        if (window.innerWidth <= 768) dropdown.classList.toggle("active");
+      });
+    });
+  }
 
-  <!-- External JavaScript -->
-  <script src="/script.js"></script>
+  // ==================================
+  // 3) Sticky nav hide/show (all pages)
+  // ==================================
+  const mainNav = document.getElementById("mainNav");
+  if (mainNav) {
+    let lastScrollTop = 0;
+    const scrollThreshold = 200;
 
-</body>
-</html>
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > scrollThreshold) {
+        if (scrollTop > lastScrollTop) mainNav.classList.add("hidden");
+        else mainNav.classList.remove("hidden");
+      }
+
+      lastScrollTop = scrollTop;
+    });
+  }
+
+  // ======================================
+  // 4) Testimonials slider (home page only)
+  // ======================================
+  const slides = Array.from(document.querySelectorAll(".slide"));
+  const nextBtn = document.getElementById("next");
+  const prevBtn = document.getElementById("prev");
+  const slider = document.querySelector(".slider");
+
+  if (slides.length && nextBtn && prevBtn && slider) {
+    let idx = 0;
+    let autoRotateTimer;
+
+    const show = (i) => {
+      slides.forEach((s, n) => s.classList.toggle("active", n === i));
+    };
+
+    const nextSlide = () => {
+      idx = (idx + 1) % slides.length;
+      show(idx);
+    };
+
+    const prevSlide = () => {
+      idx = (idx - 1 + slides.length) % slides.length;
+      show(idx);
+    };
+
+    const startAutoRotate = () => {
+      autoRotateTimer = setInterval(nextSlide, 4000);
+    };
+
+    const stopAutoRotate = () => {
+      if (autoRotateTimer) clearInterval(autoRotateTimer);
+    };
+
+    nextBtn.addEventListener("click", () => {
+      stopAutoRotate();
+      nextSlide();
+      startAutoRotate();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      stopAutoRotate();
+      prevSlide();
+      startAutoRotate();
+    });
+
+    slider.addEventListener("mouseenter", stopAutoRotate);
+    slider.addEventListener("mouseleave", startAutoRotate);
+
+    show(idx);
+    startAutoRotate();
+  }
+
+  // ==========================================
+  // 5) Services popup modals (only pages w/ it)
+  // ==========================================
+  const serviceItems = document.querySelectorAll(".services li[data-service]");
+  const modals = document.querySelectorAll(".modal");
+  const closeButtons = document.querySelectorAll(".close");
+
+  if (serviceItems.length && modals.length) {
+    serviceItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        const service = item.getAttribute("data-service");
+        const modal = document.getElementById(`${service}-modal`);
+        if (modal) modal.style.display = "block";
+      });
+    });
+
+    closeButtons.forEach((closeBtn) => {
+      closeBtn.addEventListener("click", () => {
+        const modal = closeBtn.closest(".modal");
+        if (modal) modal.style.display = "none";
+      });
+    });
+
+    window.addEventListener("click", (event) => {
+      modals.forEach((modal) => {
+        if (event.target === modal) modal.style.display = "none";
+      });
+    });
+  }
+
+  // =========================
+  // 6) FAQ accordion (pages w/ FAQ)
+  // =========================
+  // If your HTML uses onclick="toggleFAQ(this)", this must exist globally.
+  window.toggleFAQ = function (questionEl) {
+    if (!questionEl) return;
+
+    const item = questionEl.closest(".faq-item");
+    if (!item) return;
+
+    const answer = item.querySelector(".faq-answer");
+    if (!answer) return;
+
+    // Toggle current one
+    questionEl.classList.toggle("active");
+    answer.classList.toggle("active");
+  };
+});
+

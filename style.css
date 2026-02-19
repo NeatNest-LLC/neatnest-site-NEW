@@ -1285,41 +1285,4 @@ form button:hover {
     height: 300px;
 
   }
-  /* TEMPORARY DEBUG - DELETE AFTER TESTING */
-@media (max-width: 768px) {
-  .nav-dropdown.active .nav-dropdown-menu {
-    max-height: 500px !important;
-    opacity: 1 !important;
-    padding: 10px 0 !important;
-    background: red !important; /* You should see RED background if it's working */
-    display: block !important;
-  }
-
-/* FORCE SHOW DROPDOWN - DEBUG */
-  .nav-dropdown.active .nav-dropdown-menu {
-    display: block !important;
-    visibility: visible !important;
-    max-height: 2000px !important;
-    opacity: 1 !important;
-    background: red !important;
-    padding: 15px !important;
-    margin: 0 !important;
-    position: relative !important;
-    transform: none !important;
-    overflow: visible !important;
-  }
-  
-  .nav-dropdown.active .nav-dropdown-menu li {
-    display: list-item !important;
-    background: yellow !important;
-  }
-  
-  .nav-dropdown.active .nav-dropdown-menu a {
-    display: block !important;
-    color: black !important;
-    font-size: 16px !important;
-    padding: 10px !important;
-    background: white !important;
-    margin: 2px 0 !important;
-  }
 }

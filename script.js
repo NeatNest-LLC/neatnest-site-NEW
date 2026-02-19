@@ -20,58 +20,30 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // 3) Services dropdown - FIXED with direct targeting
-  const serviceToggle = document.querySelector(".nav-dropdown-toggle");
-  const serviceDropdown = document.querySelector(".nav-dropdown");
+  // 3) Services dropdown - SIMPLIFIED
+const serviceToggle = document.querySelector(".nav-dropdown-toggle");
+const serviceDropdown = document.querySelector(".nav-dropdown");
+
+if (serviceToggle && serviceDropdown) {
+  // Single unified handler
+  serviceToggle.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // On mobile only (when hamburger is visible)
+    if (window.innerWidth <= 768) {
+      serviceDropdown.classList.toggle("active");
+      console.log("Services dropdown toggled:", serviceDropdown.classList.contains("active"));
+    }
+  });
   
-  console.log("Service toggle found:", serviceToggle);
-  console.log("Service dropdown found:", serviceDropdown);
-  
-  if (serviceToggle && serviceDropdown) {
-    
-    // Add click handler directly to the span
-    serviceToggle.addEventListener("click", function(e) {
-      console.log("=== SERVICE TOGGLE CLICKED ===");
-      
-      // Stop the event from going anywhere else
-      e.preventDefault();
-      e.stopPropagation();
-      e.stopImmediatePropagation();
-      
-      // Toggle the dropdown
-      serviceDropdown.classList.toggle("active");
-      
-      console.log("Active class toggled. Is active now?", serviceDropdown.classList.contains("active"));
-      
-      return false;
-    }, true); // Use capture phase
-    
-    // Also try with mousedown for better mobile support
-    serviceToggle.addEventListener("mousedown", function(e) {
-      console.log("=== SERVICE MOUSEDOWN ===");
-      e.preventDefault();
-      e.stopPropagation();
-      e.stopImmediatePropagation();
-      
-      serviceDropdown.classList.toggle("active");
-      console.log("Toggled via mousedown. Active?", serviceDropdown.classList.contains("active"));
-      
-      return false;
-    }, true);
-    
-    // And touchstart for mobile
-    serviceToggle.addEventListener("touchstart", function(e) {
-      console.log("=== SERVICE TOUCHSTART ===");
-      e.preventDefault();
-      e.stopPropagation();
-      e.stopImmediatePropagation();
-      
-      serviceDropdown.classList.toggle("active");
-      console.log("Toggled via touch. Active?", serviceDropdown.classList.contains("active"));
-      
-      return false;
-    }, true);
-  }
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function(e) {
+    if (!serviceDropdown.contains(e.target)) {
+      serviceDropdown.classList.remove("active");
+    }
+  });
+}
 
   // 4) Sticky nav
   const mainNav = document.getElementById("mainNav");

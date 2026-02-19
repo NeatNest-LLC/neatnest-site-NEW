@@ -916,7 +916,7 @@ form button:hover {
     padding: 15px 10px;
   }
 
-    /* Mobile dropdown styling */
+  /* Mobile dropdown - hide by default */
   .nav-dropdown-menu {
     position: static;
     background: #f8fafc;
@@ -929,59 +929,8 @@ form button:hover {
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
-  }
-
-  .nav-dropdown.active .nav-dropdown-menu {
-    max-height: 500px;
-    opacity: 1;
-    visibility: visible;
-    padding: 10px 0;
-  }
-
-  /* CRITICAL: Disable hover on mobile */
-  @media (max-width: 768px) {
-    .nav-dropdown:hover .nav-dropdown-menu {
-      position: static;
-      opacity: 0;
-      visibility: hidden;
-      max-height: 0;
-    }
-    
-    /* But allow active state to show */
-    .nav-dropdown.active .nav-dropdown-menu,
-    .nav-dropdown.active:hover .nav-dropdown-menu {
-      opacity: 1 !important;
-      visibility: visible !important;
-      max-height: 500px !important;
-      padding: 10px 0 !important;
-    }
-  }
-
-  /* Rotate arrow when active */
-  .nav-dropdown.active .nav-dropdown-toggle::after {
-    transform: rotate(180deg);
-  }
-  
-  /* FIXED: Better mobile dropdown handling */
-  .nav-dropdown-menu {
-    position: static;
-    opacity: 0;
-    visibility: hidden;
-    max-height: 0;
     transform: none;
-    box-shadow: none;
-    background: #f8fafc;
-    margin-left: 20px;
-    display: block; /* Always display:block, control with max-height */
-    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-    overflow: hidden;
-  }
-
-  .nav-dropdown.active .nav-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    max-height: 400px; /* Adjust based on your menu height */
+    transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
   }
 
   /* Override desktop hover on mobile */
@@ -991,27 +940,32 @@ form button:hover {
     max-height: 0;
   }
 
-  /* Make the arrow rotate when active */
+  /* ACTIVE STATE - must come AFTER hover override with higher specificity */
+  .nav-dropdown.active .nav-dropdown-menu,
+  .nav-dropdown.active:hover .nav-dropdown-menu {
+    max-height: 500px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding: 10px 0;
+  }
+
+  /* Rotate arrow when active */
   .nav-dropdown.active .nav-dropdown-toggle::after {
     transform: rotate(180deg);
   }
 
   /* FIXED: Side-by-side buttons, not full width */
   .nav-cta-group {
-    display: flex;
     flex-direction: row;
-    gap: 8px;
-    margin-top: 10px;
     width: 100%;
     justify-content: center;
   }
 
   .nav-cta {
-    flex: 1;
-    max-width: 140px;
-    padding: 10px 12px;
-    font-size: 0.85rem;
+    width: 100%;
+    max-width: 200px;
   }
+}
 
   /* FIXED: Add more top padding to body on mobile so socials aren't hidden */
   body {

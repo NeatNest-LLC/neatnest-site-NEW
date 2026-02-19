@@ -1,7 +1,7 @@
 // Wait for page to load
 document.addEventListener("DOMContentLoaded", function() {
   
-  console.log("Script loaded!"); // You should see this immediately
+  console.log("Script loaded!");
   
   // 1) Footer year
   const yearEl = document.getElementById("year");
@@ -9,70 +9,68 @@ document.addEventListener("DOMContentLoaded", function() {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // 2) Mobile menu toggle
+  // 2) Mobile menu toggle - FIXED to not interfere with dropdown
   const hamburger = document.getElementById("mobileMenuToggle");
   const navMenu = document.getElementById("navMenu");
   
   if (hamburger && navMenu) {
     hamburger.addEventListener("click", function(e) {
       console.log("Hamburger clicked!");
-      
-      // Only toggle if clicking the hamburger itself, not its children
-      if (e.target === hamburger || e.target.closest('#mobileMenuToggle')) {
-        e.stopPropagation();
-        navMenu.classList.toggle("active");
-      }
+      navMenu.classList.toggle("active");
     });
   }
 
-  // 3) Services dropdown - MULTIPLE EVENT APPROACH
-  const dropdowns = document.querySelectorAll(".nav-dropdown");
+  // 3) Services dropdown - FIXED with direct targeting
+  const serviceToggle = document.querySelector(".nav-dropdown-toggle");
+  const serviceDropdown = document.querySelector(".nav-dropdown");
   
-  console.log("Found dropdowns:", dropdowns.length);
+  console.log("Service toggle found:", serviceToggle);
+  console.log("Service dropdown found:", serviceDropdown);
   
-  if (dropdowns.length > 0) {
-    dropdowns.forEach(function(dropdown) {
-      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
-      const menu = dropdown.querySelector(".nav-dropdown-menu");
+  if (serviceToggle && serviceDropdown) {
+    
+    // Add click handler directly to the span
+    serviceToggle.addEventListener("click", function(e) {
+      console.log("=== SERVICE TOGGLE CLICKED ===");
       
-      if (toggle && menu) {
-        console.log("Setup dropdown listener");
-        
-        // Function to handle the toggle
-        function handleToggle(e) {
-          console.log("=== SERVICES ACTIVATED ===");
-          console.log("Event type:", e.type);
-          console.log("Window width:", window.innerWidth);
-          
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-          
-          console.log("Toggling dropdown NOW");
-          
-          // Close others
-          dropdowns.forEach(function(other) {
-            if (other !== dropdown) {
-              other.classList.remove("active");
-            }
-          });
-          
-          // Toggle this one
-          dropdown.classList.toggle("active");
-          
-          const isOpen = dropdown.classList.contains("active");
-          console.log("Dropdown is now:", isOpen ? "OPEN" : "CLOSED");
-          console.log("Dropdown classes:", dropdown.className);
-          
-          return false;
-        }
-        
-        // Try multiple event types
-        toggle.addEventListener("mousedown", handleToggle, true);
-        toggle.addEventListener("touchstart", handleToggle, true);
-        toggle.addEventListener("click", handleToggle, true);
-      }
-    });
+      // Stop the event from going anywhere else
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      
+      // Toggle the dropdown
+      serviceDropdown.classList.toggle("active");
+      
+      console.log("Active class toggled. Is active now?", serviceDropdown.classList.contains("active"));
+      
+      return false;
+    }, true); // Use capture phase
+    
+    // Also try with mousedown for better mobile support
+    serviceToggle.addEventListener("mousedown", function(e) {
+      console.log("=== SERVICE MOUSEDOWN ===");
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      
+      serviceDropdown.classList.toggle("active");
+      console.log("Toggled via mousedown. Active?", serviceDropdown.classList.contains("active"));
+      
+      return false;
+    }, true);
+    
+    // And touchstart for mobile
+    serviceToggle.addEventListener("touchstart", function(e) {
+      console.log("=== SERVICE TOUCHSTART ===");
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      
+      serviceDropdown.classList.toggle("active");
+      console.log("Toggled via touch. Active?", serviceDropdown.classList.contains("active"));
+      
+      return false;
+    }, true);
   }
 
   // 4) Sticky nav

@@ -1,80 +1,74 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // =========================
-  // 1) Footer year (all pages)
-  // =========================
+// Wait for page to load
+document.addEventListener("DOMContentLoaded", function() {
+  
+  console.log("Script loaded!"); // You should see this immediately
+  
+  // 1) Footer year
   const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
-  // ==========================================
-  // 2) Mobile nav toggle + dropdowns (all pages)
-  // ==========================================
-  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  // 2) Mobile menu toggle
+  const hamburger = document.getElementById("mobileMenuToggle");
   const navMenu = document.getElementById("navMenu");
-
-  if (mobileMenuToggle && navMenu) {
-    mobileMenuToggle.addEventListener("click", (e) => {
+  
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", function(e) {
+      console.log("Hamburger clicked!");
       e.stopPropagation();
       navMenu.classList.toggle("active");
     });
   }
 
-  // FIXED: Mobile dropdown with proper event handling
-  const navDropdowns = document.querySelectorAll(".nav-dropdown");
-  if (navDropdowns.length) {
-    navDropdowns.forEach((dropdown) => {
-      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
-      if (!toggle) return;
-
-      toggle.addEventListener("click", (e) => {
-        // Only handle clicks on mobile
+  // 3) Services dropdown
+  const dropdowns = document.querySelectorAll(".nav-dropdown");
+  
+  console.log("Found dropdowns:", dropdowns.length); // Should say "Found dropdowns: 1"
+  
+  dropdowns.forEach(function(dropdown) {
+    const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+    
+    if (toggle) {
+      console.log("Found toggle button");
+      
+      toggle.addEventListener("click", function(e) {
+        console.log("=== SERVICES CLICKED ===");
+        console.log("Window width:", window.innerWidth);
+        
         if (window.innerWidth <= 768) {
           e.preventDefault();
           e.stopPropagation();
           
-          console.log("Dropdown clicked on mobile"); // Debug log
+          console.log("Mobile mode - toggling dropdown");
           
-          // Close other dropdowns (accordion behavior)
-          navDropdowns.forEach((otherDropdown) => {
-            if (otherDropdown !== dropdown) {
-              otherDropdown.classList.remove("active");
+          // Close others
+          dropdowns.forEach(function(other) {
+            if (other !== dropdown) {
+              other.classList.remove("active");
             }
           });
           
-          // Toggle current dropdown
+          // Toggle this one
           dropdown.classList.toggle("active");
           
-          console.log("Dropdown active:", dropdown.classList.contains("active")); // Debug log
+          const isOpen = dropdown.classList.contains("active");
+          console.log("Dropdown is now:", isOpen ? "OPEN" : "CLOSED");
         }
       });
-    });
-  }
-
-  // Close mobile menu when clicking outside
-  document.addEventListener("click", (e) => {
-    if (window.innerWidth <= 768) {
-      const isClickInsideNav = e.target.closest(".main-nav");
-      const isClickOnToggle = e.target.closest(".mobile-menu-toggle");
-      
-      if (!isClickInsideNav && !isClickOnToggle && navMenu) {
-        navMenu.classList.remove("active");
-        navDropdowns.forEach(dropdown => dropdown.classList.remove("active"));
-      }
     }
   });
 
-  // ==================================
-  // 3) Sticky nav hide/show (all pages)
-  // ==================================
+  // 4) Sticky nav
   const mainNav = document.getElementById("mainNav");
   if (mainNav) {
-    let lastScrollTop = 0;
-    const scrollThreshold = 200;
-
-    window.addEventListener("scroll", () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > scrollThreshold) {
-        if (scrollTop > lastScrollTop) {
+    let lastScroll = 0;
+    
+    window.addEventListener("scroll", function() {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 200) {
+        if (currentScroll > lastScroll) {
           mainNav.classList.add("hidden");
         } else {
           mainNav.classList.remove("hidden");
@@ -82,108 +76,73 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         mainNav.classList.remove("hidden");
       }
-
-      lastScrollTop = scrollTop;
+      
+      lastScroll = currentScroll;
     });
   }
 
-  // ======================================
-  // 4) Testimonials slider (home page only)
-  // ======================================
-  const slides = Array.from(document.querySelectorAll(".slide"));
+  // 5) Testimonial slider (if exists)
+  const slides = document.querySelectorAll(".slide");
   const nextBtn = document.getElementById("next");
   const prevBtn = document.getElementById("prev");
-  const slider = document.querySelector(".slider");
-
-  if (slides.length && nextBtn && prevBtn && slider) {
-    let idx = 0;
-    let autoRotateTimer;
-
-    const show = (i) => {
-      slides.forEach((s, n) => s.classList.toggle("active", n === i));
-    };
-
-    const nextSlide = () => {
-      idx = (idx + 1) % slides.length;
-      show(idx);
-    };
-
-    const prevSlide = () => {
-      idx = (idx - 1 + slides.length) % slides.length;
-      show(idx);
-    };
-
-    const startAutoRotate = () => {
-      autoRotateTimer = setInterval(nextSlide, 4000);
-    };
-
-    const stopAutoRotate = () => {
-      if (autoRotateTimer) clearInterval(autoRotateTimer);
-    };
-
-    nextBtn.addEventListener("click", () => {
-      stopAutoRotate();
+  
+  if (slides.length > 0 && nextBtn && prevBtn) {
+    let currentSlide = 0;
+    let timer;
+    
+    function showSlide(n) {
+      slides.forEach(function(slide, i) {
+        slide.classList.toggle("active", i === n);
+      });
+    }
+    
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+    
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+    
+    function startTimer() {
+      timer = setInterval(nextSlide, 4000);
+    }
+    
+    function stopTimer() {
+      clearInterval(timer);
+    }
+    
+    nextBtn.addEventListener("click", function() {
+      stopTimer();
       nextSlide();
-      startAutoRotate();
+      startTimer();
     });
-
-    prevBtn.addEventListener("click", () => {
-      stopAutoRotate();
+    
+    prevBtn.addEventListener("click", function() {
+      stopTimer();
       prevSlide();
-      startAutoRotate();
+      startTimer();
     });
-
-    slider.addEventListener("mouseenter", stopAutoRotate);
-    slider.addEventListener("mouseleave", startAutoRotate);
-
-    show(idx);
-    startAutoRotate();
+    
+    showSlide(0);
+    startTimer();
   }
 
-  // ==========================================
-  // 5) Services popup modals (only pages w/ it)
-  // ==========================================
-  const serviceItems = document.querySelectorAll(".services li[data-service]");
-  const modals = document.querySelectorAll(".modal");
-  const closeButtons = document.querySelectorAll(".close");
-
-  if (serviceItems.length && modals.length) {
-    serviceItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        const service = item.getAttribute("data-service");
-        const modal = document.getElementById(`${service}-modal`);
-        if (modal) modal.style.display = "block";
-      });
-    });
-
-    closeButtons.forEach((closeBtn) => {
-      closeBtn.addEventListener("click", () => {
-        const modal = closeBtn.closest(".modal");
-        if (modal) modal.style.display = "none";
-      });
-    });
-
-    window.addEventListener("click", (event) => {
-      modals.forEach((modal) => {
-        if (event.target === modal) modal.style.display = "none";
-      });
-    });
-  }
-
-  // =========================
-  // 6) FAQ accordion (pages w/ FAQ)
-  // =========================
-  window.toggleFAQ = function (questionEl) {
+  // 6) FAQ accordion
+  window.toggleFAQ = function(questionEl) {
     if (!questionEl) return;
-
+    
     const item = questionEl.closest(".faq-item");
     if (!item) return;
-
+    
     const answer = item.querySelector(".faq-answer");
     if (!answer) return;
-
-    // Toggle current FAQ
+    
     questionEl.classList.toggle("active");
     answer.classList.toggle("active");
   };
+  
+  console.log("All scripts initialized!");
 });

@@ -865,12 +865,12 @@ form button:hover {
  
   /* FIXED: Move social icons down on mobile so they're not clipped */
   .social-links {
-    top: 75px;  /* Push below nav bar (nav is 70px tall) */
+    top: 75px;
   }
 
   .site-header {
-    padding-top: 50px;  /* Space for social icons */
-    padding-bottom: 20px;  /* Less bottom padding */
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
  
   .nav-menu {
@@ -906,6 +906,107 @@ form button:hover {
     justify-content: space-between;
     padding: 15px 10px;
   }
+
+  /* CRITICAL FIX: Mobile dropdown styling */
+  .nav-dropdown-menu {
+    position: static;
+    background: #f8fafc;
+    margin-left: 20px;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    min-width: auto;
+    /* Use max-height for animation */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  }
+
+  .nav-dropdown.active .nav-dropdown-menu {
+    max-height: 500px; /* Large enough for all menu items */
+    opacity: 1;
+    padding: 10px 0;
+  }
+
+  /* Force override desktop hover on mobile */
+  .nav-dropdown:hover .nav-dropdown-menu {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nav-dropdown.active:hover .nav-dropdown-menu {
+    max-height: 500px !important;
+    opacity: 1 !important;
+    padding: 10px 0 !important;
+  }
+
+  /* Rotate arrow when active */
+  .nav-dropdown.active .nav-dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+
+  /* FIXED: Side-by-side buttons, not full width */
+  .nav-cta-group {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-cta {
+    flex: 1;
+    max-width: 140px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* FIXED: Add more top padding to body on mobile so socials aren't hidden */
+  body {
+    padding-top: 90px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .trust-badges {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Contact page mobile fixes */
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-hero p {
+    font-size: 1rem;
+  }
+
+  .contact-info-box {
+    padding: 20px;
+  }
+
+  .service-area-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-area-links a {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}
 
   /* FIXED: Better mobile dropdown handling */
   .nav-dropdown-menu {

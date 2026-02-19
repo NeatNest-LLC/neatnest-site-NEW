@@ -16,49 +16,64 @@ document.addEventListener("DOMContentLoaded", function() {
   if (hamburger && navMenu) {
     hamburger.addEventListener("click", function(e) {
       console.log("Hamburger clicked!");
-      e.stopPropagation();
-      navMenu.classList.toggle("active");
+      
+      // Only toggle if clicking the hamburger itself, not its children
+      if (e.target === hamburger || e.target.closest('#mobileMenuToggle')) {
+        e.stopPropagation();
+        navMenu.classList.toggle("active");
+      }
     });
   }
 
-  // 3) Services dropdown - SIMPLIFIED VERSION
+  // 3) Services dropdown - MULTIPLE EVENT APPROACH
   const dropdowns = document.querySelectorAll(".nav-dropdown");
   
   console.log("Found dropdowns:", dropdowns.length);
   
-  dropdowns.forEach(function(dropdown) {
-    const toggle = dropdown.querySelector(".nav-dropdown-toggle");
-    
-    if (toggle) {
-      console.log("Found toggle button");
+  if (dropdowns.length > 0) {
+    dropdowns.forEach(function(dropdown) {
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      const menu = dropdown.querySelector(".nav-dropdown-menu");
       
-      toggle.addEventListener("click", function(e) {
-        console.log("=== SERVICES CLICKED ===");
-        console.log("Window width:", window.innerWidth);
+      if (toggle && menu) {
+        console.log("Setup dropdown listener");
         
-        // ALWAYS toggle, regardless of screen size (for testing)
-        e.preventDefault();
-        e.stopPropagation();
+        // Function to handle the toggle
+        function handleToggle(e) {
+          console.log("=== SERVICES ACTIVATED ===");
+          console.log("Event type:", e.type);
+          console.log("Window width:", window.innerWidth);
+          
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          
+          console.log("Toggling dropdown NOW");
+          
+          // Close others
+          dropdowns.forEach(function(other) {
+            if (other !== dropdown) {
+              other.classList.remove("active");
+            }
+          });
+          
+          // Toggle this one
+          dropdown.classList.toggle("active");
+          
+          const isOpen = dropdown.classList.contains("active");
+          console.log("Dropdown is now:", isOpen ? "OPEN" : "CLOSED");
+          console.log("Dropdown classes:", dropdown.className);
+          
+          return false;
+        }
         
-        console.log("Toggling dropdown NOW");
-        
-        // Close others
-        dropdowns.forEach(function(other) {
-          if (other !== dropdown) {
-            other.classList.remove("active");
-            console.log("Closed other dropdown");
-          }
-        });
-        
-        // Toggle this one
-        dropdown.classList.toggle("active");
-        
-        const isOpen = dropdown.classList.contains("active");
-        console.log("Dropdown is now:", isOpen ? "OPEN" : "CLOSED");
-        console.log("Dropdown classes:", dropdown.className);
-      });
-    }
-  });
+        // Try multiple event types
+        toggle.addEventListener("mousedown", handleToggle, true);
+        toggle.addEventListener("touchstart", handleToggle, true);
+        toggle.addEventListener("click", handleToggle, true);
+      }
+    });
+  }
 
   // 4) Sticky nav
   const mainNav = document.getElementById("mainNav");

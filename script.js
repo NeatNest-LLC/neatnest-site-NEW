@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // 3) Services dropdown
+  // 3) Services dropdown - SIMPLIFIED VERSION
   const dropdowns = document.querySelectorAll(".nav-dropdown");
   
-  console.log("Found dropdowns:", dropdowns.length); // Should say "Found dropdowns: 1"
+  console.log("Found dropdowns:", dropdowns.length);
   
   dropdowns.forEach(function(dropdown) {
     const toggle = dropdown.querySelector(".nav-dropdown-toggle");
@@ -36,25 +36,26 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("=== SERVICES CLICKED ===");
         console.log("Window width:", window.innerWidth);
         
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          console.log("Mobile mode - toggling dropdown");
-          
-          // Close others
-          dropdowns.forEach(function(other) {
-            if (other !== dropdown) {
-              other.classList.remove("active");
-            }
-          });
-          
-          // Toggle this one
-          dropdown.classList.toggle("active");
-          
-          const isOpen = dropdown.classList.contains("active");
-          console.log("Dropdown is now:", isOpen ? "OPEN" : "CLOSED");
-        }
+        // ALWAYS toggle, regardless of screen size (for testing)
+        e.preventDefault();
+        e.stopPropagation();
+        
+        console.log("Toggling dropdown NOW");
+        
+        // Close others
+        dropdowns.forEach(function(other) {
+          if (other !== dropdown) {
+            other.classList.remove("active");
+            console.log("Closed other dropdown");
+          }
+        });
+        
+        // Toggle this one
+        dropdown.classList.toggle("active");
+        
+        const isOpen = dropdown.classList.contains("active");
+        console.log("Dropdown is now:", isOpen ? "OPEN" : "CLOSED");
+        console.log("Dropdown classes:", dropdown.className);
       });
     }
   });

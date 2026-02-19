@@ -864,14 +864,14 @@ form button:hover {
   }
  
   /* FIXED: Move social icons down on mobile so they're not clipped */
-.social-links {
-  top: 75px;  /* Push below nav bar (nav is 70px tall) */
-}
+  .social-links {
+    top: 75px;  /* Push below nav bar (nav is 70px tall) */
+  }
 
-.site-header {
-  padding-top: 50px;  /* Space for social icons */
-  padding-bottom: 20px;  /* Less bottom padding */
-}
+  .site-header {
+    padding-top: 50px;  /* Space for social icons */
+    padding-bottom: 20px;  /* Less bottom padding */
+  }
  
   .nav-menu {
     position: fixed;
@@ -907,25 +907,37 @@ form button:hover {
     padding: 15px 10px;
   }
 
+  /* FIXED: Better mobile dropdown handling */
   .nav-dropdown-menu {
     position: static;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
     transform: none;
     box-shadow: none;
     background: #f8fafc;
     margin-left: 20px;
-    display: none;
+    display: block; /* Always display:block, control with max-height */
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    overflow: hidden;
   }
 
   .nav-dropdown.active .nav-dropdown-menu {
-    display: block;
-    max-height: 400px;
+    opacity: 1;
+    visibility: visible;
+    max-height: 400px; /* Adjust based on your menu height */
   }
 
   /* Override desktop hover on mobile */
   .nav-dropdown:hover .nav-dropdown-menu {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+  }
+
+  /* Make the arrow rotate when active */
+  .nav-dropdown.active .nav-dropdown-toggle::after {
+    transform: rotate(180deg);
   }
 
   /* FIXED: Side-by-side buttons, not full width */
@@ -1172,5 +1184,3 @@ form button:hover {
     height: 300px;
   }
 }
-
- 

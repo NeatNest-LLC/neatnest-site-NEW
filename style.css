@@ -1294,5 +1294,26 @@ form button:hover {
     background: red !important; /* You should see RED background if it's working */
     display: block !important;
   }
-}
+  /* NUCLEAR OPTION - FORCE DROPDOWN TO SHOW */
+@media (max-width: 768px) {
+  .nav-dropdown.active .nav-dropdown-menu {
+    display: block !important;
+    visibility: visible !important;
+    max-height: 1000px !important;
+    opacity: 1 !important;
+    background: red !important;
+    padding: 10px 0 !important;
+    position: static !important;
+    transform: none !important;
+  }
+  
+  .nav-dropdown.active .nav-dropdown-menu li {
+    display: block !important;
+  }
+  
+  .nav-dropdown.active .nav-dropdown-menu a {
+    display: block !important;
+    color: white !important;
+    padding: 12px 20px !important;
+  }
 }

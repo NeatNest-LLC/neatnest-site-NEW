@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.getElementById("navMenu");
 
   if (mobileMenuToggle && navMenu) {
-    mobileMenuToggle.addEventListener("click", () => {
+    mobileMenuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       navMenu.classList.toggle("active");
     });
   }
@@ -30,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
           e.preventDefault();
           e.stopPropagation();
           
+          console.log("Dropdown clicked on mobile"); // Debug log
+          
           // Close other dropdowns (accordion behavior)
           navDropdowns.forEach((otherDropdown) => {
             if (otherDropdown !== dropdown) {
@@ -39,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
           
           // Toggle current dropdown
           dropdown.classList.toggle("active");
+          
+          console.log("Dropdown active:", dropdown.classList.contains("active")); // Debug log
         }
       });
     });
@@ -168,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
   // 6) FAQ accordion (pages w/ FAQ)
   // =========================
-  // This function is called by inline onclick="toggleFAQ(this)" in HTML
   window.toggleFAQ = function (questionEl) {
     if (!questionEl) return;
 

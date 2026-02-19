@@ -17,17 +17,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // FIXED: Mobile dropdown with proper event handling
   const navDropdowns = document.querySelectorAll(".nav-dropdown");
   if (navDropdowns.length) {
     navDropdowns.forEach((dropdown) => {
       const toggle = dropdown.querySelector(".nav-dropdown-toggle");
       if (!toggle) return;
 
-      toggle.addEventListener("click", () => {
-        if (window.innerWidth <= 768) dropdown.classList.toggle("active");
+      toggle.addEventListener("click", (e) => {
+        // Only handle clicks on mobile
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Close other dropdowns (accordion behavior)
+          navDropdowns.forEach((otherDropdown) => {
+            if (otherDropdown !== dropdown) {
+              otherDropdown.classList.remove("active");
+            }
+          });
+          
+          // Toggle current dropdown
+          dropdown.classList.toggle("active");
+        }
       });
     });
   }
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      const isClickInsideNav = e.target.closest(".main-nav");
+      const isClickOnToggle = e.target.closest(".mobile-menu-toggle");
+      
+      if (!isClickInsideNav && !isClickOnToggle && navMenu) {
+        navMenu.classList.remove("active");
+        navDropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+      }
+    }
+  });
 
   // ==================================
   // 3) Sticky nav hide/show (all pages)
@@ -41,8 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (scrollTop > scrollThreshold) {
-        if (scrollTop > lastScrollTop) mainNav.classList.add("hidden");
-        else mainNav.classList.remove("hidden");
+        if (scrollTop > lastScrollTop) {
+          mainNav.classList.add("hidden");
+        } else {
+          mainNav.classList.remove("hidden");
+        }
+      } else {
+        mainNav.classList.remove("hidden");
       }
 
       lastScrollTop = scrollTop;
@@ -135,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
   // 6) FAQ accordion (pages w/ FAQ)
   // =========================
-  // If your HTML uses onclick="toggleFAQ(this)", this must exist globally.
+  // This function is called by inline onclick="toggleFAQ(this)" in HTML
   window.toggleFAQ = function (questionEl) {
     if (!questionEl) return;
 
@@ -145,9 +178,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const answer = item.querySelector(".faq-answer");
     if (!answer) return;
 
-    // Toggle current one
+    // Toggle current FAQ
     questionEl.classList.toggle("active");
     answer.classList.toggle("active");
   };
 });
-

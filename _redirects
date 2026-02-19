@@ -1,1 +1,8 @@
+# Force HTTPS
+http://neatnestllc.com/*  https://neatnestllc.com/:splat  301!
+
+# Remove .html from ALL pages
+/:page.html  /:page  301
+
+# Handle index.html
 /index.html  /  301!

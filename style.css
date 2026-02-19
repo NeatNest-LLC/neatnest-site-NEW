@@ -1283,5 +1283,16 @@ form button:hover {
 
   .map-container iframe {
     height: 300px;
+
   }
+  /* TEMPORARY DEBUG - DELETE AFTER TESTING */
+@media (max-width: 768px) {
+  .nav-dropdown.active .nav-dropdown-menu {
+    max-height: 500px !important;
+    opacity: 1 !important;
+    padding: 10px 0 !important;
+    background: red !important; /* You should see RED background if it's working */
+    display: block !important;
+  }
+}
 }

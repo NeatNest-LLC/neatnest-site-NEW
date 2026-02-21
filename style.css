@@ -1194,4 +1194,19 @@ form button:hover {
     height: 300px;
 
   }
+ 
+  /* Benefit icons */
+.benefit-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+/* Slightly smaller on mobile */
+@media (max-width: 768px) {
+  .benefit-icon {
+    width: 90px;
+    height: 90px;
+  }
 }

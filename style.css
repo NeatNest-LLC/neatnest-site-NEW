@@ -697,18 +697,18 @@ form button:hover {
     .trust-badge {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
     }
 
     .trust-badge img {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
     }
 
     .trust-badge span {
       font-weight: 600;
       color: var(--blue);
-      font-size: 1rem;
+      font-size: 1.15rem;
     }
 
     /* How It Works */

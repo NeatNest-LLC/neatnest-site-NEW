@@ -397,7 +397,7 @@ form button:hover {
     margin: 5% auto;
     padding: 20px;
   }
-
+}
 /* Book Now button styles */
 .book-btn {
   display: inline-block;
@@ -966,6 +966,11 @@ form button:hover {
     max-width: 200px;
   }
 }
+
+  /* FIXED: Add more top padding to body on mobile so socials aren't hidden */
+  body {
+    padding-top: 90px;
+  }
 
   .footer-columns {
     grid-template-columns: 1fr;

@@ -364,20 +364,20 @@
       </div>
     </section>
 
-    <!-- 8) Call-To-Action Section (Quote Form) -->
-    <section id="quote" class="section" style="background: #f8fafc;">
-      <h2>Looking for House Cleaning in Cheshire?</h2>
-      <p>Ready to experience a cleaner home? Get your free quote today!</p>
-      
-      <form name="home-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
-        <input type="hidden" name="form-name" value="cheshire-quote" />
-        <input type="hidden" name="town" value="Cheshire" />
+<!-- 8) Call-To-Action Section (Quote Form) -->
+      <section id="quote" class="section" style="background: #f8fafc;">
+        <h2>Looking for House Cleaning in Cheshire?</h2>
+        <p>Ready to experience a cleaner home? Get your free quote today!</p>
         
-        <label>Your Name <input name="name" required /></label>
-        <label>Phone <input name="phone" type="tel" required /></label>
-        <label>Email <input name="email" type="email" required /></label>
+        <form name="cheshire-quote" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="cheshire-quote" />
+          <input type="hidden" name="town" value="Cheshire" />
+          
+          <label>Your Name <input name="name" required /></label>
+          <label>Phone <input name="phone" type="tel" required /></label>
+          <label>Email <input name="email" type="email" required /></label>
         
-        <label>Service Interested In
+          <label>Service Interested In
           <select name="service" required style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
             <option value="">Select a service</option>
             <option value="Deep Cleaning">Deep Cleaning</option>

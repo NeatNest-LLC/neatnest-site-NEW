@@ -30,6 +30,96 @@
   <link rel="stylesheet" href="/style.css" />
   <link rel="canonical" href="https://neatnestllc.com/about" />
   
+  <!-- Updated Schema - About Page (single @graph) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HouseCleaningService",
+        "@id": "https://neatnestllc.com/#housecleaningservice",
+        "name": "NeatNest LLC",
+        "description": "Family-owned, fully insured & bonded house cleaning company serving Wallingford, North Haven & Cheshire, CT.",
+        "url": "https://neatnestllc.com/",
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "logo": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://neatnestllc.com/#organization",
+        "name": "NeatNest LLC",
+        "url": "https://neatnestllc.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://neatnestllc.com/#logo",
+          "url": "https://neatnestllc.com/images/logo.jpg"
+        },
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://neatnestllc.com/#website",
+        "url": "https://neatnestllc.com/",
+        "name": "NeatNest LLC",
+        "publisher": {
+          "@id": "https://neatnestllc.com/#organization"
+        }
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://neatnestllc.com/about#aboutpage",
+        "url": "https://neatnestllc.com/about",
+        "name": "About NeatNest LLC - Family-Owned Cleaning Company in Wallingford CT",
+        "isPartOf": {
+          "@id": "https://neatnestllc.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://neatnestllc.com/#organization"
+        },
+        "about": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://neatnestllc.com/#logo"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -291,7 +381,6 @@
     </div>
   </footer>
 
-<script src="/script.js"></script>
-
+  <script src="/script.js"></script>
 </body>
 </html>

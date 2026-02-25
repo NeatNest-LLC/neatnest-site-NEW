@@ -29,6 +29,185 @@
   
   <link rel="stylesheet" href="/style.css" />
   <link rel="canonical" href="https://neatnestllc.com/recurring-house-cleaning" />
+
+  <!-- Updated Schema - Service Page (single @graph) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HouseCleaningService",
+        "@id": "https://neatnestllc.com/#housecleaningservice",
+        "name": "NeatNest LLC",
+        "description": "Family-owned, fully insured & bonded house cleaning company serving Wallingford, North Haven & Cheshire, CT.",
+        "url": "https://neatnestllc.com/",
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "logo": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.45,
+          "longitude": -72.82
+        },
+        "hasMap": "https://www.google.com/maps/place/NeatNest+LLC/@41.4377754,-72.8044779,17z/data=!3m1!4b1!4m6!3m5!1s0x7acd96b0a1a0cd7:0x69a2bc28aca585cb!8m2!3d41.4377754!4d-72.8044779!16s%2Fg%2F11s5ytmvf9!5m1!1e4",
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://neatnestllc.com/#organization",
+        "name": "NeatNest LLC",
+        "url": "https://neatnestllc.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://neatnestllc.com/#logo",
+          "url": "https://neatnestllc.com/images/logo.jpg"
+        },
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://neatnestllc.com/#website",
+        "url": "https://neatnestllc.com/",
+        "name": "NeatNest LLC",
+        "publisher": {
+          "@id": "https://neatnestllc.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://neatnestllc.com/recurring-house-cleaning#webpage",
+        "url": "https://neatnestllc.com/recurring-house-cleaning",
+        "name": "Recurring House Cleaning in Wallingford, North Haven & Cheshire CT | NeatNest LLC",
+        "isPartOf": {
+          "@id": "https://neatnestllc.com/#website"
+        },
+        "about": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://neatnestllc.com/recurring-house-cleaning#service",
+        "name": "Recurring House Cleaning",
+        "serviceType": "Recurring House Cleaning",
+        "provider": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "url": "https://neatnestllc.com/recurring-house-cleaning"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://neatnestllc.com/recurring-house-cleaning#faq",
+        "url": "https://neatnestllc.com/recurring-house-cleaning",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does recurring cleaning cost in Wallingford CT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recurring house cleaning in Wallingford, CT typically ranges from $120–$350 per visit depending on home size, cleaning frequency, and overall condition. Weekly cleaning offers the lowest per-visit rate, while monthly service is slightly higher due to additional buildup between visits. NeatNest LLC provides free, customized quotes for homeowners in Wallingford, North Haven, and Cheshire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to sign a contract?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We do not require long-term contracts for recurring house cleaning. You can adjust, pause, or cancel service with reasonable notice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do prices change each visit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Your recurring cleaning price stays consistent as long as your home size, condition, and service frequency remain the same. Pricing changes only if scope or frequency changes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I need to reschedule or skip a cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you need to reschedule or skip a recurring cleaning visit, provide 24–48 hours notice and we’ll coordinate a new time that works for you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to be home during cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Many clients provide secure access via a key or door code so we can clean while they’re away. NeatNest LLC is fully insured and bonded."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I schedule service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bi-weekly cleaning is the most popular option for maintaining a consistently clean home. Weekly service is ideal for busy households, pets, or high-traffic homes, while monthly service works well for lower-traffic homes."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://neatnestllc.com/recurring-house-cleaning#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://neatnestllc.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Recurring House Cleaning",
+            "item": "https://neatnestllc.com/recurring-house-cleaning"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   
 </head>
 
@@ -86,13 +265,9 @@
     
     <img src="/images/logo.jpg" alt="NeatNest LLC company logo" class="logo" />
     
-    <!-- Only H1 on page -->
     <h1>Recurring House Cleaning in Wallingford, North Haven & Cheshire, CT</h1>
-    
-    <!-- Supporting line (short) -->
     <p>Consistent weekly, bi-weekly, or monthly housekeeping service.</p>
     
-    <!-- Primary & Secondary CTAs -->
     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
       <a class="call-btn" href="tel:+12035007034">CALL NOW</a>
       <a class="call-btn" href="#quote" style="background: var(--orange);">Get a Free Quote</a>
@@ -100,7 +275,7 @@
   </header>
 
   <main>
-    
+    <!-- Your original content stays unchanged below -->
     <!-- 2) Intro (body starts) -->
     <section class="section">
       <h2>Recurring House Cleaning Service</h2>
@@ -113,97 +288,88 @@
       <p style="margin: 0;">We provide recurring house cleaning services throughout Wallingford, North Haven, and Cheshire CT. As a locally owned company based in Wallingford, we offer reliable scheduling and consistent service across all three towns.</p>
     </section>
 
-    <!-- 4) What's Included (detailed scope with grouped lists) -->
+    <!-- 4) What's Included -->
     <section class="section">
       <h2>What's Included in Our Recurring Cleaning</h2>
-      
-    <!-- Kitchen -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">KITCHEN</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Surfaces: Wipe countertops and backsplash</li>
-        <li>Appliances: Polish exterior of fridge, oven, and dishwasher</li>
-        <li>Cabinetry: Wipe exterior fronts and handles</li>
-        <li>Sink: Clean and shine basin and fixtures</li>
-        <li>Cooking Area: Clean stovetop and exterior range hood</li>
-        <li>Microwave: Sanitize interior and exterior</li>
-        <li>Floors: Sweep and mop all floor surfaces</li>
-        <li>Trash: Empty bins and replace liners</li>
-      </ul>
-    </div>
-    
-    <!-- Bathrooms -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BATHROOMS</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Toilets: Scrub and disinfect porcelain and base</li>
-        <li>Lavatory: Sanitize sinks, countertops, and backsplashes</li>
-        <li>Showers/Tubs: Clean surfaces, tiles, and glass doors</li>
-        <li>Fixtures: Polish mirrors and faucets</li>
-        <li>Cabinets: Wipe exterior fronts and hardware</li>
-        <li>Detailing: Spot-clean walls and baseboards</li>
-        <li>Floors: Sweep, mop, and sanitize floors</li>
-      </ul>
-    </div>
-    
-    <!-- Bedrooms & Living Areas -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BEDROOMS &amp; LIVING AREAS</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Dusting: Thoroughly dust furniture, shelves, and décor</li>
-        <li>High-Dusting: Dust ceiling fans and light fixtures</li>
-        <li>Woodwork: Wipe window sills, baseboards, and door frames</li>
-        <li>Beds: Make beds (linens must be left out)</li>
-        <li>Upholstery: Vacuum furniture and tidy cushions</li>
-        <li>Floors: Vacuum carpets/rugs and mop hard floors</li>
-      </ul>
-    </div>
-    
-    <!-- General Throughout -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">GENERAL THROUGHOUT</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Touchpoints: Sanitize light switches and door handles</li>
-        <li>Spot-Cleaning: Remove scuffs from walls and doors</li>
-        <li>Organization: Straighten and tidy common areas</li>
-        <li>Waste: Empty all bins and replace liners</li>
-        <li>Entryways: Vacuum hallways and sweep entry porches</li>
-        <li>Service: Take trash to curb (available upon request)</li>
-        <li>Focus Areas: Rotating "Deep Clean" task each visit to ensure total home care</li>
-      </ul>
-    </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">KITCHEN</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Surfaces: Wipe countertops and backsplash</li>
+          <li>Appliances: Polish exterior of fridge, oven, and dishwasher</li>
+          <li>Cabinetry: Wipe exterior fronts and handles</li>
+          <li>Sink: Clean and shine basin and fixtures</li>
+          <li>Cooking Area: Clean stovetop and exterior range hood</li>
+          <li>Microwave: Sanitize interior and exterior</li>
+          <li>Floors: Sweep and mop all floor surfaces</li>
+          <li>Trash: Empty bins and replace liners</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BATHROOMS</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Toilets: Scrub and disinfect porcelain and base</li>
+          <li>Lavatory: Sanitize sinks, countertops, and backsplashes</li>
+          <li>Showers/Tubs: Clean surfaces, tiles, and glass doors</li>
+          <li>Fixtures: Polish mirrors and faucets</li>
+          <li>Cabinets: Wipe exterior fronts and hardware</li>
+          <li>Detailing: Spot-clean walls and baseboards</li>
+          <li>Floors: Sweep, mop, and sanitize floors</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BEDROOMS &amp; LIVING AREAS</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Dusting: Thoroughly dust furniture, shelves, and décor</li>
+          <li>High-Dusting: Dust ceiling fans and light fixtures</li>
+          <li>Woodwork: Wipe window sills, baseboards, and door frames</li>
+          <li>Beds: Make beds (linens must be left out)</li>
+          <li>Upholstery: Vacuum furniture and tidy cushions</li>
+          <li>Floors: Vacuum carpets/rugs and mop hard floors</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">GENERAL THROUGHOUT</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Touchpoints: Sanitize light switches and door handles</li>
+          <li>Spot-Cleaning: Remove scuffs from walls and doors</li>
+          <li>Organization: Straighten and tidy common areas</li>
+          <li>Waste: Empty all bins and replace liners</li>
+          <li>Entryways: Vacuum hallways and sweep entry porches</li>
+          <li>Service: Take trash to curb (available upon request)</li>
+          <li>Focus Areas: Rotating "Deep Clean" task each visit to ensure total home care</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- 5) Benefits (3 logos side by side with descriptions) -->
+    <!-- 5) Benefits -->
     <section class="section">
       <h2>Benefits of Recurring House Cleaning</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
-        
-        <!-- Benefit 1 -->
         <div style="text-align: center;">
           <img src="/images/time-and-energy-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Save Time & Energy</h3>
           <p style="margin: 0; line-height: 1.6;">Spend your weekends doing what you love, not cleaning. Reclaim hours every week and enjoy a consistently clean home.</p>
         </div>
 
-        <!-- Benefit 2 -->
         <div style="text-align: center;">
           <img src="/images/same-team-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Same Team Every Visit</h3>
           <p style="margin: 0; line-height: 1.6;">Build trust with a consistent cleaning team who knows your home, your preferences, and your routine.</p>
         </div>
 
-        <!-- Benefit 3 -->
         <div style="text-align: center;">
           <img src="/images/priority-discount-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Priority & Discounts</h3>
           <p style="margin: 0; line-height: 1.6;">Recurring clients enjoy priority scheduling, discounted rates, and flexible rescheduling when life gets in the way.</p>
         </div>
-
       </div>
     </section>
 
-    <!-- 6a) "See the Difference" (visual section) -->
+    <!-- 6a) See the Difference -->
     <section class="section">
       <h2>See The Difference</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
@@ -225,35 +391,30 @@
     <section class="section">
       <h2>Choose Your Cleaning Frequency</h2>
       <div style="max-width: 900px; margin: 20px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-        
-        <!-- Weekly -->
         <div style="border: 2px solid var(--blue); border-radius: 12px; padding: 20px; text-align: center; background: white;">
           <h3 style="color: var(--blue); margin: 10px 0 15px; font-size: 1.4rem;">Weekly</h3>
           <p style="margin: 0 0 15px; line-height: 1.6;">Perfect for busy families, pet owners, and those who want a consistently spotless home with minimal effort.</p>
           <p style="margin: 0; font-weight: 600; color: var(--blue);">Best Value!</p>
         </div>
 
-        <!-- Bi-Weekly -->
         <div style="border: 2px solid var(--blue); border-radius: 12px; padding: 20px; text-align: center; background: white;">
           <h3 style="color: var(--blue); margin: 10px 0 15px; font-size: 1.4rem;">Bi-Weekly</h3>
           <p style="margin: 0 0 15px; line-height: 1.6;">Our most popular option. Keeps your home clean and fresh without breaking the bank. Ideal for most households.</p>
           <p style="margin: 0; font-weight: 600; color: var(--blue);">Most Popular!</p>
         </div>
 
-        <!-- Monthly -->
         <div style="border: 2px solid var(--blue); border-radius: 12px; padding: 20px; text-align: center; background: white;">
           <h3 style="color: var(--blue); margin: 10px 0 15px; font-size: 1.4rem;">Monthly</h3>
           <p style="margin: 0 0 15px; line-height: 1.6;">Great for smaller homes, individuals, or those who maintain their space well but want professional help monthly.</p>
           <p style="margin: 0; font-weight: 600; color: var(--blue);">Budget-Friendly!</p>
         </div>
-
       </div>
     </section>
 
-    <!-- 7) Testimonials (3 TOTAL with town tags + internal links) -->
+    <!-- 7) Testimonials -->
     <section class="section">
       <h2>What Customers Say</h2>
-      
+
       <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--blue);">
         <p style="font-style: italic; margin-bottom: 10px;">“My house has never been as clean as it is now that I have hired them. Mike and his crew are personable, honest, detail oriented and very hard working. I highly recommend them!”</p>
         <p style="font-weight: 600; margin: 0;">— Janis B., <a href="/wallingford-ct-house-cleaning" style="color: var(--blue); text-decoration: none;">Wallingford CT</a></p>
@@ -270,7 +431,7 @@
       </div>
     </section>
 
-    <!-- 8) Serving Your Community (keep very short) -->
+    <!-- 8) Serving -->
     <section class="section">
       <h2>Serving Wallingford, North Haven & Cheshire</h2>
       <p>NeatNest LLC is proud to serve homeowners throughout Wallingford, North Haven, and Cheshire CT with professional recurring house cleaning services. Our locally owned team brings reliable scheduling, consistent quality, and personalized attention to every home we service.</p>
@@ -281,13 +442,11 @@
       </div>
     </section>
 
-    <!-- 9) FAQ with Accordion (first one expanded) -->
+    <!-- 9) FAQ -->
     <section class="section" style="background: #f8fafc;">
       <h2>Recurring House Cleaning FAQs</h2>
-      
-        <div class="faq-wrap">
-        
-        <!-- FAQ 1 - EXPANDED by default -->
+
+      <div class="faq-wrap">
         <div class="faq-item">
           <div class="faq-question active" onclick="toggleFAQ(this)">
             How much does recurring cleaning cost in Wallingford CT?
@@ -297,72 +456,66 @@
           </div>
         </div>
 
-        <!-- FAQ 2 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Do I need to sign a contract?
           </div>
           <div class="faq-answer">
-            <p>No long-term contracts are required for our recurring house cleaning services. We operate on a flexible schedule and believe clients should stay with us because they’re happy with the service. You can adjust, pause, or cancel recurring cleaning with reasonable notice—no binding agreements.</p>
+            <p>No long-term contracts are required for our recurring house cleaning services. You can adjust, pause, or cancel with reasonable notice.</p>
           </div>
         </div>
 
-        <!-- FAQ 3 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Do prices change each visit?
           </div>
           <div class="faq-answer">
-            <p>No. Your recurring cleaning price stays consistent as long as the home size, condition, and service frequency remain the same. Pricing only changes if the scope of work increases (for example, adding rooms or changing cleaning frequency).</p>
+            <p>No. Pricing stays consistent unless your scope, home size, or frequency changes.</p>
           </div>
         </div>
 
-        <!-- FAQ 4 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             What if I need to reschedule or skip a cleaning?
           </div>
           <div class="faq-answer">
-            <p>We understand that schedules change. If you need to reschedule or skip a recurring cleaning visit, simply provide 24–48 hours notice and we’ll coordinate a new time that works for you. We aim to provide reliable, flexible house cleaning service that fits your routine.</p>
+            <p>Provide 24–48 hours notice and we’ll coordinate a new time.</p>
           </div>
         </div>
 
-        <!-- FAQ 5 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Do I need to be home during cleaning?
           </div>
           <div class="faq-answer">
-            <p>No. Most recurring house cleaning clients in Wallingford provide secure access via key or door code so we can clean while they’re at work. NeatNest LLC is fully insured and bonded, and all team members are background-checked for your peace of mind.</p>
+            <p>No. Many clients provide secure access via key or door code. We’re fully insured and bonded.</p>
           </div>
         </div>
 
-        <!-- FAQ 6 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             How often should I schedule service?
           </div>
           <div class="faq-answer">
-            <p>Bi-weekly house cleaning is the most popular option for maintaining a consistently clean home. Weekly service is ideal for busy households, families with pets, or high-traffic homes, while monthly cleaning works best for lower-traffic households that stay relatively tidy between visits.</p>
+            <p>Bi-weekly is most popular. Weekly is great for busy households or pets, and monthly works best for lower-traffic homes.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- 10) Quote Form (conversion block) -->
+    <!-- 10) Quote Form -->
     <section id="quote" class="section">
       <h2>Get a Free Recurring Cleaning Quote</h2>
       <p>Ready to enjoy a consistently clean home? Fill out the form below and we'll get back to you quickly with a personalized quote.</p>
-      
+
       <form name="recurring-cleaning-quote" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="recurring-cleaning-quote" />
         <input type="hidden" name="service" value="Recurring House Cleaning" />
-        
+
         <label>Your Name <input name="name" required /></label>
         <label>Phone <input name="phone" type="tel" required /></label>
         <label>Email <input name="email" type="email" required /></label>
-        
+
         <label>Town
           <select name="town" required style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
             <option value="">Select your town</option>
@@ -389,13 +542,12 @@
         <label>Additional Details
           <textarea name="message" rows="4" placeholder="Tell us about your home, preferred cleaning day, or any special requests..."></textarea>
         </label>
-        
+
         <button type="submit">Get My Free Quote</button>
       </form>
-      
+
       <p style="margin-top: 15px; font-size: 1rem;">Prefer faster service? Call now: <a href="tel:+12035007034" style="color: var(--blue); font-weight: 600; text-decoration: none;">(203) 500-7034</a></p>
-      
-      <!-- Contact Info -->
+
       <div class="contact-info" style="margin-top: 25px;">
         <strong>NeatNest LLC</strong><br>
         274 Woodhouse Ave, Wallingford, CT 06492<br>
@@ -405,7 +557,7 @@
       </div>
     </section>
 
-    <!-- 11) Other Services (internal links) - TIGHTER SPACING & VERTICAL BUTTONS -->
+    <!-- 11) Other Services -->
     <section class="section" style="background: #f8fafc;">
       <h2 style="margin-bottom: 8px;">Other Cleaning Services</h2>
       <p style="margin-top: 0; margin-bottom: 12px;">NeatNest LLC offers a complete range of professional cleaning services for your home or business:</p>
@@ -420,7 +572,6 @@
 
   </main>
 
- <!-- Global Footer -->
   <footer class="site-footer">
     <div class="footer-columns">
       <div class="footer-col">
@@ -465,6 +616,5 @@
   </footer>
 
   <script src="/script.js"></script>
-  
 </body>
 </html>

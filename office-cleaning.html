@@ -29,6 +29,185 @@
   
   <link rel="stylesheet" href="/style.css" />
   <link rel="canonical" href="https://neatnestllc.com/office-cleaning" />
+
+  <!-- Updated Schema - Service Page (single @graph) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HouseCleaningService",
+        "@id": "https://neatnestllc.com/#housecleaningservice",
+        "name": "NeatNest LLC",
+        "description": "Family-owned, fully insured & bonded house cleaning company serving Wallingford, North Haven & Cheshire, CT.",
+        "url": "https://neatnestllc.com/",
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "logo": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.45,
+          "longitude": -72.82
+        },
+        "hasMap": "https://www.google.com/maps/place/NeatNest+LLC/@41.4377754,-72.8044779,17z/data=!3m1!4b1!4m6!3m5!1s0x7acd96b0a1a0cd7:0x69a2bc28aca585cb!8m2!3d41.4377754!4d-72.8044779!16s%2Fg%2F11s5ytmvf9!5m1!1e4",
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://neatnestllc.com/#organization",
+        "name": "NeatNest LLC",
+        "url": "https://neatnestllc.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://neatnestllc.com/#logo",
+          "url": "https://neatnestllc.com/images/logo.jpg"
+        },
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://neatnestllc.com/#website",
+        "url": "https://neatnestllc.com/",
+        "name": "NeatNest LLC",
+        "publisher": {
+          "@id": "https://neatnestllc.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://neatnestllc.com/office-cleaning#webpage",
+        "url": "https://neatnestllc.com/office-cleaning",
+        "name": "Office & Commercial Cleaning in Wallingford, North Haven & Cheshire CT | NeatNest LLC",
+        "isPartOf": {
+          "@id": "https://neatnestllc.com/#website"
+        },
+        "about": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://neatnestllc.com/office-cleaning#service",
+        "name": "Office & Commercial Cleaning",
+        "serviceType": "Office & Commercial Cleaning",
+        "provider": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "url": "https://neatnestllc.com/office-cleaning"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://neatnestllc.com/office-cleaning#faq",
+        "url": "https://neatnestllc.com/office-cleaning",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does office cleaning cost in Wallingford, CT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Office cleaning costs in Wallingford, CT typically range from $150–$500 per visit for small offices (1,000–3,000 sq ft), depending on square footage, cleaning frequency, and services needed. NeatNest LLC provides customized commercial cleaning quotes for businesses in Wallingford, North Haven, and Cheshire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What hours do you provide commercial cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer flexible office cleaning schedules in Wallingford, North Haven, and Cheshire. Most businesses choose after-hours cleaning (evenings or weekends), but we can also schedule early morning or off-peak commercial cleaning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you bring your own commercial cleaning supplies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our office cleaning team brings professional-grade supplies and equipment. We can also accommodate eco-friendly or fragrance-free requests."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your office cleaners insured and background-checked?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our team members are trained and background-checked, and NeatNest LLC is fully insured and bonded for commercial work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should my office be professionally cleaned?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Frequency depends on foot traffic and business type. Many small offices choose weekly or bi-weekly service, while higher-traffic spaces may benefit from multiple visits per week. We help you choose the right schedule."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you ensure quality and consistency with recurring office cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We use a detailed commercial cleaning checklist tailored to your facility and service plan, with consistent high-touch disinfection, restroom sanitation, trash removal, and floor care. We prioritize reliability and clear communication so your workplace stays professional and well-maintained."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://neatnestllc.com/office-cleaning#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://neatnestllc.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Office Cleaning",
+            "item": "https://neatnestllc.com/office-cleaning"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   
 </head>
 
@@ -86,13 +265,9 @@
     
     <img src="/images/logo.jpg" alt="NeatNest LLC company logo" class="logo" />
     
-    <!-- Only H1 on page -->
     <h1>Office & Commercial Cleaning in Wallingford, North Haven & Cheshire, CT</h1>
-    
-    <!-- Supporting line (short) -->
     <p>Reliable commercial cleaning tailored to offices, retail spaces, and local businesses.</p>
     
-    <!-- Primary & Secondary CTAs -->
     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
       <a class="call-btn" href="tel:+12035007034">CALL NOW</a>
       <a class="call-btn" href="#quote" style="background: var(--orange);">Get a Free Quote</a>
@@ -100,7 +275,7 @@
   </header>
 
   <main>
-    
+    <!-- Your original page content remains unchanged below -->
     <!-- 2) Intro (body starts) -->
     <section class="section">
       <h2>Professional Office & Commercial Cleaning</h2>
@@ -108,100 +283,87 @@
       <p>Unlike residential cleaning, commercial service focuses on high-traffic areas, shared spaces, and maintaining a consistently professional appearance. We work after hours or during off-peak times to minimize disruption to your business. Our team is trained, insured, and background-checked for your peace of mind.</p>
     </section>
 
-    <!-- 3) Short Geo Reinforcement -->
     <section class="section" style="background: #f8fafc; padding: 15px 20px;">
       <p style="margin: 0;">We provide professional office and commercial cleaning services throughout Wallingford, North Haven, and Cheshire CT. As a locally owned company based in Wallingford, we offer reliable scheduling and consistent service across all three towns.</p>
     </section>
 
-    <!-- 4) What's Included (detailed scope with grouped lists) -->
     <section class="section">
       <h2>What's Included in Our Office & Commercial Cleaning</h2>
-      
-    <!-- Offices & Workspaces -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">OFFICES &amp; WORKSPACES</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Workstations: Dust and sanitize desks, monitors, and surfaces</li>
-        <li>Electronics: Sanitize high-touch phones, keyboards, and mice</li>
-        <li>Storage: Dust filing cabinets, bookshelves, and credenzas</li>
-        <li>Touchpoints: Disinfect light switches and door handles</li>
-        <li>Floors: Vacuum carpets and rugs; sweep and mop hard floors</li>
-        <li>Waste: Empty bins and replace liners</li>
-      </ul>
-    </div>
-    
-    <!-- Restrooms -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">RESTROOMS</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Sanitization: Scrub and disinfect toilets and urinals</li>
-        <li>Lavatory: Sanitize sinks, countertops, and partitions</li>
-        <li>Fixtures: Polish mirrors and faucets</li>
-        <li>Replenishing: Refill soap dispensers, paper towels, and tissue</li>
-        <li>Disinfection: Deep clean all high-touch surfaces and walls</li>
-        <li>Floors: Sweep and mop with hospital-grade disinfectant</li>
-        <li>Trash: Empty waste receptacles and replace liners</li>
-      </ul>
-    </div>
-    
-    <!-- Break Rooms & Kitchens -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BREAK ROOMS &amp; KITCHENS</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Surfaces: Clean and sanitize all tables and countertops</li>
-        <li>Appliances: Wipe down exterior of fridge, microwave, and coffee stations</li>
-        <li>Sink: Scrub basin and polish fixtures</li>
-        <li>Cabinetry: Wipe exterior fronts and handles</li>
-        <li>Common Areas: Straighten chairs and organize shared spaces</li>
-        <li>Floors: Sweep and mop to remove spills and debris</li>
-        <li>Waste: Empty trash and recycling bins</li>
-      </ul>
-    </div>
-    
-    <!-- Lobbies & Common Areas -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">LOBBIES &amp; COMMON AREAS</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>First Impression: Dust reception desks and waiting area furniture</li>
-        <li>Glass: Clean entrance doors and interior partition windows</li>
-        <li>Safety: Wipe down handrails, elevator buttons, and light switches</li>
-        <li>Detailing: Spot-clean walls, baseboards, and door frames</li>
-        <li>Floors: Vacuum entry mats and hallways; sweep and mop hard floors</li>
-        <li>Maintenance: Ensure a spotless, professional appearance throughout</li>
-      </ul>
-    </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">OFFICES &amp; WORKSPACES</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Workstations: Dust and sanitize desks, monitors, and surfaces</li>
+          <li>Electronics: Sanitize high-touch phones, keyboards, and mice</li>
+          <li>Storage: Dust filing cabinets, bookshelves, and credenzas</li>
+          <li>Touchpoints: Disinfect light switches and door handles</li>
+          <li>Floors: Vacuum carpets and rugs; sweep and mop hard floors</li>
+          <li>Waste: Empty bins and replace liners</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">RESTROOMS</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Sanitization: Scrub and disinfect toilets and urinals</li>
+          <li>Lavatory: Sanitize sinks, countertops, and partitions</li>
+          <li>Fixtures: Polish mirrors and faucets</li>
+          <li>Replenishing: Refill soap dispensers, paper towels, and tissue</li>
+          <li>Disinfection: Deep clean all high-touch surfaces and walls</li>
+          <li>Floors: Sweep and mop with hospital-grade disinfectant</li>
+          <li>Trash: Empty waste receptacles and replace liners</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BREAK ROOMS &amp; KITCHENS</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Surfaces: Clean and sanitize all tables and countertops</li>
+          <li>Appliances: Wipe down exterior of fridge, microwave, and coffee stations</li>
+          <li>Sink: Scrub basin and polish fixtures</li>
+          <li>Cabinetry: Wipe exterior fronts and handles</li>
+          <li>Common Areas: Straighten chairs and organize shared spaces</li>
+          <li>Floors: Sweep and mop to remove spills and debris</li>
+          <li>Waste: Empty trash and recycling bins</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">LOBBIES &amp; COMMON AREAS</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>First Impression: Dust reception desks and waiting area furniture</li>
+          <li>Glass: Clean entrance doors and interior partition windows</li>
+          <li>Safety: Wipe down handrails, elevator buttons, and light switches</li>
+          <li>Detailing: Spot-clean walls, baseboards, and door frames</li>
+          <li>Floors: Vacuum entry mats and hallways; sweep and mop hard floors</li>
+          <li>Maintenance: Ensure a spotless, professional appearance throughout</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- 5) Benefits (3 logos side by side with descriptions) -->
     <section class="section">
       <h2>Benefits of Professional Office Cleaning</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
-        
-        <!-- Benefit 1 -->
         <div style="text-align: center;">
           <img src="/images/professional-impression-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Professional Impression</h3>
           <p style="margin: 0; line-height: 1.6;">A clean office creates a positive first impression for clients and customers. Show professionalism in every detail.</p>
         </div>
 
-        <!-- Benefit 2 -->
         <div style="text-align: center;">
           <img src="/images/healthier-workplace-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Healthier Workplace</h3>
           <p style="margin: 0; line-height: 1.6;">Regular disinfection of high-touch surfaces reduces sick days and keeps your team healthy and productive.</p>
         </div>
 
-        <!-- Benefit 3 -->
         <div style="text-align: center;">
           <img src="/images/flexible-schedule-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Flexible Scheduling</h3>
           <p style="margin: 0; line-height: 1.6;">We clean after hours, before opening, or during off-peak times so your business operations are never disrupted.</p>
         </div>
-
       </div>
     </section>
 
-    <!-- 6a) "See the Difference" (visual section) -->
     <section class="section">
       <h2>See The Difference</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
@@ -219,7 +381,6 @@
       </p>
     </section>
 
-    <!-- 6b) Types of Businesses We Serve -->
     <section class="section">
       <h2>Types of Businesses We Serve</h2>
       <div style="max-width: 800px; margin: 20px auto; text-align: left;">
@@ -240,10 +401,9 @@
       </div>
     </section>
 
-    <!-- 7) Testimonials (3 TOTAL with town tags + internal links) -->
     <section class="section">
       <h2>What Customers Say</h2>
-      
+
       <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--blue);">
         <p style="font-style: italic; margin-bottom: 10px;">“Outstanding job, very professional, fair pricing, and great communication throughout the process. Highly recommended.”</p>
         <p style="font-weight: 600; margin: 0;">— Robert F., <a href="/wallingford-ct-house-cleaning" style="color: var(--blue); text-decoration: none;">Wallingford CT</a></p>
@@ -260,7 +420,6 @@
       </div>
     </section>
 
-    <!-- 8) Serving Your Community (keep very short) -->
     <section class="section">
       <h2>Serving Wallingford, North Haven & Cheshire</h2>
       <p>NeatNest LLC is proud to serve businesses throughout Wallingford, North Haven, and Cheshire CT with professional office and commercial cleaning services. Our locally owned team brings reliable scheduling, consistent quality, and personalized attention to every business we service.</p>
@@ -271,13 +430,10 @@
       </div>
     </section>
 
-    <!-- 9) FAQ with Accordion (first one expanded) -->
     <section class="section" style="background: #f8fafc;">
       <h2>Office & Commercial Cleaning FAQs</h2>
-      
-        <div class="faq-wrap">
-        
-        <!-- FAQ 1 - EXPANDED by default -->
+
+      <div class="faq-wrap">
         <div class="faq-item">
           <div class="faq-question active" onclick="toggleFAQ(this)">
             How much does office cleaning cost in Wallingford, CT?
@@ -287,7 +443,6 @@
           </div>
         </div>
 
-        <!-- FAQ 2 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             What hours do you provide commercial cleaning?          
@@ -297,7 +452,6 @@
           </div>
         </div>
 
-        <!-- FAQ 3 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Do you bring your own commercial cleaning supplies?
@@ -307,7 +461,6 @@
           </div>
         </div>
 
-        <!-- FAQ 4 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Are your office cleaners insured and background-checked?
@@ -317,7 +470,6 @@
           </div>
         </div>
 
-        <!-- FAQ 5 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             How often should my office be professionally cleaned?
@@ -327,7 +479,6 @@
           </div>
         </div>
 
-        <!-- FAQ 6 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             How do you ensure quality and consistency with recurring office cleaning?
@@ -336,24 +487,22 @@
             <p>We follow a detailed commercial cleaning checklist tailored to your office layout and service plan. Each visit includes consistent task tracking, high-touch surface disinfection, restroom sanitation, trash removal, and floor care. As a locally owned office cleaning company serving Wallingford, North Haven, and Cheshire, CT, we prioritize reliability, clear communication, and consistent results so your workplace always looks professional and well-maintained.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- 10) Quote Form (conversion block) -->
     <section id="quote" class="section">
       <h2>Get a Free Office Cleaning Quote</h2>
       <p>Ready for a cleaner, more professional workspace? Fill out the form below and we'll get back to you quickly with a personalized quote.</p>
-      
+
       <form name="office-cleaning-quote" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="office-cleaning-quote" />
         <input type="hidden" name="service" value="Office & Commercial Cleaning" />
-        
+
         <label>Your Name <input name="name" required /></label>
         <label>Business Name <input name="business" required /></label>
         <label>Phone <input name="phone" type="tel" required /></label>
         <label>Email <input name="email" type="email" required /></label>
-        
+
         <label>Town
           <select name="town" required style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
             <option value="">Select your town</option>
@@ -374,13 +523,12 @@
         <label>Additional Details
           <textarea name="message" rows="4" placeholder="Tell us about your business, preferred cleaning schedule, or any special requirements..."></textarea>
         </label>
-        
+
         <button type="submit">Get My Free Quote</button>
       </form>
-      
+
       <p style="margin-top: 15px; font-size: 1rem;">Prefer faster service? Call now: <a href="tel:+12035007034" style="color: var(--blue); font-weight: 600; text-decoration: none;">(203) 500-7034</a></p>
-      
-      <!-- Contact Info -->
+
       <div class="contact-info" style="margin-top: 25px;">
         <strong>NeatNest LLC</strong><br>
         274 Woodhouse Ave, Wallingford, CT 06492<br>
@@ -390,7 +538,6 @@
       </div>
     </section>
 
-    <!-- 11) Other Services (internal links) - TIGHTER SPACING & VERTICAL BUTTONS -->
     <section class="section" style="background: #f8fafc;">
       <h2 style="margin-bottom: 8px;">Other Cleaning Services</h2>
       <p style="margin-top: 0; margin-bottom: 12px;">NeatNest LLC offers a complete range of professional cleaning services for your home or business:</p>
@@ -405,7 +552,6 @@
 
   </main>
 
- <!-- Global Footer -->
   <footer class="site-footer">
     <div class="footer-columns">
       <div class="footer-col">
@@ -450,6 +596,5 @@
   </footer>
 
   <script src="/script.js"></script>
-  
 </body>
 </html>

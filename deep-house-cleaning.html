@@ -29,6 +29,185 @@
   
   <link rel="stylesheet" href="/style.css" />
   <link rel="canonical" href="https://neatnestllc.com/deep-house-cleaning" />
+
+  <!-- Updated Schema - Service Page (single @graph) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HouseCleaningService",
+        "@id": "https://neatnestllc.com/#housecleaningservice",
+        "name": "NeatNest LLC",
+        "description": "Family-owned, fully insured & bonded house cleaning company serving Wallingford, North Haven & Cheshire, CT.",
+        "url": "https://neatnestllc.com/",
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "logo": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.45,
+          "longitude": -72.82
+        },
+        "hasMap": "https://www.google.com/maps/place/NeatNest+LLC/@41.4377754,-72.8044779,17z/data=!3m1!4b1!4m6!3m5!1s0x7acd96b0a1a0cd7:0x69a2bc28aca585cb!8m2!3d41.4377754!4d-72.8044779!16s%2Fg%2F11s5ytmvf9!5m1!1e4",
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://neatnestllc.com/#organization",
+        "name": "NeatNest LLC",
+        "url": "https://neatnestllc.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://neatnestllc.com/#logo",
+          "url": "https://neatnestllc.com/images/logo.jpg"
+        },
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://neatnestllc.com/#website",
+        "url": "https://neatnestllc.com/",
+        "name": "NeatNest LLC",
+        "publisher": {
+          "@id": "https://neatnestllc.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://neatnestllc.com/deep-house-cleaning#webpage",
+        "url": "https://neatnestllc.com/deep-house-cleaning",
+        "name": "Deep House Cleaning in Wallingford, North Haven & Cheshire CT | NeatNest LLC",
+        "isPartOf": {
+          "@id": "https://neatnestllc.com/#website"
+        },
+        "about": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://neatnestllc.com/deep-house-cleaning#service",
+        "name": "Deep House Cleaning",
+        "serviceType": "Deep House Cleaning",
+        "provider": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "url": "https://neatnestllc.com/deep-house-cleaning"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://neatnestllc.com/deep-house-cleaning#faq",
+        "url": "https://neatnestllc.com/deep-house-cleaning",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a deep cleaning cost in Wallingford CT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Deep cleaning in Wallingford, CT typically ranges from $250–$600 depending on your home’s size, condition, and level of buildup. NeatNest LLC provides free, customized deep cleaning estimates for homeowners in Wallingford, North Haven, and Cheshire so you know what to expect before we begin."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a deep clean take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most deep cleaning services take 4–8 hours depending on square footage and the level of detail required. Larger homes or first-time deep cleans may take longer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What’s the difference between deep cleaning and recurring cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recurring cleaning maintains cleanliness with regular dusting, vacuuming, mopping, and surface wipe-downs. Deep cleaning is more intensive, targeting buildup, grime, baseboards, fixtures, and other detailed areas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between deep cleaning and standard cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standard cleaning focuses on maintenance while deep cleaning goes further into buildup and hard-to-reach areas like baseboards, ceiling fans, and detailed scrubbing in kitchens and bathrooms."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I schedule deep cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many homeowners schedule a deep clean 2–4 times per year, often with the change of seasons or before major holidays. If you have recurring service, annual or semi-annual deep cleans are often enough."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is deep cleaning recommended before starting recurring service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many homeowners start with a deep clean to establish a fresh baseline, then maintain it with weekly or bi-weekly recurring cleaning."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://neatnestllc.com/deep-house-cleaning#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://neatnestllc.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Deep House Cleaning",
+            "item": "https://neatnestllc.com/deep-house-cleaning"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   
 </head>
 
@@ -89,10 +268,8 @@
     <!-- Only H1 on page -->
     <h1>Deep House Cleaning in Wallingford, North Haven & Cheshire, CT</h1>
     
-    <!-- Supporting line (short) -->
     <p>Top-to-bottom detailed cleaning for homes that need extra attention.</p>
     
-    <!-- Primary & Secondary CTAs -->
     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
       <a class="call-btn" href="tel:+12035007034">CALL NOW</a>
       <a class="call-btn" href="#quote" style="background: var(--orange);">Get a Free Quote</a>
@@ -100,7 +277,7 @@
   </header>
 
   <main>
-    
+    <!-- Everything below is your original content (unchanged) -->
     <!-- 2) Intro (body starts) -->
     <section class="section">
       <h2>Professional Deep House Cleaning</h2>
@@ -114,14 +291,12 @@
         We provide deep house cleaning services throughout Wallingford, North Haven, and Cheshire CT. As a locally owned company based in Wallingford, we offer reliable scheduling and consistent service across all three towns — 
         <a href="/about">meet our team.</a>
       </p>
-
     </section>
 
-    <!-- 4) What's Included (detailed scope with grouped lists) -->
+    <!-- 4) What's Included -->
     <section class="section">
       <h2>Deep Cleaning Focus Areas</h2> 
-      
-      <!-- Kitchen -->
+
       <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">KITCHEN</h3>
       <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
         <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
@@ -134,8 +309,7 @@
           <li>Floors: Sweep and mop thoroughly</li>
         </ul>
       </div>
-      
-      <!-- Bathrooms -->
+
       <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BATHROOMS</h3>
       <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
         <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
@@ -148,8 +322,7 @@
           <li>Floors: Sweep, mop, and sanitize floor surfaces</li>
         </ul>
       </div>
-      
-      <!-- Living Areas & Bedrooms -->
+
       <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">LIVING AREAS &amp; BEDROOMS</h3>
       <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
         <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
@@ -161,8 +334,7 @@
           <li>Floors: Deep vacuum carpets and mop hard floors</li>
         </ul>
       </div>
-      
-      <!-- Optional Add-Ons -->
+
       <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">OPTIONAL ADD-ONS</h3>
       <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
         <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
@@ -176,38 +348,33 @@
           <li>Upholstery Cleaning</li>
         </ul>
       </div>
-      </section>
+    </section>
 
- <!-- 5) Benefits (3 logos side by side with descriptions) --> 
+    <!-- 5) Benefits -->
     <section class="section"> 
       <h2>Benefits of a Deep Clean</h2> 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;"> 
-      
-        <!-- Benefit 1 --> 
         <div style="text-align: center;"> 
           <img src="/images/fresh-start-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Fresh Reset</h3> 
           <p style="margin: 0; line-height: 1.6;">Perfect before holidays, events, or the start of a new season. Remove built-up grime and restore your home.</p> 
         </div> 
 
-        <!-- Benefit 2 --> 
         <div style="text-align: center;"> 
           <img src="/images/healthier-home-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;"> 
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Healthier Home</h3> 
           <p style="margin: 0; line-height: 1.6;">Reduce allergens, dust, and bacteria. Deep cleaning improves air quality and creates a healthier environment.</p> 
         </div> 
 
-        <!-- Benefit 3 --> 
         <div style="text-align: center;"> 
           <img src="/images/hard-to-reach-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;"> 
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Hard to Reach Areas</h3> 
           <p style="margin: 0; line-height: 1.6;">We tackle ceiling fans, vents, baseboards, and all those spots that are easy to overlook but make a big difference.</p> 
         </div> 
-      
       </div> 
     </section> 
 
-    <!-- 6) "See the Difference" (visual section) -->
+    <!-- 6) See the Difference -->
     <section class="section">
       <h2>See The Difference</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
@@ -225,10 +392,9 @@
       </p>
     </section>
 
-    <!-- 7) Testimonials (3 TOTAL with town tags + internal links) -->
+    <!-- 7) Testimonials -->
     <section class="section">
       <h2>What Customers Say</h2>
-      
       <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--blue);">
         <p style="font-style: italic; margin-bottom: 10px;">"I could not be happier with the service from NeatNest LLC. Had a deep cleaning done before the holidays. It was far beyond what I imagined. Rugs, stove, floors, fixtures. Everything. You won't be disappointed and won't find a more trustworthy service in your home."</p>
         <p style="font-weight: 600; margin: 0;">— David T., <a href="/wallingford-ct-house-cleaning" style="color: var(--blue); text-decoration: none;">Wallingford CT</a></p>
@@ -245,7 +411,7 @@
       </div>
     </section>
 
-    <!-- 8) Serving Your Community (keep very short) -->
+    <!-- 8) Serving -->
     <section class="section">
       <h2>Serving Wallingford, North Haven & Cheshire</h2>
       <p>NeatNest LLC is proud to serve homeowners throughout Wallingford, North Haven, and Cheshire CT with professional deep cleaning services. Our locally owned team brings reliable scheduling, consistent quality, and personalized attention to every home we service.</p>
@@ -256,13 +422,10 @@
       </div>
     </section>
 
-    <!-- 9) FAQ with Accordion (first one expanded) -->
+    <!-- 9) FAQ section (your on-page FAQ stays the same) -->
     <section class="section" style="background: #f8fafc;">
       <h2>Deep Cleaning FAQs</h2>
-      
-        <div class="faq-wrap">
-        
-        <!-- FAQ 1 - EXPANDED by default -->
+      <div class="faq-wrap">
         <div class="faq-item">
           <div class="faq-question active" onclick="toggleFAQ(this)">
             How much does a deep cleaning cost in Wallingford CT?
@@ -272,7 +435,6 @@
           </div>
         </div>
 
-        <!-- FAQ 2 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             How long does a deep clean take?
@@ -282,7 +444,6 @@
           </div>
         </div>
 
-        <!-- FAQ 3 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             What’s the difference between deep cleaning and recurring cleaning?
@@ -292,7 +453,6 @@
           </div>
         </div>
 
-        <!-- FAQ 4 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             What's the difference between deep cleaning and standard cleaning?
@@ -302,7 +462,6 @@
           </div>
         </div>
 
-        <!-- FAQ 5 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             How often should I schedule deep cleaning?
@@ -312,7 +471,6 @@
           </div>
         </div>
 
-        <!-- FAQ 6 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Is deep cleaning recommended before starting recurring service?
@@ -321,23 +479,22 @@
             <p>Yes. Many homeowners in Wallingford choose a deep clean before beginning weekly or bi-weekly cleaning. A deep cleaning establishes a fresh starting point so ongoing maintenance cleaning is more effective and consistent.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- 10) Quote Form (conversion block) -->
+    <!-- 10) Quote Form -->
     <section id="quote" class="section">
       <h2>Get a Free Deep Cleaning Quote</h2>
       <p>Ready to experience a truly clean home? Fill out the form below and we'll get back to you quickly with a personalized quote.</p>
-      
+
       <form name="deep-clean-quote" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="deep-clean-quote" />
         <input type="hidden" name="service" value="Deep House Cleaning" />
-        
+
         <label>Your Name <input name="name" required /></label>
         <label>Phone <input name="phone" type="tel" required /></label>
         <label>Email <input name="email" type="email" required /></label>
-        
+
         <label>Town
           <select name="town" required style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
             <option value="">Select your town</option>
@@ -358,13 +515,12 @@
         <label>Additional Details
           <textarea name="message" rows="4" placeholder="Tell us about any specific areas of concern or special requests..."></textarea>
         </label>
-        
+
         <button type="submit">Get My Free Quote</button>
       </form>
-      
+
       <p style="margin-top: 15px; font-size: 1rem;">Prefer faster service? Call now: <a href="tel:+12035007034" style="color: var(--blue); font-weight: 600; text-decoration: none;">(203) 500-7034</a></p>
-      
-      <!-- Contact Info -->
+
       <div class="contact-info" style="margin-top: 25px;">
         <strong>NeatNest LLC</strong><br>
         274 Woodhouse Ave, Wallingford, CT 06492<br>
@@ -374,7 +530,7 @@
       </div>
     </section>
 
-    <!-- 11) Other Services (internal links) - TIGHTER SPACING & VERTICAL BUTTONS -->
+    <!-- 11) Other Services -->
     <section class="section" style="background: #f8fafc;">
       <h2 style="margin-bottom: 8px;">Other Cleaning Services</h2>
       <p style="margin-top: 0; margin-bottom: 12px;">NeatNest LLC offers a complete range of professional cleaning services for your home or business:</p>
@@ -389,7 +545,6 @@
 
   </main>
 
- <!-- Global Footer -->
   <footer class="site-footer">
     <div class="footer-columns">
       <div class="footer-col">
@@ -434,6 +589,5 @@
   </footer>
 
   <script src="/script.js"></script>
-
 </body>
 </html>

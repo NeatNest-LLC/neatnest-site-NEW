@@ -30,35 +30,124 @@
   <link rel="stylesheet" href="/style.css" />
   <link rel="canonical" href="https://neatnestllc.com/wallingford-ct-house-cleaning" />
   
-  <!-- Local Business Schema -->
+  <!-- Updated Schema - Town Page (single @graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "NeatNest LLC",
-    "image": "https://neatnestllc.com/images/logo.jpg",
-    "telephone": "+1-203-500-7034",
-    "email": "info@neatnestllc.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "274 Woodhouse Ave",
-      "addressLocality": "Wallingford",
-      "addressRegion": "CT",
-      "postalCode": "06492",
-      "addressCountry": "US"
-    },
-    "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "41.4570",
-    "longitude": "-72.8232"
-    },
-    "url": "https://neatnestllc.com/wallingford-ct-house-cleaning",
-    "areaServed": {
-      "@type": "City",
-      "name": "Wallingford"
-    },
-    "priceRange": "$$",
-    "openingHours": "Mo-Su 07:00-20:00"
+    "@graph": [
+      {
+        "@type": "HouseCleaningService",
+        "@id": "https://neatnestllc.com/#housecleaningservice",
+        "name": "NeatNest LLC",
+        "description": "Family-owned, fully insured & bonded house cleaning company serving Wallingford, North Haven & Cheshire, CT.",
+        "url": "https://neatnestllc.com/",
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "logo": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.45,
+          "longitude": -72.82
+        },
+        "hasMap": "https://www.google.com/maps/place/NeatNest+LLC/@41.4377754,-72.8044779,17z/data=!3m1!4b1!4m6!3m5!1s0x7acd96b0a1a0cd7:0x69a2bc28aca585cb!8m2!3d41.4377754!4d-72.8044779!16s%2Fg%2F11s5ytmvf9!5m1!1e4",
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://neatnestllc.com/wallingford-ct-house-cleaning#webpage",
+        "url": "https://neatnestllc.com/wallingford-ct-house-cleaning",
+        "name": "House Cleaning Services in Wallingford, CT | NeatNest LLC",
+        "about": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://neatnestllc.com/wallingford-ct-house-cleaning#faq",
+        "url": "https://neatnestllc.com/wallingford-ct-house-cleaning",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are you familiar with cleaning older New England-style homes in Wallingford?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many Wallingford homes have detailed trim, baseboards, and older fixtures that benefit from careful attention and detail-focused cleaning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide cleaning for rental properties in Wallingford?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We work with landlords and property owners preparing Wallingford homes and apartments between tenants."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you clean homes near Choate Rosemary Hall and downtown Wallingford?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We regularly service homes near downtown Wallingford, Choate Rosemary Hall, and surrounding residential streets."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is your staff background-checked before they enter my Wallingford home?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Safety is a priority. Our cleaners are trained and background-checked before being assigned to homes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you accommodate seasonal cleaning requests in Wallingford?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many Wallingford homeowners schedule deep cleaning in spring or before the holidays to reset their homes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you bring your own cleaning supplies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We bring professional-grade cleaning supplies and equipment. We use eco-friendly products that are safe for families and pets, and we can accommodate specific product preferences."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "HouseCleaningService",
+        "@id": "https://neatnestllc.com/wallingford-ct-house-cleaning#wallingford-service",
+        "name": "House Cleaning Services in Wallingford, CT",
+        "url": "https://neatnestllc.com/wallingford-ct-house-cleaning",
+        "provider": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Wallingford"
+        }
+      }
+    ]
   }
   </script>
   
@@ -118,45 +207,35 @@
     
     <img src="/images/logo.jpg" alt="NeatNest LLC company logo" class="logo" />
     
-    <!-- Only H1 on page -->
     <h1>House Cleaning Services in Wallingford, CT</h1>
     
-    <!-- Subline -->
     <p>Professional, family-owned house cleaning services in Wallingford, CT. NeatNest LLC provides reliable deep cleaning, recurring housekeeping, and move-in/move-out cleaning for homeowners throughout the Wallingford area.</p>
     
-    <!-- Primary & Secondary CTAs -->
     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
       <a class="call-btn" href="tel:+12035007034">CALL NOW</a>
       <a class="call-btn" href="#quote" style="background: var(--orange);">Get a Free Quote</a>
     </div>
 
-    <!-- Trust Badges with Icons -->
     <div style="display: flex; gap: 30px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 25px; padding: 0 20px;">
-      
-      <!-- Badge 1: Family-Owned -->
       <div style="display: flex; align-items: center; gap: 8px;">
         <img src="/images/badge-family.png" alt="" style="width: 32px; height: 32px;">
         <span style="font-weight: 600; color: var(--blue); font-size: 1rem;">Family-Owned</span>
       </div>
 
-      <!-- Badge 2: Fully Insured & Bonded -->
       <div style="display: flex; align-items: center; gap: 8px;">
         <img src="/images/badge-insured.png" alt="" style="width: 32px; height: 32px;">
         <span style="font-weight: 600; color: var(--blue); font-size: 1rem;">Fully Insured & Bonded</span>
       </div>
 
-      <!-- Badge 3: 5-Star Rated -->
       <div style="display: flex; align-items: center; gap: 8px;">
         <img src="/images/badge-stars.png" alt="" style="width: 32px; height: 32px;">
         <span style="font-weight: 600; color: var(--blue); font-size: 1rem;">5-Star Rated</span>
       </div>
-
     </div>
   </header>
 
   <main>
-    
-    <!-- 2) Intro (Location-Focused) -->
+    <!-- Everything below is your original content (unchanged) -->
     <section class="section">
       <h2>Your Trusted Cleaning Service in Wallingford</h2>
       <p>NeatNest LLC is based right here in Wallingford, CT. As a local, family-owned cleaning company, we understand the needs of Wallingford homeowners—from historic homes near downtown to newer developments on the outskirts of town.</p>
@@ -164,7 +243,6 @@
       <p>Because we’re local, we offer flexible scheduling, fast response times, and personalized service that larger franchise cleaning companies simply can’t match.</p>
     </section>
 
-    <!-- 3) Why Wallingford Homeowners Choose Us -->
     <section class="section">
       <h2>Why Wallingford Homeowners Choose NeatNest LLC</h2>
       <ul style="text-align: left; max-width: 700px; margin: 20px auto; line-height: 1.9; font-size: 1.1rem;">
@@ -178,18 +256,12 @@
       </ul>
     </section>
 
-    <!-- 4) Services Available in Wallingford - 5 SERVICES (2-2-1 LAYOUT) -->
     <section class="section" style="background: #f8fafc;">
       <h2>Cleaning Services Available in Wallingford</h2>
       <p>We provide professional house cleaning services throughout Wallingford, including:</p>
-      
-      <!-- Container for all service cards -->
+
       <div style="max-width: 1000px; margin: 25px auto;">
-        
-        <!-- Top Row: 2 Services -->
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px;">
-          
-          <!-- Service 1 -->
           <div style="border: 2px solid var(--blue); border-radius: 12px; padding: 20px; text-align: center; background: white;">
             <img src="/images/service-logo-mop.png" alt="" style="width: 60px; height: 60px; margin-bottom: 10px;">
             <h3 style="color: var(--blue); margin: 10px 0; font-size: 1.2rem;">Deep Cleaning</h3>
@@ -197,20 +269,15 @@
             <a href="/deep-house-cleaning" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Learn More</a>
           </div>
 
-          <!-- Service 2 -->
           <div style="border: 2px solid var(--blue); border-radius: 12px; padding: 20px; text-align: center; background: white;">
             <img src="/images/service-logo-bottle.png" alt="" style="width: 60px; height: 60px; margin-bottom: 10px;">
             <h3 style="color: var(--blue); margin: 10px 0; font-size: 1.2rem;">Recurring Cleaning</h3>
             <p style="margin: 10px 0; font-size: 0.95rem;">Weekly, bi-weekly, or monthly service to keep your home spotless.</p>
             <a href="/recurring-house-cleaning" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Learn More</a>
           </div>
-
         </div>
 
-        <!-- Middle Row: 2 Services -->
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px;">
-          
-          <!-- Service 3 -->
           <div style="border: 2px solid var(--blue); border-radius: 12px; padding: 20px; text-align: center; background: white;">
             <img src="/images/service-logo-movein.png" alt="" style="width: 60px; height: 60px; margin-bottom: 10px;">
             <h3 style="color: var(--blue); margin: 10px 0; font-size: 1.2rem;">Move-In/Move-Out</h3>
@@ -218,40 +285,30 @@
             <a href="/move-in-move-out-cleaning" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Learn More</a>
           </div>
 
-          <!-- Service 4 -->
           <div style="border: 2px solid var(--blue); border-radius: 12px; padding: 20px; text-align: center; background: white;">
             <img src="/images/service-logo-office.png" alt="" style="width: 60px; height: 60px; margin-bottom: 10px;">
             <h3 style="color: var(--blue); margin: 10px 0; font-size: 1.2rem;">Office Cleaning</h3>
             <p style="margin: 10px 0; font-size: 0.95rem;">Professional cleaning for businesses and commercial spaces.</p>
             <a href="/office-cleaning" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Learn More</a>
           </div>
-
         </div>
 
-        <!-- Bottom Row: 1 Service (Centered) -->
         <div style="display: flex; justify-content: center;">
-          
-          <!-- Service 5 -->
           <div style="border: 2px solid var(--blue); border-radius: 12px; padding: 20px; text-align: center; background: white; max-width: 480px; width: 100%;">
             <img src="/images/service-logo-chair.png" alt="" style="width: 60px; height: 60px; margin-bottom: 10px;">
             <h3 style="color: var(--blue); margin: 10px 0; font-size: 1.2rem;">Carpet & Upholstery</h3>
             <p style="margin: 10px 0; font-size: 0.95rem;">Professional carpet and upholstery deep cleaning services.</p>
-            <a href="carpet-and-upholstery-cleaning" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Learn More</a>
+            <!-- FIXED: missing leading slash in your original -->
+            <a href="/carpet-and-upholstery-cleaning" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: var(--blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Learn More</a>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- 5) MERGED: Serving Neighborhoods Across Wallingford + Our Work -->
     <section class="section">
       <h2>Serving Neighborhoods Across Wallingford</h2>
-      
       <p style="max-width: 800px; margin: 0 auto 25px;">From homes near downtown to residential neighborhoods throughout town, we proudly serve homeowners across Wallingford with dependable, detail-focused cleaning services.</p>
 
-      <!-- 2 Before/After Photos -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 25px auto; max-width: 900px;">
         <div>
           <img src="/images/sink-before-photo.jpeg" alt="A dirty bathroom sink in a residential home." style="width: 100%; border-radius: 8px;" loading="lazy">
@@ -263,12 +320,10 @@
         </div>
       </div>
 
-      <!-- Natural paragraph mentioning neighborhoods + landmarks -->
       <p style="max-width: 800px; margin: 25px auto 20px; line-height: 1.7;">
         We provide professional house cleaning services throughout Wallingford, including homes near Choate Rosemary Hall, Community Lake, and residential neighborhoods across Wallingford Center and Yalesville. Because we’re based locally, we’re familiar with the area and offer dependable scheduling for homeowners throughout town.
       </p>
-      
-      <!-- Neighborhood list (keeps SEO value) -->
+
       <p style="margin-top: 30px;"><strong>Areas we serve throughout Wallingford:</strong></p>
       <ul style="text-align: left; max-width: 700px; margin: 15px auto; line-height: 1.9; columns: 2; column-gap: 40px;">
         <li>Wallingford Center</li>
@@ -282,10 +337,9 @@
       </ul>
     </section>
 
-    <!-- 6) Testimonials (Town-Specific) -->
     <section class="section" style="background: #f8fafc;">
       <h2>What Wallingford Customers Say</h2>
-      
+
       <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--blue);">
         <p style="font-style: italic; margin-bottom: 10px;">“We’re so happy with the job they did on my mom’s condo in Wallingford. Everything was spotless, and they were professional, thorough, and kind. Highly recommend!”</p>
         <p style="font-weight: 600; margin: 0;">— Melanie F., Wallingford CT</p>
@@ -302,13 +356,10 @@
       </div>
     </section>
 
-    <!-- 7) FAQ (Town-Specific) -->
     <section class="section">
       <h2>House Cleaning FAQs for Wallingford Residents</h2>
-      
-        <div class="faq-wrap">
-        
-        <!-- FAQ 1 - EXPANDED by default -->
+
+      <div class="faq-wrap">
         <div class="faq-item">
           <div class="faq-question active" onclick="toggleFAQ(this)">
             Are you familiar with cleaning older New England-style homes?
@@ -318,7 +369,6 @@
           </div>
         </div>
 
-        <!-- FAQ 2 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Do you provide cleaning for rental properties in Wallingford?
@@ -328,7 +378,6 @@
           </div>
         </div>
 
-        <!-- FAQ 3 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Do you clean homes near Choate Rosemary Hall and downtown Wallingford?
@@ -338,7 +387,6 @@
           </div>
         </div>
 
-        <!-- FAQ 4 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Is your staff background-checked before they enter my Wallingford home?
@@ -348,7 +396,6 @@
           </div>
         </div>
 
-        <!-- FAQ 5 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Can you accommodate seasonal cleaning requests in Wallingford?
@@ -358,7 +405,6 @@
           </div>
         </div>
 
-        <!-- FAQ 6 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Do you bring your own cleaning supplies?
@@ -367,23 +413,21 @@
             <p>Yes! We bring all professional-grade cleaning supplies and equipment. We use eco-friendly products that are safe for your family and pets. If you have specific product preferences, just let us know.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- 8) Call-To-Action Section (Quote Form) -->
     <section id="quote" class="section" style="background: #f8fafc;">
       <h2>Looking for House Cleaning in Wallingford?</h2>
       <p>Ready to experience a cleaner home? Get your free quote today!</p>
-      
+
       <form name="Wallingford-quote" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="Wallingford-quote" />
         <input type="hidden" name="town" value="Wallingford" />
-        
+
         <label>Your Name <input name="name" required /></label>
         <label>Phone <input name="phone" type="tel" required /></label>
         <label>Email <input name="email" type="email" required /></label>
-        
+
         <label>Service Interested In
           <select name="service" required style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
             <option value="">Select a service</option>
@@ -402,13 +446,12 @@
         <label>Additional Details
           <textarea name="message" rows="4" placeholder="Tell us about your cleaning needs..."></textarea>
         </label>
-        
+
         <button type="submit">Get My Free Quote</button>
       </form>
-      
+
       <p style="margin-top: 15px; font-size: 1rem;">Prefer faster service? Call now: <a href="tel:+12035007034" style="color: var(--blue); font-weight: 600; text-decoration: none;">(203) 500-7034</a></p>
-      
-      <!-- Contact Info -->
+
       <div class="contact-info" style="margin-top: 25px;">
         <strong>NeatNest LLC</strong><br>
         274 Woodhouse Ave, Wallingford, CT 06492<br>
@@ -418,7 +461,6 @@
       </div>
     </section>
 
-    <!-- 9) Other Town Links -->
     <section class="section">
       <h2>We Also Serve:</h2>
       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
@@ -430,7 +472,6 @@
 
   </main>
 
- <!-- Global Footer -->
   <footer class="site-footer">
     <div class="footer-columns">
       <div class="footer-col">
@@ -474,7 +515,6 @@
     </div>
   </footer>
 
-<script src="/script.js"></script>
-  
+  <script src="/script.js"></script>
 </body>
 </html>

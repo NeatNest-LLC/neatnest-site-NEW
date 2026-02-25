@@ -29,6 +29,185 @@
   
   <link rel="stylesheet" href="/style.css" />
   <link rel="canonical" href="https://neatnestllc.com/move-in-move-out-cleaning" />
+
+  <!-- Updated Schema - Service Page (single @graph) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HouseCleaningService",
+        "@id": "https://neatnestllc.com/#housecleaningservice",
+        "name": "NeatNest LLC",
+        "description": "Family-owned, fully insured & bonded house cleaning company serving Wallingford, North Haven & Cheshire, CT.",
+        "url": "https://neatnestllc.com/",
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "logo": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.45,
+          "longitude": -72.82
+        },
+        "hasMap": "https://www.google.com/maps/place/NeatNest+LLC/@41.4377754,-72.8044779,17z/data=!3m1!4b1!4m6!3m5!1s0x7acd96b0a1a0cd7:0x69a2bc28aca585cb!8m2!3d41.4377754!4d-72.8044779!16s%2Fg%2F11s5ytmvf9!5m1!1e4",
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://neatnestllc.com/#organization",
+        "name": "NeatNest LLC",
+        "url": "https://neatnestllc.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://neatnestllc.com/#logo",
+          "url": "https://neatnestllc.com/images/logo.jpg"
+        },
+        "image": "https://neatnestllc.com/images/logo.jpg",
+        "telephone": "+1-203-500-7034",
+        "email": "info@neatnestllc.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "274 Woodhouse Ave",
+          "addressLocality": "Wallingford",
+          "addressRegion": "CT",
+          "postalCode": "06492",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/neatnestct",
+          "https://www.instagram.com/neatnestct"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://neatnestllc.com/#website",
+        "url": "https://neatnestllc.com/",
+        "name": "NeatNest LLC",
+        "publisher": {
+          "@id": "https://neatnestllc.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://neatnestllc.com/move-in-move-out-cleaning#webpage",
+        "url": "https://neatnestllc.com/move-in-move-out-cleaning",
+        "name": "Move-In/Move-Out Cleaning in Wallingford, North Haven & Cheshire CT | NeatNest LLC",
+        "isPartOf": {
+          "@id": "https://neatnestllc.com/#website"
+        },
+        "about": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://neatnestllc.com/move-in-move-out-cleaning#service",
+        "name": "Move-In/Move-Out Cleaning",
+        "serviceType": "Move-In/Move-Out Cleaning",
+        "provider": {
+          "@id": "https://neatnestllc.com/#housecleaningservice"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Wallingford" },
+          { "@type": "City", "name": "North Haven" },
+          { "@type": "City", "name": "Cheshire" }
+        ],
+        "url": "https://neatnestllc.com/move-in-move-out-cleaning"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://neatnestllc.com/move-in-move-out-cleaning#faq",
+        "url": "https://neatnestllc.com/move-in-move-out-cleaning",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does move-out cleaning cost in Wallingford CT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Move-in and move-out cleaning in Wallingford, CT typically ranges from $300–$600 depending on the size of the home, overall condition, and level of detail required. NeatNest LLC provides free, customized move-out cleaning quotes for Wallingford, North Haven, and Cheshire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does move-in/move-out cleaning take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most move-in or move-out cleaning services take 3–5 hours depending on the property size and condition. Empty homes allow for more detailed cleaning inside cabinets, closets, and appliances."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this for empty homes only?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Move-in and move-out cleaning is most common for empty properties, but we can also provide detailed cleaning for occupied homes during a transition. We tailor the service to your situation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between move-out cleaning and deep cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Move-out cleaning is designed for vacant properties and includes detailed cleaning inside cabinets, drawers, closets, and appliances. Deep cleaning focuses on occupied homes and addresses buildup, baseboards, fixtures, and high-touch surfaces."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you work with my moving schedule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We offer flexible scheduling for move-in and move-out cleaning in Wallingford, North Haven, and Cheshire, CT and do our best to accommodate closing, inspection, or move timelines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How far in advance should I book?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We recommend booking move-in or move-out cleaning 1–2 weeks in advance. If you need last-minute service, contact us and we’ll do our best to fit you into our schedule."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://neatnestllc.com/move-in-move-out-cleaning#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://neatnestllc.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Move-In/Move-Out Cleaning",
+            "item": "https://neatnestllc.com/move-in-move-out-cleaning"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   
 </head>
 
@@ -86,13 +265,9 @@
     
     <img src="/images/logo.jpg" alt="NeatNest LLC Company logo" class="logo" />
     
-    <!-- Only H1 on page -->
     <h1>Move-In & Move-Out Cleaning in Wallingford, North Haven & Cheshire, CT</h1>
-    
-    <!-- Supporting line (short) -->
     <p>Thorough cleaning to prepare your new home, or leave your old one pristine for the next person!</p>
     
-    <!-- Primary & Secondary CTAs -->
     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
       <a class="call-btn" href="tel:+12035007034">CALL NOW</a>
       <a class="call-btn" href="#quote" style="background: var(--orange);">Get a Free Quote</a>
@@ -100,97 +275,87 @@
   </header>
 
   <main>
-    
-    <!-- 2) Intro (body starts) -->
+    <!-- EVERYTHING BELOW IS YOUR ORIGINAL CONTENT (UNCHANGED) -->
+
     <section class="section">
       <h2>Professional Move-In / Move-Out Cleaning</h2>
       <p>Whether you’re moving into a new home or preparing one for sale, our move-in/move-out cleaning ensures the property is spotless and ready for its next chapter.</p>
       <p>Unlike standard cleaning, move-in/move-out service covers every surface, appliance, and corner of an empty home. We clean inside cabinets and closets, scrub appliances inside and out, sanitize bathrooms from top to bottom, and leave the property move-in ready or inspection-ready.</p>
     </section>
 
-    <!-- 3) Short Geo Reinforcement -->
     <section class="section" style="background: #f8fafc; padding: 15px 20px;">
       <p style="margin: 0;">We serve homeowners, renters, landlords, and real estate agents throughout Wallingford, North Haven, and Cheshire.</p>
     </section>
 
-    <!-- 4) What's Included (detailed scope with grouped lists) -->
     <section class="section">
       <h2>What's Included in Our Move-In/Move-Out Cleaning</h2>
-      
-    <!-- Kitchen -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">KITCHEN: TOTAL SANITIZATION</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Appliances: Deep clean inside and out (fridge, oven, microwave, dishwasher)</li>
-        <li>Cooking Area: Degrease stovetop, backsplash, and range hood filter</li>
-        <li>Cabinetry: Detailed wipe of all fronts, interior shelves, and drawers</li>
-        <li>Surfaces: Clean and sanitize all countertops</li>
-        <li>Sink: Scrub basin and polish fixtures to a high shine</li>
-        <li>Detailing: Clean baseboards, window sills, and light fixtures</li>
-        <li>Floors: Intensive sweep and mop; remove all debris/trash</li>
-      </ul>
-    </div>
-    
-    <!-- Bathrooms -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BATHROOMS: DEEP RESTORATION</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Commode: Scrub and disinfect toilets (tank, base, and behind)</li>
-        <li>Lavatory: Sanitize sinks, countertops, and faucets</li>
-        <li>Showers/Tubs: Intensive scrub of tiles, grout, and basins</li>
-        <li>Mirrors: Polish mirrors and all chrome fittings</li>
-        <li>Cabinetry: Wipe inside and outside of vanities and drawers</li>
-        <li>Detailing: Clean baseboards, window sills, and light fixtures</li>
-        <li>Floors: Sweep and mop thoroughly; remove all trash</li>
-      </ul>
-    </div>
-    
-    <!-- Bedrooms & Living Areas -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BEDROOMS &amp; LIVING AREAS: THE FRESH START</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>High-Dusting: Hand-wipe ceiling fans, light fixtures, and HVAC vents</li>
-        <li>Woodwork: Detail all baseboards and door frames</li>
-        <li>Windows: Clean sills, tracks, and blinds/shutters</li>
-        <li>Closets: Wipe down all shelves, rods, and floor tracks</li>
-        <li>Floors: Power-vacuum carpets and rugs; sweep and mop hard floors</li>
-        <li>Final Touch: Remove any remaining debris or trash</li>
-      </ul>
-    </div>
-    
-    <!-- Additional Services & Add-Ons -->
-    <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">ADDITIONAL SERVICES &amp; ADD-ONS</h3>
-    <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
-        <li>Laundry Room: Clean inside washer/dryer, cabinets, and floors</li>
-        <li>Utility Areas: Sweep and spot-clean basement or garage</li>
-        <li>Traffic Areas: Detailed cleaning of entryways, hallways, and stair railings</li>
-        <li>Walls: Touch-up cleaning for scuffs and marks</li>
-        <li>Interior Windows: Professional glass and track cleaning (Add-on)</li>
-      </ul>
-    </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">KITCHEN: TOTAL SANITIZATION</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Appliances: Deep clean inside and out (fridge, oven, microwave, dishwasher)</li>
+          <li>Cooking Area: Degrease stovetop, backsplash, and range hood filter</li>
+          <li>Cabinetry: Detailed wipe of all fronts, interior shelves, and drawers</li>
+          <li>Surfaces: Clean and sanitize all countertops</li>
+          <li>Sink: Scrub basin and polish fixtures to a high shine</li>
+          <li>Detailing: Clean baseboards, window sills, and light fixtures</li>
+          <li>Floors: Intensive sweep and mop; remove all debris/trash</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BATHROOMS: DEEP RESTORATION</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Commode: Scrub and disinfect toilets (tank, base, and behind)</li>
+          <li>Lavatory: Sanitize sinks, countertops, and faucets</li>
+          <li>Showers/Tubs: Intensive scrub of tiles, grout, and basins</li>
+          <li>Mirrors: Polish mirrors and all chrome fittings</li>
+          <li>Cabinetry: Wipe inside and outside of vanities and drawers</li>
+          <li>Detailing: Clean baseboards, window sills, and light fixtures</li>
+          <li>Floors: Sweep and mop thoroughly; remove all trash</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">BEDROOMS &amp; LIVING AREAS: THE FRESH START</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>High-Dusting: Hand-wipe ceiling fans, light fixtures, and HVAC vents</li>
+          <li>Woodwork: Detail all baseboards and door frames</li>
+          <li>Windows: Clean sills, tracks, and blinds/shutters</li>
+          <li>Closets: Wipe down all shelves, rods, and floor tracks</li>
+          <li>Floors: Power-vacuum carpets and rugs; sweep and mop hard floors</li>
+          <li>Final Touch: Remove any remaining debris or trash</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--blue); margin: 15px auto 8px; text-align: center; max-width: 800px; text-transform: uppercase;">ADDITIONAL SERVICES &amp; ADD-ONS</h3>
+      <div style="max-width: 800px; margin: 0 auto 10px; text-align: left;">
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6; columns: 2; column-gap: 40px;">
+          <li>Laundry Room: Clean inside washer/dryer, cabinets, and floors</li>
+          <li>Utility Areas: Sweep and spot-clean basement or garage</li>
+          <li>Traffic Areas: Detailed cleaning of entryways, hallways, and stair railings</li>
+          <li>Walls: Touch-up cleaning for scuffs and marks</li>
+          <li>Interior Windows: Professional glass and track cleaning (Add-on)</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- 5) Benefits (3 logos side by side with descriptions) -->
     <section class="section">
       <h2>Benefits of Move In/ Move Out Cleaning</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
-        
-        <!-- Benefit 1 -->
+
         <div style="text-align: center;">
           <img src="/images/stress-free-moving-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Stress-Free Moving</h3>
           <p style="margin: 0; line-height: 1.6;">Focus on packing and logistics while we handle the cleaning. Start fresh in your new home without lifting a mop.</p>
         </div>
 
-        <!-- Benefit 2 -->
         <div style="text-align: center;">
           <img src="/images/deposit-back-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Get Your Deposit Back</h3>
           <p style="margin: 0; line-height: 1.6;">Renters: professional cleaning helps ensure you get your full security deposit back. Landlords: attract better tenants with a spotless property.</p>
         </div>
 
-        <!-- Benefit 3 -->
         <div style="text-align: center;">
           <img src="/images/inspection-ready-icon.png" alt="" style="width: 80px; height: 80px; margin-bottom: 15px;">
           <h3 style="font-size: 1.3rem; margin: 10px 0; color: var(--blue);">Inspection Ready</h3>
@@ -200,7 +365,6 @@
       </div>
     </section>
 
-    <!-- 6) "See the Difference" (visual section) -->
     <section class="section">
       <h2>See The Difference</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
@@ -218,10 +382,9 @@
       </p>
     </section>
 
-    <!-- 7) Testimonials (3 TOTAL with town tags + internal links) -->
     <section class="section">
       <h2>What Customers Say</h2>
-      
+
       <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--blue);">
         <p style="font-style: italic; margin-bottom: 10px;">“Mike and his team did a wonderful job prepping my home to sell. They helped get everything ready and made the house look fantastic.”</p>
         <p style="font-weight: 600; margin: 0;">— Christopher S., <a href="/wallingford-ct-house-cleaning" style="color: var(--blue); text-decoration: none;">Wallingford CT</a></p>
@@ -238,7 +401,6 @@
       </div>
     </section>
 
-    <!-- 8) Serving Your Community (keep very short) -->
     <section class="section">
       <h2>Serving Wallingford, North Haven & Cheshire</h2>
       <p>NeatNest LLC is proud to serve homeowners, renters, landlords, and real estate professionals throughout Wallingford, North Haven, and Cheshire CT with professional move-in/move-out cleaning services. Our locally owned team brings reliable scheduling, consistent quality, and personalized attention to every property we service.</p>
@@ -249,13 +411,10 @@
       </div>
     </section>
 
-    <!-- 9) FAQ with Accordion (first one expanded) -->
     <section class="section" style="background: #f8fafc;">
       <h2>Move-In/Move-Out Cleaning FAQs</h2>
-      
-        <div class="faq-wrap">
-        
-        <!-- FAQ 1 - EXPANDED by default -->
+
+      <div class="faq-wrap">
         <div class="faq-item">
           <div class="faq-question active" onclick="toggleFAQ(this)">
             How much does move-out cleaning cost in Wallingford CT?
@@ -265,7 +424,6 @@
           </div>
         </div>
 
-        <!-- FAQ 2 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             How long does move-in/move-out cleaning take?
@@ -275,7 +433,6 @@
           </div>
         </div>
 
-        <!-- FAQ 3 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Is this for empty homes only?
@@ -285,7 +442,6 @@
           </div>
         </div>
 
-        <!-- FAQ 4 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             What's the difference between move-out cleaning and deep cleaning?
@@ -295,7 +451,6 @@
           </div>
         </div>
 
-        <!-- FAQ 5 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             Can you work with my moving schedule?
@@ -305,7 +460,6 @@
           </div>
         </div>
 
-        <!-- FAQ 6 - Collapsed -->
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
             How far in advance should I book?
@@ -314,23 +468,21 @@
             <p>We recommend booking move-in or move-out cleaning 1–2 weeks in advance to secure your preferred date, especially during busy moving seasons. If you need last-minute service, contact us and we’ll do our best to fit you into our schedule.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- 10) Quote Form (conversion block) -->
     <section id="quote" class="section">
       <h2>Get a Free Move-In/Move-Out Cleaning Quote</h2>
       <p>Ready for a stress-free move? Fill out the form below and we'll get back to you quickly with a personalized quote.</p>
-      
+
       <form name="move-in-out-quote" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="move-in-out-quote" />
         <input type="hidden" name="service" value="Move-In/Move-Out Cleaning" />
-        
+
         <label>Your Name <input name="name" required /></label>
         <label>Phone <input name="phone" type="tel" required /></label>
         <label>Email <input name="email" type="email" required /></label>
-        
+
         <label>Town
           <select name="town" required style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
             <option value="">Select your town</option>
@@ -351,13 +503,12 @@
         <label>Additional Details
           <textarea name="message" rows="4" placeholder="Tell us about your moving timeline, any specific areas of concern, or special requests..."></textarea>
         </label>
-        
+
         <button type="submit">Get My Free Quote</button>
       </form>
-      
+
       <p style="margin-top: 15px; font-size: 1rem;">Prefer faster service? Call now: <a href="tel:+12035007034" style="color: var(--blue); font-weight: 600; text-decoration: none;">(203) 500-7034</a></p>
-      
-      <!-- Contact Info -->
+
       <div class="contact-info" style="margin-top: 25px;">
         <strong>NeatNest LLC</strong><br>
         274 Woodhouse Ave, Wallingford, CT 06492<br>
@@ -367,7 +518,6 @@
       </div>
     </section>
 
-    <!-- 11) Other Services (internal links) - TIGHTER SPACING & VERTICAL BUTTONS -->
     <section class="section" style="background: #f8fafc;">
       <h2 style="margin-bottom: 8px;">Other Cleaning Services</h2>
       <p style="margin-top: 0; margin-bottom: 12px;">NeatNest LLC offers a complete range of professional cleaning services for your home or business:</p>
@@ -382,7 +532,6 @@
 
   </main>
 
- <!-- Global Footer -->
   <footer class="site-footer">
     <div class="footer-columns">
       <div class="footer-col">
@@ -427,6 +576,5 @@
   </footer>
 
   <script src="/script.js"></script>
-
 </body>
 </html>

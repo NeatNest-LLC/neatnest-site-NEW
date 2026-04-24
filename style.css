@@ -285,6 +285,12 @@ button:hover {
   color: white;
 }
 
+/* Narrow helper text above forms (used on town/sub-pages) */
+.form-intro {
+  max-width: 520px;
+  margin: 0 auto 15px;
+}
+
 form {
   text-align: center;
   border: 2px solid var(--blue);

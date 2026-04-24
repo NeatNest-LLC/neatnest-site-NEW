@@ -128,10 +128,7 @@ if (serviceToggle && serviceDropdown) {
     
     questionEl.classList.toggle("active");
     answer.classList.toggle("active");
-  };
-  
-  console.log("All scripts initialized!");
-});
+   };
 
   // 7) Walkthrough style helper text (show note when "User-Sent Video" is selected)
   const walkthroughStyle = document.getElementById("walkthroughStyle");
@@ -149,3 +146,6 @@ if (serviceToggle && serviceDropdown) {
     walkthroughStyle.addEventListener("change", updateWalkthroughNote);
     updateWalkthroughNote(); // run once on page load
   }
+
+  console.log("All scripts initialized!");
+});

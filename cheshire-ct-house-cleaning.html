@@ -450,6 +450,33 @@
         <label>Phone <input name="phone" type="tel" required /></label>
         <label>Email <input name="email" type="email" required /></label>
 
+        <label>Preferred Method of Contact
+          <select name="preferred_contact_method" required
+            style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
+            <option value="">Select one</option>
+            <option value="Phone Call">Phone Call</option>
+            <option value="Text Message">Text Message</option>
+            <option value="Email">Email</option>
+          </select>
+        </label>
+        
+        <label>Choose Your Walkthrough Style
+          <select id="walkthroughStyle" name="walkthrough_style" required
+            style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
+            <option value="">Select one</option>
+            <option value="User-Sent Video (Fastest & Most Popular)">User-Sent Video (Fastest & Most Popular)</option>
+            <option value="FaceTime / Live Virtual Tour">FaceTime / Live Virtual Tour</option>
+            <option value="In-Person Walkthrough">In-Person Walkthrough</option>
+          </select>
+        
+          <!-- NEW: helper text shown only when "User-Sent Video" is selected -->
+          <p id="videoWalkthroughNote"
+             style="display:none; margin: -5px auto 15px; max-width: 400px; font-size: 0.95rem; line-height: 1.4; color: #495869; font-weight: 600;">
+            Text your name and user-sent video to <a href="sms:+12035007034">(203) 500-7034</a>, or email to
+            <a href="mailto:info@neatnestllc.com">info@neatnestllc.com</a>.
+          </p>
+        </label>
+
         <label>Service Interested In
           <select name="service" required style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
             <option value="">Select a service</option>

@@ -517,8 +517,8 @@
     <!-- 10) Quote Form -->
     <section id="quote" class="section">
       <h2>Get a Free Recurring Cleaning Quote</h2>
-      <p>Ready to enjoy a consistently clean home? Fill out the form below and we'll get back to you quickly with a personalized quote.</p>
-
+        <p class="form-intro">Ready to get a fast, accurate quote? Tell us your details, how you’d like to be contacted, and your preferred walkthrough style.</p>
+        
       <form name="recurring-cleaning-quote" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="recurring-cleaning-quote" />
         <input type="hidden" name="service" value="Recurring House Cleaning" />
@@ -526,6 +526,33 @@
         <label>Your Name <input name="name" required /></label>
         <label>Phone <input name="phone" type="tel" required /></label>
         <label>Email <input name="email" type="email" required /></label>
+
+         <label>Preferred Method of Contact
+          <select name="preferred_contact_method" required
+            style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
+            <option value="">Select one</option>
+            <option value="Phone Call">Phone Call</option>
+            <option value="Text Message">Text Message</option>
+            <option value="Email">Email</option>
+          </select>
+        </label>
+        
+        <label>Choose Your Walkthrough Style
+          <select id="walkthroughStyle" name="walkthrough_style" required
+            style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">
+            <option value="">Select one</option>
+            <option value="User-Sent Video (Fastest & Most Popular)">User-Sent Video (Fastest & Most Popular)</option>
+            <option value="FaceTime / Live Virtual Tour">FaceTime / Live Virtual Tour</option>
+            <option value="In-Person Walkthrough">In-Person Walkthrough</option>
+          </select>
+        
+          <!-- NEW: helper text shown only when "User-Sent Video" is selected -->
+          <p id="videoWalkthroughNote"
+             style="display:none; margin: -5px auto 15px; max-width: 400px; font-size: 0.95rem; line-height: 1.4; color: #495869; font-weight: 600;">
+            Text your name and user-sent video to <a href="sms:+12035007034">(203) 500-7034</a>, or email to
+            <a href="mailto:info@neatnestllc.com">info@neatnestllc.com</a>.
+          </p>
+        </label>
 
         <label>Town
           <select name="town" required style="display: block; margin: 5px auto 15px; padding: 12px; border: 2px solid var(--blue); border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background: var(--card); font-size: 1rem; font-family: var(--font-body);">

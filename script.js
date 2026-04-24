@@ -132,3 +132,20 @@ if (serviceToggle && serviceDropdown) {
   
   console.log("All scripts initialized!");
 });
+
+  // 7) Walkthrough style helper text (show note when "User-Sent Video" is selected)
+  const walkthroughStyle = document.getElementById("walkthroughStyle");
+  const videoNote = document.getElementById("videoWalkthroughNote");
+
+  function updateWalkthroughNote() {
+    if (!walkthroughStyle || !videoNote) return;
+
+    const val = walkthroughStyle.value || "";
+    const isUserSentVideo = val.toLowerCase().includes("user-sent video");
+    videoNote.style.display = isUserSentVideo ? "block" : "none";
+  }
+
+  if (walkthroughStyle && videoNote) {
+    walkthroughStyle.addEventListener("change", updateWalkthroughNote);
+    updateWalkthroughNote(); // run once on page load
+  }
